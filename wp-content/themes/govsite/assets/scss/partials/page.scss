@@ -1,0 +1,152 @@
+// most of these elements are also used for pages and posts
+
+.post-summary {
+  @include clearfix;
+}
+
+.page-header {
+  width: 100%;
+  display: inline-block;
+  margin-top: $space-medium*2;
+
+  h1 {
+    @media #{$large-up} {
+      width: 80%;
+      float: left;
+    }
+  }
+
+  .header-group {
+    h1 {
+      @media #{$large-up} {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+  ul.entry-meta {
+    @media #{$large-up} {
+      width: 20%;
+      float: right;
+      margin-top: 17px;
+      li {
+        float: right;
+      }
+    }
+  }
+}
+
+.page-element {
+  border-bottom: 1px solid darken($lightest, 13%);
+  padding-top: $space-medium*2;
+  padding-bottom: $space-medium*2;
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+
+  figure {
+    margin: 0;
+
+  }
+
+  .main-content, .intro-content {
+    border-top: 5px solid $secondary-color;
+    padding-top: $space-medium;
+  }
+}
+
+.summary,
+.post-summary {
+  @include clearfix;
+  margin-bottom: $space-large;
+  border-bottom: 1px solid darken($lightest, 13%);
+  padding-bottom: $space-medium*2;
+
+  &:last-of-type {
+    margin-bottom: $space-medium*2;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  a img {
+    float: left;
+    margin-top: 8px;
+    margin-right: 3%;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  header {
+    position: relative;
+  }
+
+  &.sticky {
+    position: relative;
+    border-bottom: 3px solid darken($lightest, 13%);
+    background: darken($lightest, 7%);
+    padding: $space-small $space-small*2 $space-small*2 $space-small*2;
+    
+    h4 {
+      margin-top: 0;
+      a {
+        @include font-size(28);
+      }
+    }
+    
+    img {
+      max-width: 100%;
+      float: none;
+      margin: $space-small 0;
+    }
+    
+    a {
+      img {
+        border: 5px solid $lightest;
+        @include single-transition();
+        &:hover, &:focus {
+          border-color: darken($lightest, 13%);
+        }
+      }
+    }
+  }
+
+  &.post-password-required,
+  &.status-private {
+
+    h2, h4 {
+      position: relative;
+      display: table;
+      margin-top: 0;
+      padding-left: $space-small*4;
+      @include icon(before, lock);
+      
+      &:before {
+        width: 30px;
+        height: 30px;
+        display: table-cell;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        background: $primary-color;
+        color: $lightest;
+        @include font-size(18);
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+    h2 {
+      &:before {
+        top: 7px;
+      }
+    }
+  }
+}
+
+.news-posts {
+  margin-bottom: $space-medium*2;
+}

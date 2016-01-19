@@ -1,0 +1,12 @@
+@mixin thumb() {
+  line-height: 0;
+  display: inline-block;
+  max-width: 100%;
+  box-shadow: none;
+}
+
+.featured {
+  .thumb {
+    max-height: 150px;
+  }
+}

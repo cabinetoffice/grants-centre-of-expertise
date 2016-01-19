@@ -1,0 +1,33 @@
+{
+	"name": "cocommunity",
+	"description": "Cabinet Office Community Site",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "http://wpackagist.org"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/wp-sync-db/wp-sync-db"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"johnpbloch/wordpress": "^4.4",
+		"wpackagist-plugin/advanced-custom-fields": "*",
+		"wpackagist-plugin/akismet": "*",
+		"wpackagist-plugin/bbpress": "^2.5.8",
+		"wpackagist-plugin/better-font-awesome": "^1.4.3",
+		"wpackagist-plugin/buddypress": "*",
+		"wpackagist-plugin/miniorange-saml-20-single-sign-on": "*",
+		"wpackagist-plugin/the-events-calendar": "*"
+	},
+	"extra": {
+		"wordpress-install-dir": "wp",
+		"installer-paths": {
+			"wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+			"wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+			"wp-content/themes/{$name}/": ["type:wordpress-theme"]
+		}
+	}
+}

@@ -1,0 +1,57 @@
+.pager {
+  @include clearfix;
+  margin-bottom: $space-small*4;
+  border-top: 1px solid darken($lightest, 13%);
+  padding-top: $space-small*4;
+  text-align: center;
+
+  .pagination {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .btn-pagination {
+    margin-top: 13px; //to align the buttons to the middle of .pager container
+  }
+
+  a {
+    &:visited {
+      color: $primary-color;
+      
+      &:hover, &:focus {
+        color: scale-color($primary-color, $lightness: -14%);
+      }
+    }
+  }
+
+  ul {
+    @include inline-list;
+    margin: 0;
+    
+    > li {
+      margin-left: $space-small;
+      
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  li {
+    a {
+      border: 1px solid darken($lightest, 7%);
+      @include radius($global-radius);
+      background: $lightest;
+      padding: $space-small $space-medium;
+    }
+
+    &.active {
+      a {
+        background: darken($lightest, 7%);
+        border-color: darken($lightest, 13%);
+        color: lighten($darkest, 47%);
+        cursor: default;
+      }
+    }
+  }
+}

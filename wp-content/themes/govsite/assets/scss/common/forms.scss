@@ -1,0 +1,73 @@
+label {
+  margin-bottom: $space-small/2;
+}
+
+select {
+  background-color: $lightest;
+  border-color: darken($lightest, 13%);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea {
+  margin-bottom: $space-small*2;
+  border-color: darken($lightest, 13%);
+  box-shadow: none;
+  
+  &:focus {
+    box-shadow: none;
+    background: $lightest;
+  }
+}
+
+.widget_search {
+  .searchform {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.searchform {  
+  label {
+    margin-bottom: $space-small;
+  }
+  
+  input[type="text"] {
+    width: 70%;
+    height: 40px;
+    float: left;
+    margin-bottom: 0;
+    border: none;
+    padding: 0.5rem;
+    @include font-size(14);
+  }
+  
+  input[type="submit"] {
+    width: 30%;
+    height: 40px;
+    float: left;
+    border: none;
+    background: $primary-color;
+    padding: 0.5rem;
+    color: $lightest;
+    @include font-size(16);
+    -webkit-font-smoothing: $font-smoothing;
+    -moz-osx-font-smoothing: grayscale;
+    
+    &:hover, &:focus {
+      background: darken($primary-color, 10%);
+    }
+  }
+}

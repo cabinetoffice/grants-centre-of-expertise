@@ -1,0 +1,39 @@
+.main-archive,
+.main-home {
+  article.post-summary {
+    h1.entry-title {
+      margin-bottom: $space-small;
+    }
+
+    img {
+      max-width: 30%;
+      float: left;
+      margin-top: 8px;
+      margin-right: 5%;
+
+      @media #{$medium-up} {
+        width: 20%;
+        margin-right: 3%;
+      }
+    }
+
+    p {
+      margin-bottom: $space-small*2;
+    }
+
+    .button {
+      margin-bottom: 0;
+    }
+  }
+
+  article.sticky {
+    header {
+      h1 {
+        line-height: 1;
+        a {
+          @include font-size(30);
+        }
+      }
+    }
+  }
+}

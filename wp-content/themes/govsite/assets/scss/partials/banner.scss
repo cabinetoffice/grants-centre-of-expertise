@@ -1,0 +1,29 @@
+.page-banner {
+  padding: $space-medium*2 0;
+  background: $secondary-color;
+  text-align: left;
+  color: $lightest;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+
+  h2 {
+    margin-bottom: $space-medium;
+  }
+}
+
+.bottom-banner {
+  padding: $space-medium*2 0;
+  background: $secondary-color;
+  text-align: center;
+  color: $lightest;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $lightest;
+  }
+
+  h2 {
+    margin-bottom: $space-medium;
+  }
+}

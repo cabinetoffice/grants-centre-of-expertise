@@ -1,0 +1,46 @@
+.site-footer {
+  .navigation {
+    background: lighten($darkest, 14%);
+    padding: $space-small*2 0 $space-medium 0;
+
+    a {
+      color: $lightest;
+      @include font-size(14);
+      border-bottom: 1px solid transparent;
+
+      &:hover, &:focus {
+        border-bottom-color: $lightest;
+      }
+    }
+
+    p {
+      margin: 0;
+      text-align: right;
+      color: $lightest;
+      @include font-size(14);
+
+      @media #{$small-only} {
+        text-align: left;
+      }
+    }
+  }
+
+  .credits {
+    background: lighten($darkest, 8%);
+
+    small {
+      padding: $space-small 0;
+    }
+  }
+
+  ul.menu {
+    width: auto;
+    display: inline-block;
+  }
+
+  small {
+    display: block;
+    color: $lightest;
+    @include font-size(12);
+  }
+}

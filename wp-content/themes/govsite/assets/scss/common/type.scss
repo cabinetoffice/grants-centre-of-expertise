@@ -1,0 +1,166 @@
+html {
+  -webkit-font-smoothing: $font-smoothing;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus {
+  outline: 0;
+}
+
+p, a, button, .button, ul, ol, dl {
+  @include font-size(18);
+}
+
+small {
+  @include font-size(14);
+  
+  a, button, .button {
+    @include font-size(14);
+  }
+}
+
+h1 {
+  @include font-size(36);
+  
+  a, button, .button {
+    @include font-size(36);
+  }
+}
+
+h2 {
+  @include font-size(30);
+  
+  a, button, .button {
+    @include font-size(30);
+  }
+}
+
+h3 {
+  @include font-size(28);
+  
+  a, button, .button {
+    @include font-size(28);
+  }
+}
+
+h4 {
+  @include font-size(24);
+  
+  a, button, .button {
+    @include font-size(24);
+  }
+}
+
+h5 {
+  @include font-size(20);
+  
+  a, button, .button {
+    @include font-size(20);
+  }
+}
+
+h6 {
+  @include font-size(18);
+}
+
+a {
+  &:visited {
+    color: $visited-link-color;
+    
+    &:hover, &:focus {
+      color: scale-color($visited-link-color, $lightness: -20%);
+    }
+  }
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+hr.footer {
+  border-color: lighten($darkest, 20%);
+}
+
+.vcard {
+  margin-bottom: $space-small;
+  border: none;
+  padding: 0;
+  
+  .fn {
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+blockquote {
+  min-height: 182px;
+  position: relative;
+  margin: 1.25rem 0;
+  border-left: none;
+  padding: 0 0 0 70px;
+  @include icon(before, quoteleft);
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    color: $logo-color;
+    @include font-size(50);
+  }
+
+  @media #{$large-up} {
+    width: 48%;
+    min-height: 0;
+    float: left;
+    margin-top: 0;
+    margin-right: 4%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media #{$xlarge-up} {
+    width: 65%;
+    margin-left: -130px;
+  }
+
+  p, ul, ol {
+    color: $logo-color;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  cite {
+    margin-top: $space-small/2;
+    color: $logo-color;
+    @include font-size(18);
+    
+    a {
+      color: $primary-color;
+    }
+  }
+}
+
+code {
+  border: none;
+  background-color: darken($lightest, 13%);
+  padding: $space-mini*2;
+  margin: 0 $space-small/2;
+}
+
+pre {
+  margin-bottom: 1.25rem;
+}
+
+ul, ol {
+  li {
+    margin-bottom: $space-mini;
+  }
+}
+
+dl {
+  dd {
+    margin-left: $space-large;
+  }
+}

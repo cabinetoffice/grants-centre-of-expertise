@@ -1,0 +1,16 @@
+footer.site-footer {
+  nav {
+    ul {
+      @include inline-list;
+      margin-bottom: 0;
+    }
+
+    a {
+      @include font-size(14);
+      color: $lightest;
+      &:hover, &:focus {
+        border-bottom: 1px solid $lightest;
+      }
+    }
+  }
+}

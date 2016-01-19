@@ -1,0 +1,59 @@
+button, .button {
+  padding: $space-small $space-small*2;
+  
+  &:visited {
+    color: $lightest;
+    
+    &:hover, &:focus {
+      color: $lightest;
+    }
+  }
+}
+
+.button-banner {
+  @include button;
+  background: $lightest;
+  padding: $space-medium $space-small*2;
+  color: $secondary-color;
+  @include font-size(20);
+  
+  &:hover, &:focus {
+    background: $lightest;
+    color: darken($secondary-color, 15%);
+  }
+  
+  &:visited {
+    color: $secondary-color;
+    
+    &:hover, &:focus {
+      color: darken($secondary-color, 15%);
+    }
+  }
+}
+
+.button-search-form {
+  @include button;
+  background: $lightest;
+  padding: $space-small;
+  color: $logo-color;
+  
+  &:hover, &:focus {
+    background: $lightest;
+    color: darken($logo-color, 15%);
+  }
+  
+  &:visited {
+    color: $logo-color;
+    
+    &:hover, &:focus {
+      color: darken($logo-color, 15%);
+    }
+  }
+}
+
+input, button {
+  &.button {
+    -webkit-font-smoothing: $font-smoothing;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
