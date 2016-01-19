@@ -1,0 +1,211 @@
+/*
+Theme Name:         Cabinet Office Grants Hub
+Template:           govsite/templates
+*/
+
+.menu-main-menu-container {
+    margin-top: 52px;
+}
+
+.menu-main-menu-container ul{
+    list-style: none;
+}
+
+/*wrap this in a govuk class ?*/
+
+.panel-indent {
+    clear: both;
+    padding: 0.789474em;
+    margin-bottom: 0.789474em;
+    border-left: 5px solid #BFC1C3;
+}
+.panel-indent-info {
+    border-left-width: 10px;
+}
+
+.govuk > details {
+    display: block;
+}
+
+.govuk > details summary {
+    display: inline-block;
+    color: #005EA5;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: em(5);
+}
+
+.govuk > details summary:hover {
+    color: #2E8ACA;
+}
+
+.govuk > details summary:focus {
+    outline: 3px solid #2E8ACA;
+}
+
+.govuk > details .summary {
+    text-decoration: underline;
+}
+
+.govuk > details .arrow {
+    margin-right: .35em;
+    font-style: normal;
+}
+
+.govuk .summary:before,
+.govuk .summary:after,
+.govuk .post-summary:before,
+.govuk .post-summary:after {
+    /*content: none;*/
+}
+
+.site-header{
+    border-top: 0;
+}
+
+.site-header ul{
+    list-style-type: none;
+    margin-bottom:0;
+}
+
+.site-header ul li{
+    display:inline;
+}
+
+.site-header ul li a{
+    padding-left:12px;
+}
+
+.primary-sidebar ul{
+    list-style-type: none;
+    margin-left:0;
+}
+
+.entry-meta time:after {
+    content: "";
+}
+
+/*
+.top-bar {
+    height: auto;
+    padding:30px 0 30px 0;
+}*/
+
+.top-bar-section ul li {
+}
+
+.top-bar .toggle-topbar.menu-icon a {
+    /*color:#000;*/
+}
+
+/*hamburger bars*/
+.top-bar .toggle-topbar.menu-icon a span::after {
+    box-shadow: 0px 0px 0px 1px #000, 0px 7px 0px 1px #000, 0px 14px 0px 1px #000;
+}
+
+/*.top-bar-section .dropdown li a{*/
+/*background:#fff;*/
+/*padding:0;*/
+/*margin:0;*/
+/*line-height:1em;*/
+/*}*/
+
+/*.top-bar .menu > .active > a::before {*/
+/*content: "";*/
+/*border-left: 10px solid transparent;*/
+/*border-right: 10px solid transparent;*/
+/*border-top: 10px solid #f00;*/
+/*width:0;*/
+/*left:40%;*/
+/*position: relative;*/
+/*top: 0px;*/
+/*}*/
+
+.top-bar-section ul li > a {
+    position: relative;
+    background: transparent none repeat scroll 0% 0%;
+    padding: 12px 0 12px 2rem ;
+    /*color: #222;*/
+    font-size: 0.992rem;
+    line-height: 1.5;
+    /* remove set font-family on top navigation section */
+    font-family: inherit;
+    /*font-weight: bold;*/
+}
+
+.top-bar-section .dropdown li a {
+    line-height: 1em;
+}
+
+.pointer-bar {
+    padding:0;
+    text-align: right;
+}
+
+.pointer-bar ul{
+    list-style: none;
+    text-align: right;
+    margin:0 28px 0 0;
+    padding:0px;
+}
+
+.pointer-bar ul li{
+    display: inline;
+}
+
+.pointer-bar ul li a{
+    padding-left:12px;
+    font-size:0.8rem;
+}
+
+.top-bar-section ul {
+    float: right;
+}
+
+.button-search::before {
+    content: "\e609";
+    font-style: normal;
+    font-weight: normal;
+    font-family: "icomoon";
+    line-height: 1;
+    font-size: 3em;
+}
+
+nav button.button-search {
+    background: transparent;
+    border: none;
+}
+
+
+/*prevent the thin grey lines that appear around the navigation items*/
+.top-bar-section ul li {
+    background: transparent
+}
+
+/*styles for wide desktop view*/
+@media only screen and (min-width: 780px) {
+    .top-bar-section .dropdown:after {
+        bottom: 100%;
+        left: 50px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-bottom-color: #ddd;
+        border-width: 12px;
+        margin-left: -12px;
+    }
+}
+
+/*styles for narrow responsive view*/
+@media only screen and (max-width: 779px)
+{
+    .parent-link{
+        margin-bottom: 2px;
+    }
+}
+
+
