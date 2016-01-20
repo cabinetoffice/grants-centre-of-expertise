@@ -1,4 +1,4 @@
-* Cabinet Office Grant Hub *
+# Cabinet Office Grant Hub
 
 This WordPress install uses Composer to install WordPress core and some plugins - please note not all plugins are added by default.
 
