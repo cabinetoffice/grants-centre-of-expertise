@@ -41,6 +41,17 @@ p, a, button, .button, ul, ol, dl {
 	.bbp-forum-title, .bbp-forum-link, .bbp-topic-permalink { font-size: 1rem; }
 }
 
+// Removing profile visibility settings
+#buddypress {
+	.item-list-tabs {
+		#general-personal-li, #profile-personal-li { display: none; }
+	}
+}
+
+#profile-edit-form {
+	> h4, .field-visibility-settings-notoggle { display: none; }
+}
+
 // .menu-main-menu-container {
 // 	margin-top: 52px;
 // 	ul {

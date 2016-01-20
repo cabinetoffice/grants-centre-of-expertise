@@ -8,7 +8,7 @@ function _log( $message ) {
 foreach( glob( STYLESHEETPATH . '/app/*.php' ) as $filename ) require_once $filename;
 foreach( glob( STYLESHEETPATH . '/app/posts/*.php' ) as $filename ) require_once $filename;
 
-require_once STYLESHEETPATH . '/app/theme/custom-theme-css.php';
+// require_once STYLESHEETPATH . '/app/theme/custom-theme-css.php';
 require_once STYLESHEETPATH . '/app/theme/custom-scripts.php';
 require_once STYLESHEETPATH . '/app/theme/shortcodes.php';
 // require_once STYLESHEETPATH . '/app/theme/menus.php';
@@ -76,15 +76,21 @@ function co_topic_trash_link( $retval, $r ) {
 add_filter( 'bbp_get_topic_trash_link', 'co_topic_trash_link', 10, 2 );
 
 
-// Redirect to fresh topics after a topic has been deleted and is inaccessible by the user
-function co_bbp_fix_404_topics() {
+// Handling 404's and their redirects
+function co_bbp_fix_404s() {
 	global $wp_query;
 
+	// Redirecting to user's profile
+	// if ( $wp_query->query['name'] == 'profile' ) {
+	// 	wp_redirect( bp_loggedin_user_domain() );
+	// }
+
+	// Redirect to fresh topics after a topic has been deleted and is inaccessible by the user
 	if ( $wp_query->is_404 && $wp_query->query['post_type'] == 'topic' && isset( $wp_query->query['topic'] ) ) {
 		wp_redirect( bbp_get_topics_url() );
 	}
 }
-add_action( 'wp', 'co_bbp_fix_404_topics' );
+add_action( 'wp', 'co_bbp_fix_404s' );
 
 
 // Replaces "current-menu-item" with "active"

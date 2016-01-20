@@ -14,4 +14,8 @@ p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-permalink { font-size: 1rem; }
 
+#buddypress .item-list-tabs #general-personal-li, #buddypress .item-list-tabs #profile-personal-li { display: none; }
+
+#profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
+
 /*# sourceMappingURL=style.css.map */
