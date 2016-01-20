@@ -15,7 +15,7 @@ function govsite_scripts_wp_enqueue_scripts() {
   // This will break any plugin that requires a feature/behaviour in jQuery 2.x which is missing/different in jQuery 1.10.x 
 
   wp_deregister_script('jquery');
-  wp_enqueue_script('jquery', get_stylesheet_directory_uri() . '/../build/lib/jquery.min.js');
+  // wp_enqueue_script('jquery', get_stylesheet_directory_uri() . '/../build/lib/jquery.min.js');
 
   // Because it's awesome
   wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/../build/lib/modernizr.min.js');
