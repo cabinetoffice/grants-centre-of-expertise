@@ -9,10 +9,10 @@ function widget_sidebar_init() {
 	register_sidebar( array(
 		'name'          => 'Widget sidebar',
 		'id'            => 'widget_sidebar_1',
-		'before_widget' => '<div>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
+		// 'before_title'  => '<h2>',
+		// 'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
@@ -41,4 +41,4 @@ function widget_sidebar_init() {
 	) );
 
 }
-// add_action( 'widgets_init', 'widget_sidebar_init' );
+add_action( 'widgets_init', 'widget_sidebar_init' );

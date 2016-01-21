@@ -13,10 +13,10 @@ function co_enqueue_scripts() {
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/../build/main.min.js', array('jquery', 'modernizr'), '', true );
 
 	// Enqueue custom css which may of been added the style.css
-	wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/style.css', array( 'main' ), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
 	// Enqueue polyfill for html summary/details
-	wp_enqueue_script('details=polyfill', get_stylesheet_directory_uri() . '/build/lib/details.polyfill.js', array('jquery', 'modernizr'), '', true);
+	wp_enqueue_script('details=polyfill', get_stylesheet_directory_uri() . '/../build/lib/details.polyfill.js', array('jquery', 'modernizr'), '', true);
 
 	wp_deregister_style( 'main' );
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/../build/main.min.css' );

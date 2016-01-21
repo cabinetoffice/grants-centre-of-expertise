@@ -5,14 +5,14 @@ function _log( $message ) {
 	error_log( print_r( $message, true ) );
 }
 
-foreach( glob( STYLESHEETPATH . '/app/*.php' ) as $filename ) require_once $filename;
-foreach( glob( STYLESHEETPATH . '/app/posts/*.php' ) as $filename ) require_once $filename;
+foreach( glob( STYLESHEETPATH . '/../app/*.php' ) as $filename ) require_once $filename;
+foreach( glob( STYLESHEETPATH . '/../app/posts/*.php' ) as $filename ) require_once $filename;
 
-// require_once STYLESHEETPATH . '/app/theme/custom-theme-css.php';
-require_once STYLESHEETPATH . '/app/theme/custom-scripts.php';
-require_once STYLESHEETPATH . '/app/theme/shortcodes.php';
-require_once STYLESHEETPATH . '/app/theme/sidebars.php';
-// require_once STYLESHEETPATH . '/app/theme/menus.php';
+// require_once STYLESHEETPATH . '/../app/theme/custom-theme-css.php';
+require_once STYLESHEETPATH . '/../app/theme/custom-scripts.php';
+require_once STYLESHEETPATH . '/../app/theme/shortcodes.php';
+require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
+// require_once STYLESHEETPATH . '/../app/theme/menus.php';
 
 add_theme_support( 'custom-background' );
 

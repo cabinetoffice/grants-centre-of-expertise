@@ -5,7 +5,13 @@ Template:           govsite/templates
 */
 p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 
-.top-bar-section { position: absolute; }
+.site-header .logo img { max-width: 140px; }
+.site-header .top-bar div { float: none; }
+.site-header .top-bar ul > li { background: none; margin-bottom: 0; }
+.site-header .top-bar .top-bar-section > ul > li > a { padding: 15px; }
+.site-header .top-bar .menu > .active > a:before { display: none; }
+.site-header .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
+.site-header .dropdown { top: 55px; }
 
 #bbpress-forums .bbp-breadcrumb + #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
@@ -17,5 +23,11 @@ p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 #buddypress .item-list-tabs #general-personal-li, #buddypress .item-list-tabs #profile-personal-li { display: none; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
+
+.widget_subpages ul, .widget_subpages li { list-style: none; margin: 0; padding: 0; }
+
+#primary-sidebar { margin-top: 35px; }
+
+footer.site-footer nav ul > li:first-child { margin-left: 0; }
 
 /*# sourceMappingURL=style.css.map */

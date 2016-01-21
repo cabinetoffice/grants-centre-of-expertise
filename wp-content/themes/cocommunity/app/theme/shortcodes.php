@@ -88,7 +88,7 @@ function govsite_co_show_recent_events_func( $atts ) {
 		while (have_posts()) : the_post();
 
 		ob_start();  
-		get_template_part( 'templates/partials/loop', 'event' );
+		get_template_part( 'partials/loop', 'event' );
 		$output .= ob_get_contents();
 		ob_end_clean();
 
