@@ -34,12 +34,10 @@ add_shortcode( 'govuk_hidden_text', 'govuk_hidden_text_func' );
  * @param $atts
  * @return string
  */
-function govsite_co_show_recent_posts_func($atts) {
-
+function govsite_co_show_recent_posts_func( $atts ) {
 	$a = shortcode_atts( array(
 		'numberposts' => '3'
 	), $atts );
-	
 
 	query_posts( array(
 		'showposts' => $a['numberposts'],
@@ -65,6 +63,44 @@ function govsite_co_show_recent_posts_func($atts) {
 	wp_reset_query();
 
 	return $output;
-
 }
 add_shortcode( 'govsite_co_show_recent_posts', 'govsite_co_show_recent_posts_func' );
+
+
+/**
+ * @param $atts
+ * @return string
+ */
+function govsite_co_show_recent_events_func( $atts ) {
+	$a = shortcode_atts( array(
+		'numberposts' => '3'
+	), $atts );
+
+	query_posts( array(
+		'showposts' => $a['numberposts'],
+		'post_type' => 'tribe_events',
+	) );
+
+	$output = '';
+	if ( have_posts() ) :
+		$output .= '<div class="main-archive">';
+
+		while (have_posts()) : the_post();
+
+		ob_start();  
+		get_template_part( 'templates/partials/loop', 'event' );
+		$output .= ob_get_contents();
+		ob_end_clean();
+
+		endwhile;
+
+		$output .= '</div>';
+	endif;
+
+	wp_reset_query();
+
+	return $output;
+}
+add_shortcode( 'govsite_co_show_recent_events', 'govsite_co_show_recent_events_func' );
+
+
