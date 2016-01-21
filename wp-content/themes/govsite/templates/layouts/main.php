@@ -17,70 +17,37 @@
     <script src="//code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/../assets/js/ie/browser-support.js"></script>
   <![endif]-->
-
 </head>
 <body <?php body_class() ?>>
   <!--[if lt IE 8]>
     <div class="alert-box alert">You are using an <strong>outdated</strong> browser. Please <a href="//browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
   <![endif]-->
 
-  <div class="pointer-bar">
+  <header class="site-header" role="banner">
     <div class="row">
-      <div class="small-12 medium-12 columns">
-        <?php dynamic_sidebar('pointer_bar') ?>
+      <div class="small-12 medium-3 columns">
+        <a href="<?php echo home_url('/') ?>" title="<?php bloginfo('name') ?>" class="logo">
+          <?php if( $logo = get_option('logo-setting') ): ?>
+            <img src="<?php echo $logo ?>" alt="<?php bloginfo('name') ?> logo">
+          <?php else: ?>
+            <?php bloginfo('name') ?>
+          <?php endif; ?>
+        </a>
+        <div class="toggle-container hidden-for-medium-up">
+          <a href="#top-bar" class="nav-toggle"><span class="visually-hidden"><?php _e('Menu', 'govsite') ?></span></a>
+        </div>
+      </div>
+      <div class="small-12 medium-9 columns">
+        <?php get_template_part('partials/nav') ?>
       </div>
     </div>
-  </div>
+  </header>
 
-<!--  remove inline styles-->
-
-  <div class="fullwidth" style="padding: 26px 0;">
+  <div class="header-search">
     <div class="row">
-      <div class="small-12 medium-12 columns"">
-
-          <nav id="top-bar" class="top-bar" role="navigation" data-topbar>
-            <ul class="title-area">
-              <li class="name">
-                <a href="<?php echo home_url('/') ?>" title="<?php bloginfo('name') ?>" class="logo">
-                  <?php if( $logo = get_option('logo-setting') ): ?>
-                    <img style="max-width: 180px;" src="<?php echo $logo ?>" alt="<?php bloginfo('name') ?> logo">
-                  <?php else: ?>
-                    <?php bloginfo('name') ?>
-                  <?php endif; ?>
-                </a>
-              </li>
-              <li class="toggle-topbar menu-icon"><a href="#"><span>&nbsp;</span></a></li>
-            </ul>
-              <?php
-              if (has_nav_menu('header')) :
-                wp_nav_menu(array(
-                    'theme_location'  => 'header',
-                    'menu_class'      => 'menu',
-                    'depth'           => 3,
-                    'container_class' => 'top-bar-section',
-                ));
-              endif;
-              ?>
-			  
-			<?php if( get_option('display-search-bar') ): ?>
-				<div class="show-for-medium-up" style="display:block; float:right; width:30px;">
-					<button type="button" class="button-search"><span class="visually-hidden"><?php _e('Search', 'govsite') ?></span></button>
-				</div>
-			<?php endif; ?>
-			
-          </nav>
-      </div>
+      <?php get_template_part('partials/search-form'); ?>
     </div>
   </div>
-
-<?php if( get_option('display-search-bar') ): ?>
-	<div class="header-search">
-		<div class="row">
-			<?php get_template_part('partials/search-form'); ?>
-		</div>
-	</div>
-<?php endif; ?>
-
 
   <?php w_requested_template() ?>
 
@@ -89,10 +56,12 @@
     <div class="navigation">
       <div class="row">
         <div class="medium-6 columns">
-          <?php dynamic_sidebar('widget_footer_left') ?>
+          <?php get_template_part('partials/nav-footer') ?>
         </div>
         <div class="medium-6 columns">
-          <?php dynamic_sidebar('widget_footer_right') ?>
+          <?php if ( get_option('footer-link-text-setting') ) : ?>
+            <p><?php echo get_option('footer-link-text-setting') ?> <a href="<?php echo get_option('footer-link-url-setting') ?>"><?php echo get_option('footer-link-cta-setting') ?></a></p>
+          <?php endif ?>
         </div>
       </div>
     </div>
@@ -111,13 +80,6 @@
   </footer>
 
   <?php wp_footer() ?>
-
-  <!-- should enque this in scripts -->
-  <script src="<?php echo get_stylesheet_directory_uri()?>/../build/lib/foundation.min.js"></script>
-
-  <script>
-    $(document).foundation();
-  </script>
 
 </body>
 </html>
