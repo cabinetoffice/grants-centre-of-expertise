@@ -11,7 +11,10 @@ foreach( glob( STYLESHEETPATH . '/app/posts/*.php' ) as $filename ) require_once
 // require_once STYLESHEETPATH . '/app/theme/custom-theme-css.php';
 require_once STYLESHEETPATH . '/app/theme/custom-scripts.php';
 require_once STYLESHEETPATH . '/app/theme/shortcodes.php';
+require_once STYLESHEETPATH . '/app/theme/sidebars.php';
 // require_once STYLESHEETPATH . '/app/theme/menus.php';
+
+add_theme_support( 'custom-background' );
 
 
 function get_profile_info_keys_personal() {
@@ -111,4 +114,3 @@ function co_current_to_active( $nav_menu, $args ) {
 	return $nav_menu;
 }
 add_filter( 'wp_nav_menu','co_current_to_active', 1, 2 );
-
