@@ -114,3 +114,24 @@ function co_current_to_active( $nav_menu, $args ) {
 	return $nav_menu;
 }
 add_filter( 'wp_nav_menu','co_current_to_active', 1, 2 );
+
+
+/**
+ * Include bbPress 'topic' custom post type in WordPress' search results
+ */
+function ntwb_bbp_topic_cpt_search( $topic_search ) {
+	$topic_search['exclude_from_search'] = false;
+	return $topic_search;
+}
+add_filter( 'bbp_register_topic_post_type', 'ntwb_bbp_topic_cpt_search' );
+
+/**
+ * Include bbPress 'reply' custom post type in WordPress' search results
+ */
+function ntwb_bbp_reply_cpt_search( $reply_search ) {
+	$reply_search['exclude_from_search'] = false;
+	return $reply_search;
+}
+add_filter( 'bbp_register_reply_post_type', 'ntwb_bbp_reply_cpt_search' );
+
+
