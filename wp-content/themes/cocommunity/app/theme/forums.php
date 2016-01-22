@@ -41,10 +41,6 @@ function co_topic_trash_link( $retval, $r ) {
 add_filter( 'bbp_get_topic_trash_link', 'co_topic_trash_link', 10, 2 );
 
 
-// Removing the individual comment reply link - not using multithreaded replies
-add_filter( 'bbp_get_topic_reply_link', '__return_false' );
-
-
 // Handling 404's and their redirects
 function co_bbp_fix_404s() {
 	global $wp_query;
@@ -61,6 +57,16 @@ function co_add_topics_replies_to_search( $search ) {
 	$search['exclude_from_search'] = false;
 	return $search;
 }
+add_filter( 'bbp_register_forum_post_type', 'co_add_topics_replies_to_search' );
 add_filter( 'bbp_register_topic_post_type', 'co_add_topics_replies_to_search' );
 add_filter( 'bbp_register_reply_post_type', 'co_add_topics_replies_to_search' );
 
+
+// Removing various bits of bbPress
+add_filter( 'bbp_get_topic_reply_link', '__return_false' );
+add_filter( 'bbp_get_reply_to_link', '__return_false' );
+add_filter( 'bbp_get_breadcrumb', '__return_false' );
+add_filter( 'bbp_get_single_forum_description', '__return_false' );
+add_filter( 'bbp_get_forum_pagination_count', '__return_false' );
+add_filter( 'bbp_get_topic_author_avatar', '__return_false' );
+add_filter( 'bbp_get_reply_author_avatar', '__return_false' );

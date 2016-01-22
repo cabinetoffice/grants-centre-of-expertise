@@ -1,17 +1,15 @@
 <?php
 
-foreach( glob( STYLESHEETPATH . '/../app/*.php' ) as $filename ) require_once $filename;
-foreach( glob( STYLESHEETPATH . '/../app/posts/*.php' ) as $filename ) require_once $filename;
+// Theme setup
+function co_theme_setup() {
+	add_theme_support( 'custom-background' );
 
-// require_once STYLESHEETPATH . '/../app/theme/custom-theme-css.php';
-require_once STYLESHEETPATH . '/../app/theme/custom-scripts.php';
-require_once STYLESHEETPATH . '/../app/theme/custom-hooks.php';
-require_once STYLESHEETPATH . '/../app/theme/custom-menus.php';
-require_once STYLESHEETPATH . '/../app/theme/shortcodes.php';
-require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
-require_once STYLESHEETPATH . '/../app/theme/forums.php';
-
-add_theme_support( 'custom-background' );
+	// Language file
+	if ( file_exists( WP_LANG_DIR . '/plugins/bbpress-' . WPLANG . '.mo' ) ) {
+		load_textdomain( 'bbpress', WP_LANG_DIR . '/plugins/bbpress-' . WPLANG . '.mo' );
+	}
+}
+add_action( 'after_setup_theme', 'co_theme_setup' );
 
 
 // Simple logging function
@@ -39,3 +37,15 @@ function get_fa_icon_for_mime_type( $type, $default = 'fa-file-text-o' ) {
 
 	return $default;
 }
+
+
+foreach( glob( STYLESHEETPATH . '/../app/*.php' ) as $filename ) require_once $filename;
+foreach( glob( STYLESHEETPATH . '/../app/posts/*.php' ) as $filename ) require_once $filename;
+
+// require_once STYLESHEETPATH . '/../app/theme/custom-theme-css.php';
+require_once STYLESHEETPATH . '/../app/theme/custom-scripts.php';
+require_once STYLESHEETPATH . '/../app/theme/custom-hooks.php';
+require_once STYLESHEETPATH . '/../app/theme/custom-menus.php';
+require_once STYLESHEETPATH . '/../app/theme/shortcodes.php';
+require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
+require_once STYLESHEETPATH . '/../app/theme/forums.php';

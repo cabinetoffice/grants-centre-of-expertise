@@ -1,5 +1,5 @@
 #bbpress-forums {
-	.bbp-breadcrumb + #subscription-toggle {
+	> #subscription-toggle {
 		float: right;
 		font-size: 1rem;
 		font-weight: bold;
@@ -17,6 +17,8 @@
 		&.bbp-reply-author {
 			.bbp-author-role { display: none; }
 		}
+
+		&.bbp-search-form { display: none; }
 	}
 
 	p {
@@ -25,5 +27,12 @@
 		}
 	}
 
-	.bbp-forum-title, .bbp-forum-link, .bbp-topic-permalink { font-size: 1rem; }
+	.bbp-forum-title, .bbp-forum-link, .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
 }
+
+.topics-navigation {
+	font-size: 1rem;
+	margin-bottom: 15px;
+}
+
+.bbp-pagination { display: none; }

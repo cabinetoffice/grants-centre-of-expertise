@@ -28,12 +28,17 @@ Template:           govsite/templates
 
 @media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav { position: static; width: 100%; text-align: left; }
   #search-members-form { width: 100%; } }
-#bbpress-forums .bbp-breadcrumb + #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
+#bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.bbp-reply-author .bbp-author-role { display: none; }
+#bbpress-forums div.bbp-search-form { display: none; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
-#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-permalink { font-size: 1rem; }
+#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
+
+.topics-navigation { font-size: 1rem; margin-bottom: 15px; }
+
+.bbp-pagination { display: none; }
 
 .widget_subpages .widget_subpages_current_page { font-weight: bold; }
 
