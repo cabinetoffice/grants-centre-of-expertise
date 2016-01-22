@@ -3,7 +3,7 @@
 
 the_post();
 
-$documents = new WP_Query( array( 'post_type' => 'document' ) );
+$documents = new WP_Query( array( 'post_type' => 'document', 'orderby' => 'menu_order', 'order' => 'asc' ) );
 ?>
 
 <main id="content" role="main" class="main">
@@ -44,7 +44,7 @@ $documents = new WP_Query( array( 'post_type' => 'document' ) );
 						<ul>
 							<?php while ( $documents->have_posts() ) : $documents->the_post(); ?>
 								<?php $document = get_field( 'file_upload' ); ?>
-								
+
 								<li>
 									<a href="<?php the_permalink(); ?>">
 										<i class="fa <?php echo get_fa_icon_for_mime_type( $document['mime_type'] ); ?>"></i>

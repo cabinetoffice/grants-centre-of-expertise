@@ -3,6 +3,56 @@ Theme Name:         Cabinet Office Grants Hub
 Author:             WTG
 Template:           govsite/templates
 */
+#buddypress { position: relative; }
+#buddypress .item-list-tabs #general-personal-li, #buddypress .item-list-tabs #profile-personal-li { display: none; }
+#buddypress div.dir-search { float: none; margin-top: 0; }
+#buddypress div.dir-search input[type=text] { width: 100%; }
+
+#members-directory-form div.item-list-tabs#subnav { position: absolute; right: 0; top: 0; margin: 0; width: 50%; text-align: right; }
+#members-directory-form div.item-list-tabs#subnav ul li.last { margin-top: 0; }
+#members-directory-form ul.item-list li { padding: 15px; }
+#members-directory-form ul.item-list li.odd { background: rgba(255, 255, 255, 0.5); }
+#members-directory-form ul.item-list li div.action { right: 15px; }
+#members-directory-form #members-all { display: none; }
+#members-directory-form #members-order-select { width: 100%; }
+#members-directory-form #members-order-select label { display: inline; padding-right: 4px; }
+#members-directory-form span.department { font-size: small; opacity: .8; }
+
+#profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
+
+#search-members-form { position: relative; margin-bottom: 20px; width: 50%; }
+#search-members-form label { margin-bottom: 0; }
+#search-members-form input { height: 36px; margin-bottom: 0; }
+#search-members-form #members_search { padding: 0 10px; }
+#search-members-form #members_search_submit { width: 75px; position: absolute; right: 0; top: 0; }
+
+@media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav { position: static; width: 100%; text-align: left; }
+  #search-members-form { width: 100%; } }
+#bbpress-forums .bbp-breadcrumb + #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
+#bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
+#bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
+#bbpress-forums div.bbp-reply-author .bbp-author-role { display: none; }
+#bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
+#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-permalink { font-size: 1rem; }
+
+.widget_subpages .widget_subpages_current_page { font-weight: bold; }
+
+.sidebar { margin-top: 35px; }
+
+.secondary-sidebar { margin-top: 35px; }
+.secondary-sidebar ul, .secondary-sidebar li { list-style: none; margin: 0; padding: 0; }
+
+.documentation-widget { margin-bottom: 40px; }
+.documentation-widget li { margin-bottom: 8px; }
+.documentation-widget li a { display: block; padding-left: 20px; position: relative; }
+.documentation-widget li a .fa { position: absolute; left: 0; top: 5px; }
+
+.home-page .page-header { display: none; }
+.home-page .main-archive .button { display: none; }
+.home-page .main-archive .post-summary { padding-bottom: 0; border-bottom: 0; }
+
+a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
+
 p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 
 .site-header .logo img { max-width: 140px; }
@@ -12,28 +62,6 @@ p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 .site-header .top-bar .menu > .active > a:before { display: none; }
 .site-header .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
 .site-header .dropdown { top: 55px; }
-
-#bbpress-forums .bbp-breadcrumb + #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
-#bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
-#bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
-#bbpress-forums div.bbp-reply-author .bbp-author-role { display: none; }
-#bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
-#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-permalink { font-size: 1rem; }
-
-#buddypress .item-list-tabs #general-personal-li, #buddypress .item-list-tabs #profile-personal-li { display: none; }
-
-#profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
-
-.widget_subpages .widget_subpages_current_page { font-weight: bold; }
-
-.sidebar { margin-top: 35px; }
-
-.secondary-sidebar { margin-top: 35px; }
-.secondary-sidebar ul, .secondary-sidebar li { list-style: none; margin: 0; padding: 0; }
-
-.documentation-widget li { margin-bottom: 8px; }
-.documentation-widget li a { display: block; padding-left: 20px; position: relative; }
-.documentation-widget li a .fa { position: absolute; left: 0; top: 5px; }
 
 footer.site-footer nav ul > li:first-child { margin-left: 0; }
 

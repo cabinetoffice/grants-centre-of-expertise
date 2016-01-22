@@ -1,0 +1,100 @@
+// Removing profile visibility settings
+#buddypress {
+	position: relative;
+
+	.item-list-tabs {
+		#general-personal-li, #profile-personal-li { display: none; }
+	}
+	
+	div {
+		&.dir-search {
+			float: none;
+			margin-top: 0;
+
+			input[type=text] { width: 100%; }
+		}
+	}	
+}
+
+#members-directory-form {
+	div {
+		&.item-list-tabs {
+			&#subnav {
+				position: absolute;
+				right: 0;
+				top: 0;
+				margin: 0;
+				width: 50%;
+				text-align: right;
+
+				ul li.last {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	ul.item-list li {
+		padding: 15px;
+
+		&.odd { background: rgba( 255, 255, 255, 0.5 ); }
+		
+		div.action { right: 15px; }
+	}
+
+	#members-all { display: none; }
+
+	#members-order-select {
+		width: 100%;
+
+		label {
+			display: inline;
+			padding-right: 4px;
+		}
+	}
+	
+	span.department {
+		font-size: small;
+		opacity: .8;
+	}
+}
+
+#profile-edit-form {
+	> h4, .field-visibility-settings-notoggle { display: none; }
+}
+
+#search-members-form {
+	position: relative;
+	margin-bottom: 20px;
+	width: 50%;
+
+	label {
+		margin-bottom: 0;
+	}
+
+	input {
+		height: 36px;
+		margin-bottom: 0;
+	}
+
+	#members_search { padding: 0 10px; }
+
+	#members_search_submit {
+		width: 75px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+@media only screen and (max-width: 48.75em) {
+	#members-directory-form {
+		div.item-list-tabs#subnav {
+			position: static;
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	#search-members-form { width: 100%; }
+}

@@ -1,0 +1,29 @@
+#bbpress-forums {
+	.bbp-breadcrumb + #subscription-toggle {
+		float: right;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	div {
+		&.bbp-template-notice {
+			img.avatar { margin-bottom: 0; }
+		}
+
+		&.bbp-reply-content {
+			p { font-size: 1rem; }
+		}
+
+		&.bbp-reply-author {
+			.bbp-author-role { display: none; }
+		}
+	}
+
+	p {
+		&.bbp-topic-meta {
+			img.avatar { margin-bottom: 0; }
+		}
+	}
+
+	.bbp-forum-title, .bbp-forum-link, .bbp-topic-permalink { font-size: 1rem; }
+}
