@@ -52,6 +52,7 @@ function co_bbp_fix_404s() {
 }
 add_action( 'wp', 'co_bbp_fix_404s' );
 
+
 // Include bbPress 'topic' and 'reply' custom post type in WordPress' search results
 function co_add_topics_replies_to_search( $search ) {
 	$search['exclude_from_search'] = false;
@@ -70,3 +71,7 @@ add_filter( 'bbp_get_single_forum_description', '__return_false' );
 add_filter( 'bbp_get_forum_pagination_count', '__return_false' );
 add_filter( 'bbp_get_topic_author_avatar', '__return_false' );
 add_filter( 'bbp_get_reply_author_avatar', '__return_false' );
+add_filter( 'bbp_get_single_topic_description', '__return_false' );
+add_filter( 'bbp_get_reply_author_role', '__return_false' );
+add_filter( 'bbp_get_author_ip', '__return_false' );
+
