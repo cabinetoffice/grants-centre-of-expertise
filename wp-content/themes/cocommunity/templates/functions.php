@@ -17,18 +17,6 @@ require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
 add_theme_support( 'custom-background' );
 
 
-function get_profile_info_keys_personal() {
-	return array(
-		'user_email' => array(1, __('Email')),
-		'user_url' => array(0, __('Website')),
-		'from' => array(0, __('Location')),
-		'occ' => array(0, __('Occupation')),
-		'interest' => array(0, __('Interests'))
-	);
-}
-add_filter( 'get_profile_info_keys', 'get_profile_info_keys_personal' );
-
-
 // Removing unnecessary roles
 function co_change_user_roles() {
 	remove_role( 'bbp_spectator' );
@@ -41,11 +29,10 @@ function co_change_user_roles() {
 // This is a workaround due to bbPress' inability to delete own topics by default
 function co_change_role_caps( $caps, $role ) {
 	if ( $role == bbp_get_participant_role() ) {
-		$caps['delete_forums'] = true;
 		$caps['delete_topics'] = true;
 		$caps['delete_replies'] = true;
-		$caps['delete_others_replies'] = true;
 		$caps['delete_others_topics'] = true;
+		$caps['delete_others_replies'] = true;
 	}
 
 	return $caps;
@@ -77,6 +64,10 @@ function co_topic_trash_link( $retval, $r ) {
 	return $retval;
 }
 add_filter( 'bbp_get_topic_trash_link', 'co_topic_trash_link', 10, 2 );
+
+
+// Removing the individual comment reply link - not using multithreaded replies
+add_filter( 'bbp_get_topic_reply_link', '__return_false' );
 
 
 // Handling 404's and their redirects
@@ -116,22 +107,31 @@ function co_current_to_active( $nav_menu, $args ) {
 add_filter( 'wp_nav_menu','co_current_to_active', 1, 2 );
 
 
-/**
- * Include bbPress 'topic' custom post type in WordPress' search results
- */
-function ntwb_bbp_topic_cpt_search( $topic_search ) {
-	$topic_search['exclude_from_search'] = false;
-	return $topic_search;
+// Include bbPress 'topic' and 'reply' custom post type in WordPress' search results
+function co_add_topics_replies_to_search( $search ) {
+	$search['exclude_from_search'] = false;
+	return $search;
 }
-add_filter( 'bbp_register_topic_post_type', 'ntwb_bbp_topic_cpt_search' );
+add_filter( 'bbp_register_topic_post_type', 'co_add_topics_replies_to_search' );
+add_filter( 'bbp_register_reply_post_type', 'co_add_topics_replies_to_search' );
 
-/**
- * Include bbPress 'reply' custom post type in WordPress' search results
- */
-function ntwb_bbp_reply_cpt_search( $reply_search ) {
-	$reply_search['exclude_from_search'] = false;
-	return $reply_search;
+
+// Returns a Font Awesome icon class for a mime type defined in the file upload field
+function get_fa_icon_for_mime_type( $type, $default = 'fa-file-text-o' ) {
+	$fa_icon_map = array(
+		'application/pdf' => 'fa-file-pdf-o',
+		'text/csv' => 'fa-table',
+		'application/msword' => 'fa-file-word-o',
+		'application/vnd.openxmlformats-officedocument.wordprocessingml.document' => 'fa-file-word-o',
+		'application/vnd.ms-excel' => 'fa-file-excel-o',
+		'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' => 'fa-file-excel-o',
+		'application/vnd.ms-powerpoint' => 'fa-file-powerpoint-o',
+		'application/vnd.openxmlformats-officedocument.presentationml.slideshow' => 'fa-file-powerpoint-o',
+		'application/vnd.openxmlformats-officedocument.presentationml.presentation' => 'fa-file-powerpoint-o',
+	);
+
+	if ( isset( $fa_icon_map[$type] ) )
+		return $fa_icon_map[$type];
+
+	return $default;
 }
-add_filter( 'bbp_register_reply_post_type', 'ntwb_bbp_reply_cpt_search' );
-
-

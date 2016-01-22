@@ -24,9 +24,16 @@ p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
-.widget_subpages ul, .widget_subpages li { list-style: none; margin: 0; padding: 0; }
+.widget_subpages .widget_subpages_current_page { font-weight: bold; }
 
-#primary-sidebar { margin-top: 35px; }
+.sidebar { margin-top: 35px; }
+
+.secondary-sidebar { margin-top: 35px; }
+.secondary-sidebar ul, .secondary-sidebar li { list-style: none; margin: 0; padding: 0; }
+
+.documentation-widget li { margin-bottom: 8px; }
+.documentation-widget li a { display: block; padding-left: 20px; position: relative; }
+.documentation-widget li a .fa { position: absolute; left: 0; top: 5px; }
 
 footer.site-footer nav ul > li:first-child { margin-left: 0; }
 

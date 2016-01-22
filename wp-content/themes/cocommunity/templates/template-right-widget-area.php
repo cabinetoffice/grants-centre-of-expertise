@@ -1,7 +1,9 @@
 <?php
 /* Template name: Right Widget Area */
+
 the_post();
 ?>
+
 <main id="content" role="main" class="main">
 
     <div class="row">
