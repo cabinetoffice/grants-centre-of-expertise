@@ -30,7 +30,7 @@ if ( ! function_exists('co_register_custom_post_type') ) {
 			'label'                 => __( 'Document', 'cabinetoffice' ),
 			'description'           => __( 'A single document upload', 'cabinetoffice' ),
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'editor', 'excerpt', ),
+			'supports'              => array( 'title', 'editor', 'excerpt', 'page-attributes' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
