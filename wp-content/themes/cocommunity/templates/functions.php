@@ -44,8 +44,8 @@ foreach( glob( STYLESHEETPATH . '/../app/posts/*.php' ) as $filename ) require_o
 
 // require_once STYLESHEETPATH . '/../app/theme/custom-theme-css.php';
 require_once STYLESHEETPATH . '/../app/theme/custom-scripts.php';
-require_once STYLESHEETPATH . '/../app/theme/custom-hooks.php';
 require_once STYLESHEETPATH . '/../app/theme/custom-menus.php';
 require_once STYLESHEETPATH . '/../app/theme/shortcodes.php';
 require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
 require_once STYLESHEETPATH . '/../app/theme/forums.php';
+require_once STYLESHEETPATH . '/../app/theme/members.php';

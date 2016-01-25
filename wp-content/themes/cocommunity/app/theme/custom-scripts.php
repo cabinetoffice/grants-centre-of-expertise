@@ -5,6 +5,8 @@ function co_enqueue_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js' );
 
+	wp_enqueue_script( 'jquery-migrate', 'http://code.jquery.com/jquery-migrate-1.3.0.min.js' );
+
 	// Fixing a bug in the parent theme
 	wp_deregister_script( 'modernizr' );
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/../build/lib/modernizr.min.js' );

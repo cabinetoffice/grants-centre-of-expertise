@@ -63,6 +63,43 @@ add_filter( 'bbp_register_topic_post_type', 'co_add_topics_replies_to_search' );
 add_filter( 'bbp_register_reply_post_type', 'co_add_topics_replies_to_search' );
 
 
+// Actions above forums list
+function co_filter_topics() {
+	print '<p class="topics-navigation">';
+	_e( 'Show: ', 'cabinetoffice' );
+	printf( '<a href="%s">%s</a> | ', bbp_get_topics_url(), __( 'All topics', 'cabinetoffice' ) );
+	printf( '<a href="%s">%s</a> | ', bbp_get_user_topics_created_url( get_current_user_id() ), __( 'My topics', 'cabinetoffice' ) );
+	printf( '<a href="%s">%s</a>', bbp_get_subscriptions_permalink( get_current_user_id() ), __( 'My subscriptions', 'cabinetoffice' ) );
+	print '</p>';
+}
+add_action( 'bbp_template_before_forums_index', 'co_filter_topics' );
+add_action( 'bbp_template_before_single_forum', 'co_filter_topics' );
+
+
+// Actions above single topic
+function co_topic_actions() {
+	print '<p class="topics-navigation">';
+	print bbp_get_topic_subscription_link( array( 'before' => '' ) );
+	print '</p>';
+}
+add_action( 'bbp_template_before_single_topic', 'co_topic_actions' );
+
+
+// Removing the pipe before subscription toggle
+function co_subscribe_link_hide_before( $args = array() ) {
+	$args['before'] = '';
+	return $args;
+}
+add_filter( 'bbp_before_get_user_subscribe_link_parse_args', 'co_subscribe_link_hide_before' );
+
+
+// Adding a button class to subscription toggle
+function co_subscribe_link_wrap_in_button( $retval, $r ) {
+	return str_replace( 'class="subscription-toggle"', 'class="subscription-toggle button"', $retval );
+}
+add_filter( 'bbp_get_user_subscribe_link', 'co_subscribe_link_wrap_in_button', 10, 2 );
+
+
 // Removing various bits of bbPress
 add_filter( 'bbp_get_topic_reply_link', '__return_false' );
 add_filter( 'bbp_get_reply_to_link', '__return_false' );
@@ -74,4 +111,5 @@ add_filter( 'bbp_get_reply_author_avatar', '__return_false' );
 add_filter( 'bbp_get_single_topic_description', '__return_false' );
 add_filter( 'bbp_get_reply_author_role', '__return_false' );
 add_filter( 'bbp_get_author_ip', '__return_false' );
+
 

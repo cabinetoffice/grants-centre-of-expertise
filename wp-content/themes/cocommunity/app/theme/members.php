@@ -16,15 +16,3 @@ function co_member_additional_info() {
 	}
 }
 add_action( 'bp_directory_members_item', 'co_member_additional_info' );
-
-
-function co_filter_topics() {
-	print '<p class="topics-navigation">';
-	_e( 'Show: ', 'cabinetoffice' );
-	printf( '<a href="%s">%s</a> | ', bbp_get_topics_url(), __( 'All topics', 'cabinetoffice' ) );
-	printf( '<a href="%s">%s</a> | ', bbp_get_user_topics_created_url( get_current_user_id() ), __( 'My topics', 'cabinetoffice' ) );
-	printf( '<a href="%s">%s</a>', bbp_get_subscriptions_permalink( get_current_user_id() ), __( 'My subscriptions', 'cabinetoffice' ) );
-	print '</p>';
-}
-add_action( 'bbp_template_before_forums_index', 'co_filter_topics' );
-add_action( 'bbp_template_before_single_forum', 'co_filter_topics' );

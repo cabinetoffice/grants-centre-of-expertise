@@ -20,6 +20,8 @@ Template:           govsite/templates
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
+.profile .page-header { display: none; }
+
 #search-members-form { position: relative; margin-bottom: 20px; width: 50%; }
 #search-members-form label { margin-bottom: 0; }
 #search-members-form input { height: 36px; margin-bottom: 0; }
@@ -38,6 +40,8 @@ Template:           govsite/templates
 .topics-navigation { font-size: 1rem; margin-bottom: 15px; }
 
 .bbp-pagination { display: none; }
+
+.bbp-reply-content #subscription-toggle { display: none; }
 
 .widget_subpages .widget_subpages_current_page { font-weight: bold; }
 
