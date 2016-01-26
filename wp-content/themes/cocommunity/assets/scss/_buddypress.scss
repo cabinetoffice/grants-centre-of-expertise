@@ -160,6 +160,14 @@
 	h5 { margin: 0; }
 }
 
+.search-results {
+	#members-dir-list {
+		margin-bottom: 40px;
+		
+		.pagination { display: none; }
+	}
+}
+
 @media only screen and (max-width: 48.75em) {
 	#members-directory-form div.item-list-tabs#subnav, #groups-order-select {
 		position: static;

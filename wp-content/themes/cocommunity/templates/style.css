@@ -48,6 +48,9 @@ Template:           govsite/templates
 
 #member-list h5 { margin: 0; }
 
+.search-results #members-dir-list { margin-bottom: 40px; }
+.search-results #members-dir-list .pagination { display: none; }
+
 @media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav, #groups-order-select { position: static; width: 100%; text-align: left; left: 0; }
   #search-members-form { width: 100%; }
   #buddypress div.message-search, #groups-order-select { float: left !important; clear: both; margin: 20px 10px 0 !important; } }
