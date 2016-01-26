@@ -52,4 +52,4 @@ require_once STYLESHEETPATH . '/../app/theme/custom-menus.php';
 require_once STYLESHEETPATH . '/../app/theme/shortcodes.php';
 require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
 require_once STYLESHEETPATH . '/../app/theme/forums.php';
-// require_once STYLESHEETPATH . '/../app/theme/members.php';
+require_once STYLESHEETPATH . '/../app/theme/members.php';

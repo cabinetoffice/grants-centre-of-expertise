@@ -16,6 +16,7 @@ Template:           govsite/templates
 #buddypress table#message-threads tr td .activity { display: block; }
 #buddypress table img.avatar { float: left; margin-right: 1em; }
 #buddypress .notification-settings { width: 100%; max-width: 700px; }
+#buddypress #item-body .entry-title { margin-top: 20px; }
 
 #search-message-form { position: relative; min-width: 260px; }
 #search-message-form input { height: 36px; }
@@ -34,7 +35,7 @@ Template:           govsite/templates
 #members-order-select, #groups-order-select, #group_members-order-select { width: 100%; }
 #members-order-select label, #groups-order-select label, #group_members-order-select label { display: inline; padding-right: 4px; }
 
-#groups-order-select, #group_members-order-select { position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
+#groups-order-select, #group_members-order-select { position: absolute; right: 0; top: 20px; text-align: right; max-width: 50%; margin-top: 0 !important; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
