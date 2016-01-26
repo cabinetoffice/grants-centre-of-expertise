@@ -6,7 +6,7 @@
  * @package BuddyPress
  * @subpackage bp-default
  */
-
+$user = bp_core_get_core_userdata( bp_displayed_user_id() );
 ?>
 
 <?php do_action( 'bp_before_member_header' ); ?>
@@ -23,20 +23,22 @@
 
 	<h2>
 		<a href="<?php bp_displayed_user_link(); ?>"><?php bp_displayed_user_fullname(); ?></a>
-		<small>(<?php echo bp_core_get_core_userdata( bp_displayed_user_id() )->user_nicename; ?>)</small>
+		<small>(<?php echo $user->user_nicename; ?>)</small>
 	</h2>
 
 	<?php
 		$profile_fields = array(
-			xprofile_get_field_data( 'Job Role', 0, 'comma' ),
+			xprofile_get_field_data( 'Job Title', 0, 'comma' ),
 			xprofile_get_field_data( 'Department', 0, 'comma' ),
 		);
 		$profile_fields = array_filter( $profile_fields );
 	?>
 
-	<?php if ( ! empty( $profile_fields ) ) printf( '<h5>%s</h5>', implode( ', ', $profile_fields ) ); ?>
+	<?php if ( ! empty( $profile_fields ) ) printf( '<h6>%s</h6>', implode( ', ', $profile_fields ) ); ?>
 
-	<?php if ( $email = xprofile_get_field_data( 'Email' ) ) printf( '<h5><a href="mailto:%s">%s</a></h5>', $email, $email ); ?>
+	<h6><a href="mailto:<?php echo $user->user_email; ?>"><?php echo $user->user_email; ?></a></h6>
+
+	<?php if ( $update = xprofile_get_field_data( 'Status Update' ) ) printf( '<h6>%s</h6>', $update ); ?>
 
 	<?php if ( bp_is_active( 'activity' ) && bp_activity_do_mentions() ) : ?>
 		<span class="user-nicename">@<?php bp_displayed_user_mentionname(); ?></span>

@@ -4,9 +4,22 @@ Author:             WTG
 Template:           govsite/templates
 */
 #buddypress { position: relative; }
-#buddypress .item-list-tabs #general-personal-li, #buddypress .item-list-tabs #profile-personal-li { display: none; }
 #buddypress div.dir-search { float: none; margin-top: 0; }
 #buddypress div.dir-search input[type=text] { width: 100%; }
+#buddypress div#item-header div#item-header-content small { white-space: nowrap; }
+#buddypress div#item-header div#item-header-content h2 a { color: #000; }
+#buddypress div#item-header div#item-header-content h5 a { word-break: break-all; }
+#buddypress div#item-header div#item-header-content span, #buddypress div#item-header div#item-header-content h6 { margin-bottom: 0; color: #6f6f6f; }
+#buddypress ul.item-list li div.item-count { font-size: .9em; margin-top: 4px; }
+#buddypress ul.item-list li div.item-desc p { margin-bottom: 0; }
+#buddypress table.messages-notices tr th input { margin-bottom: 0; }
+#buddypress table#message-threads tr td .activity { display: block; }
+#buddypress table img.avatar { float: left; margin-right: 1em; }
+#buddypress .notification-settings { width: 100%; max-width: 700px; }
+
+#search-message-form { position: relative; min-width: 260px; }
+#search-message-form input { height: 36px; }
+#search-message-form #messages_search_submit { position: absolute; right: 0; top: 0; }
 
 #members-directory-form div.item-list-tabs#subnav { position: absolute; right: 0; top: 0; margin: 0; width: 50%; text-align: right; }
 #members-directory-form div.item-list-tabs#subnav ul li.last { margin-top: 0; }
@@ -14,13 +27,18 @@ Template:           govsite/templates
 #members-directory-form ul.item-list li.odd { background: rgba(255, 255, 255, 0.5); }
 #members-directory-form ul.item-list li div.action { right: 15px; }
 #members-directory-form #members-all { display: none; }
-#members-directory-form #members-order-select { width: 100%; }
-#members-directory-form #members-order-select label { display: inline; padding-right: 4px; }
 #members-directory-form span.department { font-size: small; opacity: .8; }
+
+#item-body { position: relative; }
+
+#members-order-select, #groups-order-select, #group_members-order-select { width: 100%; }
+#members-order-select label, #groups-order-select label, #group_members-order-select label { display: inline; padding-right: 4px; }
+
+#groups-order-select, #group_members-order-select { position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
-.profile .page-header { display: none; }
+.profile .page-header, .bp-user .page-header { display: none; }
 
 #search-members-form { position: relative; margin-bottom: 20px; width: 50%; }
 #search-members-form label { margin-bottom: 0; }
@@ -28,8 +46,11 @@ Template:           govsite/templates
 #search-members-form #members_search { padding: 0 10px; }
 #search-members-form #members_search_submit { width: 75px; position: absolute; right: 0; top: 0; }
 
-@media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav { position: static; width: 100%; text-align: left; }
-  #search-members-form { width: 100%; } }
+#member-list h5 { margin: 0; }
+
+@media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav, #groups-order-select { position: static; width: 100%; text-align: left; left: 0; }
+  #search-members-form { width: 100%; }
+  #buddypress div.message-search, #groups-order-select { float: left !important; clear: both; margin: 20px 10px 0 !important; } }
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
@@ -63,6 +84,9 @@ a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
 
 p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 
+/* Text meant only for screen readers. */
+.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
+
 .site-header .logo img { max-width: 140px; }
 .site-header .top-bar div { float: none; }
 .site-header .top-bar ul > li { background: none; margin-bottom: 0; }
@@ -70,7 +94,5 @@ p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 .site-header .top-bar .menu > .active > a:before { display: none; }
 .site-header .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
 .site-header .dropdown { top: 55px; }
-
-footer.site-footer nav ul > li:first-child { margin-left: 0; }
 
 /*# sourceMappingURL=style.css.map */

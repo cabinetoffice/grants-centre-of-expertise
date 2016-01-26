@@ -2,13 +2,17 @@
 # This file is distributed under the same license as the 2.2.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-06-06 00:05:13+0000\n"
+"PO-Revision-Date: 2016-01-25 13:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1000\n"
+"X-Generator: Poedit 1.8.6\n"
 "Project-Id-Version: 2.2.x\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
 
 #: src/bp-core/bp-core-filters.php:648
 msgid "Page %s"
@@ -948,9 +952,7 @@ msgctxt "Admin Dashbord SWA menu"
 msgid "Activity"
 msgstr "Activity"
 
-#. #-#-#-#-#  buddypress.pot (BuddyPress 2.2.3.1)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  buddypress.pot (BuddyPress 2.2.3.1)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://buddypress.org"
 msgstr "http://buddypress.org"
@@ -6194,7 +6196,6 @@ msgstr "Logged-Out"
 msgid "Logged-In"
 msgstr "Logged-In"
 
-#. #-#-#-#-#  buddypress.pot (BuddyPress 2.2.3.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: src/bp-core/admin/bp-core-functions.php:717
 #: src/bp-core/bp-core-admin.php:216 src/bp-core/bp-core-admin.php:217

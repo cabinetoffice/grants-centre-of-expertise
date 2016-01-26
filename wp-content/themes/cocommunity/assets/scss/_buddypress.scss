@@ -1,10 +1,6 @@
 // Removing profile visibility settings
 #buddypress {
 	position: relative;
-
-	.item-list-tabs {
-		#general-personal-li, #profile-personal-li { display: none; }
-	}
 	
 	div {
 		&.dir-search {
@@ -13,7 +9,65 @@
 
 			input[type=text] { width: 100%; }
 		}
-	}	
+
+		&#item-header div#item-header-content {
+			small { white-space: nowrap; }
+
+			h2 a { color: #000; }
+
+			h5 a { word-break: break-all; }
+
+			span, h6 {
+				margin-bottom: 0;
+				color: #6f6f6f;
+			}
+		}
+	}
+
+	ul.item-list li div {
+		&.item-count {
+			font-size: .9em;
+			margin-top: 4px;
+		}
+
+		&.item-desc p {
+			margin-bottom: 0;
+		}
+	}
+
+	table {
+		&.messages-notices tr th {
+			input { margin-bottom: 0; }
+		}
+
+		&#message-threads tr td {
+			.activity { display: block; }
+		}
+
+		img.avatar {
+			float: left;
+			margin-right: 1em;
+		}
+	}
+
+	.notification-settings {
+		width: 100%;
+		max-width: 700px;
+	}
+}
+
+#search-message-form {
+	position: relative;
+	min-width: 260px;
+
+	input { height: 36px; }
+
+	#messages_search_submit {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+	}
 }
 
 #members-directory-form {
@@ -43,15 +97,6 @@
 	}
 
 	#members-all { display: none; }
-
-	#members-order-select {
-		width: 100%;
-
-		label {
-			display: inline;
-			padding-right: 4px;
-		}
-	}
 	
 	span.department {
 		font-size: small;
@@ -59,11 +104,33 @@
 	}
 }
 
+#item-body { position: relative; }
+
+#members-order-select, #groups-order-select, #group_members-order-select {
+	width: 100%;
+
+	label {
+		display: inline;
+		padding-right: 4px;
+	}
+}
+
+#groups-order-select, #group_members-order-select {
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: right;
+	max-width: 50%;
+	margin-top: 0 !important;
+}
+
 #profile-edit-form {
 	> h4, .field-visibility-settings-notoggle { display: none; }
 }
 
-.profile .page-header { display: none; }
+.profile, .bp-user {
+	.page-header { display: none; }
+}
 
 #search-members-form {
 	position: relative;
@@ -89,14 +156,23 @@
 	}
 }
 
+#member-list {
+	h5 { margin: 0; }
+}
+
 @media only screen and (max-width: 48.75em) {
-	#members-directory-form {
-		div.item-list-tabs#subnav {
-			position: static;
-			width: 100%;
-			text-align: left;
-		}
+	#members-directory-form div.item-list-tabs#subnav, #groups-order-select {
+		position: static;
+		width: 100%;
+		text-align: left;
+		left: 0;
 	}
 
 	#search-members-form { width: 100%; }
+
+	#buddypress div.message-search, #groups-order-select {
+		float: left !important;
+		clear: both;
+		margin: 20px 10px 0 !important;
+	}
 }

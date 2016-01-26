@@ -4,9 +4,13 @@
 function co_theme_setup() {
 	add_theme_support( 'custom-background' );
 
-	// Language file
+	// Language files
 	if ( file_exists( WP_LANG_DIR . '/plugins/bbpress-' . WPLANG . '.mo' ) ) {
 		load_textdomain( 'bbpress', WP_LANG_DIR . '/plugins/bbpress-' . WPLANG . '.mo' );
+	}
+
+	if ( file_exists( WP_LANG_DIR . '/plugins/buddypress-' . WPLANG . '.mo' ) ) {
+		load_textdomain( 'buddypress', WP_LANG_DIR . '/plugins/buddypress-' . WPLANG . '.mo' );
 	}
 }
 add_action( 'after_setup_theme', 'co_theme_setup' );
@@ -48,4 +52,4 @@ require_once STYLESHEETPATH . '/../app/theme/custom-menus.php';
 require_once STYLESHEETPATH . '/../app/theme/shortcodes.php';
 require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
 require_once STYLESHEETPATH . '/../app/theme/forums.php';
-require_once STYLESHEETPATH . '/../app/theme/members.php';
+// require_once STYLESHEETPATH . '/../app/theme/members.php';
