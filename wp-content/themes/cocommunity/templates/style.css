@@ -26,26 +26,34 @@ Template:           govsite/templates
 #members-directory-form div.item-list-tabs#subnav ul li.last { margin-top: 0; }
 #members-directory-form ul.item-list li { padding: 15px; }
 #members-directory-form ul.item-list li.odd { background: rgba(255, 255, 255, 0.5); }
-#members-directory-form ul.item-list li div.action { right: 15px; }
+#members-directory-form ul.item-list li div.action .generic-button { float: left; margin-right: 15px; }
 #members-directory-form #members-all { display: none; }
 #members-directory-form span.department { font-size: small; opacity: .8; }
+
+ul.acfb-holder li { margin: 0 !important; width: 100%; }
+ul.acfb-holder li input { clear: both; }
+ul.acfb-holder li.friend-tab { width: auto; }
+
+.groups-members-search { width: 100%; }
 
 #item-body { position: relative; }
 
 #members-order-select, #groups-order-select, #group_members-order-select { width: 100%; }
 #members-order-select label, #groups-order-select label, #group_members-order-select label { display: inline; padding-right: 4px; }
 
-#groups-order-select, #group_members-order-select { position: absolute; right: 0; top: 20px; text-align: right; max-width: 50%; margin-top: 0 !important; }
+#groups-order-select, #group_members-order-select { position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
+.bbp-user-page #groups-order-select, .bbp-user-page #group_members-order-select { top: 20px; }
+.my-account #groups-order-select, .my-account #group_members-order-select { top: 55px; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
 .profile .page-header, .bp-user .page-header { display: none; }
 
-#search-members-form { position: relative; margin-bottom: 20px; width: 50%; }
-#search-members-form label { margin-bottom: 0; }
-#search-members-form input { height: 36px; margin-bottom: 0; }
-#search-members-form #members_search { padding: 0 10px; }
-#search-members-form #members_search_submit { width: 75px; position: absolute; right: 0; top: 0; }
+#search-members-form, #search-groups-form { position: relative; margin-bottom: 20px; width: 50%; }
+#search-members-form label, #search-groups-form label { margin-bottom: 0; }
+#search-members-form input, #search-groups-form input { height: 36px; margin-bottom: 0; }
+#search-members-form input[type="text"], #search-groups-form input[type="text"] { padding: 0 10px !important; }
+#search-members-form input[type="submit"], #search-groups-form input[type="submit"] { width: 75px; position: absolute; right: 0; top: 0; }
 
 #member-list h5 { margin: 0; }
 
@@ -56,6 +64,7 @@ Template:           govsite/templates
   #search-members-form { width: 100%; }
   #buddypress div.message-search, #groups-order-select { float: left !important; clear: both; margin: 20px 10px 0 !important; } }
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
+#bbpress-forums #buddypress .item-list-tabs { margin-bottom: 20px; font-size: 1rem; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.bbp-search-form { display: none; }

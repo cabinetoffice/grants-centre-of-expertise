@@ -97,7 +97,9 @@
 
 		&.odd { background: rgba( 255, 255, 255, 0.5 ); }
 		
-		div.action { right: 15px; }
+		div.action {
+			.generic-button { float: left; margin-right: 15px; }
+		}
 	}
 
 	#members-all { display: none; }
@@ -107,6 +109,17 @@
 		opacity: .8;
 	}
 }
+
+ul.acfb-holder li {
+	margin: 0 !important;
+	width: 100%;
+
+	input { clear: both; }
+
+	&.friend-tab { width: auto; }
+}
+
+.groups-members-search { width: 100%; }
 
 #item-body { position: relative; }
 
@@ -122,10 +135,14 @@
 #groups-order-select, #group_members-order-select {
 	position: absolute;
 	right: 0;
-	top: 20px;
+	top: 0;
 	text-align: right;
 	max-width: 50%;
 	margin-top: 0 !important;
+
+	.bbp-user-page & { top: 20px; }
+
+	.my-account & { top: 55px; }
 }
 
 #profile-edit-form {
@@ -136,23 +153,21 @@
 	.page-header { display: none; }
 }
 
-#search-members-form {
+#search-members-form, #search-groups-form {
 	position: relative;
 	margin-bottom: 20px;
 	width: 50%;
 
-	label {
-		margin-bottom: 0;
-	}
+	label { margin-bottom: 0; }
 
 	input {
 		height: 36px;
 		margin-bottom: 0;
 	}
 
-	#members_search { padding: 0 10px; }
+	input[type="text"] { padding: 0 10px !important; }
 
-	#members_search_submit {
+	input[type="submit"] {
 		width: 75px;
 		position: absolute;
 		right: 0;

@@ -1,5 +1,8 @@
 <?php
 
+// Autocomplete on all usernames
+define( 'BP_MESSAGES_AUTOCOMPLETE_ALL', true );
+
 // Theme setup
 function co_theme_setup() {
 	add_theme_support( 'custom-background' );
