@@ -22,6 +22,28 @@
 				color: #6f6f6f;
 			}
 		}
+
+		&.item-list-tabs#subnav {
+			.my-activity & { margin-bottom: 40px; }
+		}
+	}
+
+	.standard-form div.radio {
+		label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
+
+		ul {
+			list-style-type: none;
+
+			li {
+				position: relative;
+
+				&:before {
+					position: absolute;
+					left: -1em;
+					content: "\2013";
+				}
+			}
+		}
 	}
 
 	ul.item-list li div {
@@ -30,15 +52,13 @@
 			margin-top: 4px;
 		}
 
-		&.item-desc p {
-			margin-bottom: 0;
-		}
+		&.item-desc p { margin-bottom: 0; }
+
+		&.action { opacity: .5; }
 	}
 
 	table {
-		&.messages-notices tr th {
-			input { margin-bottom: 0; }
-		}
+		input[type="checkbox"] { margin-bottom: 0; }
 
 		&#message-threads tr td {
 			.activity { display: block; }
@@ -47,6 +67,13 @@
 		img.avatar {
 			float: left;
 			margin-right: 1em;
+		}
+	}
+
+	span {
+		&.department {
+			font-size: small;
+			opacity: .8;
 		}
 	}
 
@@ -123,16 +150,9 @@ ul.acfb-holder li {
 
 #item-body { position: relative; }
 
-#members-order-select, #groups-order-select, #group_members-order-select {
+// Selects
+#members-order-select, #groups-order-select, #group_members-order-select, #activity-filter-select {
 	width: 100%;
-
-	label {
-		display: inline;
-		padding-right: 4px;
-	}
-}
-
-#groups-order-select, #group_members-order-select {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -140,9 +160,16 @@ ul.acfb-holder li {
 	max-width: 50%;
 	margin-top: 0 !important;
 
+	label {
+		display: inline;
+		padding-right: 4px;
+	}
+
 	.bbp-user-page & { top: 20px; }
 
 	.my-account & { top: 55px; }
+
+	.my-activity &, .my-friends &, .notifications & { top: 0; }
 }
 
 #profile-edit-form {

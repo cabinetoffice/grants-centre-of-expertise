@@ -10,11 +10,18 @@ Template:           govsite/templates
 #buddypress div#item-header div#item-header-content h2 a { color: #000; }
 #buddypress div#item-header div#item-header-content h5 a { word-break: break-all; }
 #buddypress div#item-header div#item-header-content span, #buddypress div#item-header div#item-header-content h6 { margin-bottom: 0; color: #6f6f6f; }
+.my-activity #buddypress div.item-list-tabs#subnav { margin-bottom: 40px; }
+#buddypress .standard-form div.radio label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
+#buddypress .standard-form div.radio ul { list-style-type: none; }
+#buddypress .standard-form div.radio ul li { position: relative; }
+#buddypress .standard-form div.radio ul li:before { position: absolute; left: -1em; content: "\2013"; }
 #buddypress ul.item-list li div.item-count { font-size: .9em; margin-top: 4px; }
 #buddypress ul.item-list li div.item-desc p { margin-bottom: 0; }
-#buddypress table.messages-notices tr th input { margin-bottom: 0; }
+#buddypress ul.item-list li div.action { opacity: .5; }
+#buddypress table input[type="checkbox"] { margin-bottom: 0; }
 #buddypress table#message-threads tr td .activity { display: block; }
 #buddypress table img.avatar { float: left; margin-right: 1em; }
+#buddypress span.department { font-size: small; opacity: .8; }
 #buddypress .notification-settings { width: 100%; max-width: 700px; }
 #buddypress #item-body .entry-title { margin-top: 20px; }
 
@@ -38,12 +45,11 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 #item-body { position: relative; }
 
-#members-order-select, #groups-order-select, #group_members-order-select { width: 100%; }
-#members-order-select label, #groups-order-select label, #group_members-order-select label { display: inline; padding-right: 4px; }
-
-#groups-order-select, #group_members-order-select { position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
-.bbp-user-page #groups-order-select, .bbp-user-page #group_members-order-select { top: 20px; }
-.my-account #groups-order-select, .my-account #group_members-order-select { top: 55px; }
+#members-order-select, #groups-order-select, #group_members-order-select, #activity-filter-select { width: 100%; position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
+#members-order-select label, #groups-order-select label, #group_members-order-select label, #activity-filter-select label { display: inline; padding-right: 4px; }
+.bbp-user-page #members-order-select, .bbp-user-page #groups-order-select, .bbp-user-page #group_members-order-select, .bbp-user-page #activity-filter-select { top: 20px; }
+.my-account #members-order-select, .my-account #groups-order-select, .my-account #group_members-order-select, .my-account #activity-filter-select { top: 55px; }
+.my-activity #members-order-select, .my-friends #members-order-select, .notifications #members-order-select, .my-activity #groups-order-select, .my-friends #groups-order-select, .notifications #groups-order-select, .my-activity #group_members-order-select, .my-friends #group_members-order-select, .notifications #group_members-order-select, .my-activity #activity-filter-select, .my-friends #activity-filter-select, .notifications #activity-filter-select { top: 0; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
@@ -66,10 +72,13 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
 #bbpress-forums #buddypress .item-list-tabs { margin-bottom: 20px; font-size: 1rem; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
+#bbpress-forums div.bbp-reply-header { border-top: none; border-bottom: 1px solid #ddd; background-color: transparent; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
+#bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
 #bbpress-forums div.bbp-search-form { display: none; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
+#bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }
 
 .topics-navigation { font-size: 1rem; margin-bottom: 15px; }
 

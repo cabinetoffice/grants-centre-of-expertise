@@ -99,6 +99,17 @@ function co_subscribe_link_hide_before( $args = array() ) {
 add_filter( 'bbp_before_get_user_subscribe_link_parse_args', 'co_subscribe_link_hide_before' );
 
 
+function co_list_forums_parse_args( $args = array() ) {
+	$args['separator'] = '';
+	$args['show_reply_count'] = false;
+	$args['count_before'] = ' <small>(';
+	$args['count_after'] = ' topics)</small>';
+
+	return $args;
+}
+add_filter( 'bbp_before_list_forums_parse_args', 'co_list_forums_parse_args' );
+
+
 // Adding a button class to subscription toggle
 function co_subscribe_link_wrap_in_button( $retval, $r ) {
 	return str_replace( 'class="subscription-toggle"', 'class="subscription-toggle button"', $retval );

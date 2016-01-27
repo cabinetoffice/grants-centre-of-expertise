@@ -15,7 +15,6 @@
 		"wpackagist-plugin/bbpress": "^2.5.8",
 		"wpackagist-plugin/better-font-awesome": "^1.4.3",
 		"wpackagist-plugin/buddypress": "*",
-		"wpackagist-plugin/miniorange-saml-20-single-sign-on": "*",
 		"wpackagist-plugin/the-events-calendar": "*"
 	},
 	"extra": {

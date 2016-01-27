@@ -15,8 +15,18 @@
 			img.avatar { margin-bottom: 0; }
 		}
 
+		&.bbp-reply-header {
+			border-top: none;
+			border-bottom: 1px solid #ddd;
+			background-color: transparent;	
+		}
+
 		&.bbp-reply-content {
 			p { font-size: 1rem; }
+		}
+
+		&.reply.even + .bbp-reply-header {
+			background-color: #fff;
 		}
 
 		&.bbp-search-form { display: none; }
@@ -29,6 +39,11 @@
 	}
 
 	.bbp-forum-title, .bbp-forum-link, .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
+
+	.bbp-forums-list li {
+		display: block;
+		margin-bottom: 5px;
+	}
 }
 
 .topics-navigation {
