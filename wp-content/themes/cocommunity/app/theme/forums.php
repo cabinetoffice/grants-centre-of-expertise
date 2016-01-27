@@ -65,12 +65,18 @@ add_filter( 'bbp_register_reply_post_type', 'co_add_topics_replies_to_search' );
 
 // Actions above forums list
 function co_filter_topics() {
-	print '<p class="topics-navigation">';
-	_e( 'Show: ', 'cabinetoffice' );
-	printf( '<a href="%s">%s</a> | ', bbp_get_topics_url(), __( 'All topics', 'cabinetoffice' ) );
-	printf( '<a href="%s">%s</a> | ', bbp_get_user_topics_created_url( get_current_user_id() ), __( 'My topics', 'cabinetoffice' ) );
-	printf( '<a href="%s">%s</a>', bbp_get_subscriptions_permalink( get_current_user_id() ), __( 'My subscriptions', 'cabinetoffice' ) );
-	print '</p>';
+	?>
+	<div id="buddypress">
+		<div class="item-list-tabs no-ajax" role="navigation">
+			<ul>
+				<li><span>Show: </span></li>
+				<li class="selected" id="topics-all"><a href="<?php echo bbp_get_topics_url(); ?>"><?php _e( 'All topics', 'cabinetoffice' ); ?></a></li>
+				<li id="my-topics"><a href="<?php echo bp_loggedin_user_domain() . bbp_get_root_slug(); ?>"><?php _e( 'My topics', 'cabinetoffice' ); ?></a></li>
+				<li id="my-subscriptions"><a href="<?php echo bbp_get_subscriptions_permalink( get_current_user_id() ); ?>"><?php _e( 'My subscriptions', 'cabinetoffice' ); ?></a></li>
+			</ul>
+		</div>
+	</div>
+	<?php
 }
 add_action( 'bbp_template_before_forums_index', 'co_filter_topics' );
 add_action( 'bbp_template_before_single_forum', 'co_filter_topics' );

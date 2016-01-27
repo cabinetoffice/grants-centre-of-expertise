@@ -5,7 +5,10 @@ function co_enqueue_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js' );
 
-	wp_enqueue_script( 'jquery-migrate', 'http://code.jquery.com/jquery-migrate-1.3.0.min.js' );
+	// wp_enqueue_script( 'jquery-migrate', 'http://code.jquery.com/jquery-migrate-1.3.0.min.js' );
+
+	// Compatibility issues
+	wp_enqueue_script( 'jquery-browser', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js', array( 'jquery' ) );
 
 	// Fixing a bug in the parent theme
 	wp_deregister_script( 'modernizr' );

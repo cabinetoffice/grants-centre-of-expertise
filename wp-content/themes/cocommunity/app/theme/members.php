@@ -31,7 +31,6 @@ function co_change_bp_nav_position() {
 	$bp->bp_options_nav['forums']['replies']['name'] = 'My Replies';
 	$bp->bp_options_nav['forums']['subscriptions']['name'] = 'My Subscriptions';
 
-
 	if ( bp_get_total_group_count_for_user() > 0 ) {
 		$bp->bp_options_nav['groups']['my-groups']['name'] = sprintf( 'Memberships <span class="count">%s</span>', bp_get_total_group_count_for_user() );
 	}
@@ -64,4 +63,3 @@ function co_add_invitations_title() {
 	printf( '<h2 class="entry-title">%s</h2>', __( 'Invitations', 'buddypress' ) );
 }
 add_action( 'bp_before_group_invites_content', 'co_add_invitations_title' );
-
