@@ -151,7 +151,8 @@ ul.acfb-holder li {
 #item-body { position: relative; }
 
 // Selects
-#members-order-select, #groups-order-select, #group_members-order-select, #activity-filter-select {
+// #members-order-select, #groups-order-select, #group_members-order-select, #activity-filter-select {
+.filter, #activity-filter-select {
 	width: 100%;
 	position: absolute;
 	right: 0;
@@ -180,7 +181,7 @@ ul.acfb-holder li {
 	.page-header { display: none; }
 }
 
-#search-members-form, #search-groups-form {
+#search-members-form, #search-groups-form, #events-search-wrap {
 	position: relative;
 	margin-bottom: 20px;
 	width: 50%;

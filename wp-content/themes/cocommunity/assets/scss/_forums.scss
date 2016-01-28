@@ -5,9 +5,13 @@
 		font-weight: bold;
 	}
 
-	#buddypress .item-list-tabs {
-		margin-bottom: 20px;
-		font-size: 1rem;
+	#buddypress {
+		display: inline-block;
+		
+		.item-list-tabs {
+			margin-bottom: 20px;
+			font-size: 1rem;
+		}
 	}
 
 	div {

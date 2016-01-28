@@ -57,3 +57,4 @@ require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
 require_once STYLESHEETPATH . '/../app/theme/forums.php';
 require_once STYLESHEETPATH . '/../app/theme/members.php';
 require_once STYLESHEETPATH . '/../app/theme/groups.php';
+require_once STYLESHEETPATH . '/../app/theme/analytics.php';

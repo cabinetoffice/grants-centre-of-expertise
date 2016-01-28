@@ -45,21 +45,21 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 #item-body { position: relative; }
 
-#members-order-select, #groups-order-select, #group_members-order-select, #activity-filter-select { width: 100%; position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
-#members-order-select label, #groups-order-select label, #group_members-order-select label, #activity-filter-select label { display: inline; padding-right: 4px; }
-.bbp-user-page #members-order-select, .bbp-user-page #groups-order-select, .bbp-user-page #group_members-order-select, .bbp-user-page #activity-filter-select { top: 20px; }
-.my-account #members-order-select, .my-account #groups-order-select, .my-account #group_members-order-select, .my-account #activity-filter-select { top: 55px; }
-.my-activity #members-order-select, .my-friends #members-order-select, .notifications #members-order-select, .my-activity #groups-order-select, .my-friends #groups-order-select, .notifications #groups-order-select, .my-activity #group_members-order-select, .my-friends #group_members-order-select, .notifications #group_members-order-select, .my-activity #activity-filter-select, .my-friends #activity-filter-select, .notifications #activity-filter-select { top: 0; }
+.filter, #activity-filter-select { width: 100%; position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
+.filter label, #activity-filter-select label { display: inline; padding-right: 4px; }
+.bbp-user-page .filter, .bbp-user-page #activity-filter-select { top: 20px; }
+.my-account .filter, .my-account #activity-filter-select { top: 55px; }
+.my-activity .filter, .my-friends .filter, .notifications .filter, .my-activity #activity-filter-select, .my-friends #activity-filter-select, .notifications #activity-filter-select { top: 0; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
 .profile .page-header, .bp-user .page-header { display: none; }
 
-#search-members-form, #search-groups-form { position: relative; margin-bottom: 20px; width: 50%; }
-#search-members-form label, #search-groups-form label { margin-bottom: 0; }
-#search-members-form input, #search-groups-form input { height: 36px; margin-bottom: 0; }
-#search-members-form input[type="text"], #search-groups-form input[type="text"] { padding: 0 10px !important; }
-#search-members-form input[type="submit"], #search-groups-form input[type="submit"] { width: 75px; position: absolute; right: 0; top: 0; }
+#search-members-form, #search-groups-form, #events-search-wrap { position: relative; margin-bottom: 20px; width: 50%; }
+#search-members-form label, #search-groups-form label, #events-search-wrap label { margin-bottom: 0; }
+#search-members-form input, #search-groups-form input, #events-search-wrap input { height: 36px; margin-bottom: 0; }
+#search-members-form input[type="text"], #search-groups-form input[type="text"], #events-search-wrap input[type="text"] { padding: 0 10px !important; }
+#search-members-form input[type="submit"], #search-groups-form input[type="submit"], #events-search-wrap input[type="submit"] { width: 75px; position: absolute; right: 0; top: 0; }
 
 #member-list h5 { margin: 0; }
 
@@ -70,6 +70,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
   #search-members-form { width: 100%; }
   #buddypress div.message-search, #groups-order-select { float: left !important; clear: both; margin: 20px 10px 0 !important; } }
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
+#bbpress-forums #buddypress { display: inline-block; }
 #bbpress-forums #buddypress .item-list-tabs { margin-bottom: 20px; font-size: 1rem; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
 #bbpress-forums div.bbp-reply-header { border-top: none; border-bottom: 1px solid #ddd; background-color: transparent; }
@@ -101,6 +102,47 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .home-page .page-header { display: none; }
 .home-page .main-archive .button { display: none; }
 .home-page .main-archive .post-summary { padding-bottom: 0; border-bottom: 0; }
+
+.tribe-bar-views-list, #tribe-bar-collapse-toggle { display: none; }
+
+#tribe-bar-form label { display: inline; margin-right: 8px; font-weight: bold; }
+#tribe-bar-form input { display: inline; width: auto; height: 36px; }
+#tribe-bar-form select { width: auto; padding-right: 30px; }
+
+#tribe-bar-views { float: left; margin-right: 40px; }
+
+.tribe-bar-filters-inner > div { float: left; margin-right: 40px; }
+
+.tribe-events-button { background-color: #2e69ac; text-align: center; padding: 7px 20px; transition: background-color 300ms ease-out; color: #fff; border: none; }
+.tribe-events-button:hover, .tribe-events-button:focus { background-color: #25548a; color: #fff; }
+
+#tribe-events-footer .tribe-events-sub-nav, #tribe-events-header .tribe-events-sub-nav { line-height: normal; list-style-type: none; margin: 0; overflow: hidden; padding: 0; text-align: center; }
+#tribe-events-footer .tribe-events-sub-nav a, #tribe-events-header .tribe-events-sub-nav a { font-size: 15px; font-weight: 700; }
+#tribe-events-footer .tribe-events-sub-nav li, #tribe-events-header .tribe-events-sub-nav li { display: inline-block; margin: 0; vertical-align: middle; zoom: 1; }
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-previous { float: left; margin-right: 5px; text-align: left; }
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next { float: right; margin-left: 5px; text-align: right; }
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-left, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-left { float: left; text-align: left; }
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-right, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-right { float: right; text-align: right; }
+
+.events-list #tribe-events-footer { border-top: 1px solid #e5e5e5; padding-top: 1em; }
+
+#tribe-events-header .tribe-events-sub-nav { display: none; }
+
+.tribe-events-list .type-tribe_events { margin-bottom: 1.6em; }
+.tribe-events-list h2.tribe-events-page-title { text-align: left; }
+
+.tribe-events-list-separator-month { font-size: 1.86rem; margin: 10px 0; display: block; }
+
+.tribe-events-list-event-title { margin-bottom: 0; }
+.tribe-events-list-event-title a { font-size: 1.4rem; }
+
+.tribe-events-loop .tribe-events-event-meta { border: 0; clear: both; float: none; font-size: 14px; font-weight: 700; line-height: 1.5; margin: 5px 0 15px; overflow: visible; margin-bottom: 1em; }
+.tribe-events-loop .tribe-events-event-meta address.tribe-events-address { margin-right: 10px; }
+.tribe-events-loop .tribe-events-event-meta .tribe-events-venue-details { font-style: italic; font-weight: 400; }
+
+#tribe-events .tribe-events-content p { margin-bottom: 10px; }
+
+.tribe-events-ical { margin-top: 20px; float: right; }
 
 a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
 
