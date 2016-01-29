@@ -25,6 +25,8 @@
 
 		&.item-list-tabs#subnav {
 			.my-activity & { margin-bottom: 40px; }
+
+			.feed { display: none; }
 		}
 	}
 
@@ -85,6 +87,29 @@
 	#item-body {
 		.entry-title { margin-top: 20px; }
 	}
+
+	form {
+		&#whats-new-form {
+			p.activity-greeting { display: none; }
+
+			#whats-new-submit { margin-top: 0; }
+		}
+	}
+
+	a.activity-time-since { display: block; }
+
+	#activity-stream p {
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.activity-list li.mini .activity-avatar img {
+		&.FB_profile_pic, &.avatar {
+			width: auto;
+			height: auto;
+			margin-left: 0;
+		}
+	}
 }
 
 #search-message-form {
@@ -137,6 +162,10 @@
 	}
 }
 
+#members-group-list {
+	ul.item-list li img.avatar { margin-bottom: 10px; }
+}
+
 ul.acfb-holder li {
 	margin: 0 !important;
 	width: 100%;
@@ -171,14 +200,22 @@ ul.acfb-holder li {
 	.my-account & { top: 55px; }
 
 	.my-activity &, .my-friends &, .notifications & { top: 0; }
+
+	.group-home & { top: -45px; }
 }
 
 #profile-edit-form {
 	> h4, .field-visibility-settings-notoggle { display: none; }
 }
 
-.profile, .bp-user {
+.profile, .bp-user, .groups.single-item {
 	.page-header { display: none; }
+}
+
+.groups.single-item {
+	#item-header-content {
+		p { margin-bottom: 8px; }
+	}
 }
 
 #search-members-form, #search-groups-form, #events-search-wrap {

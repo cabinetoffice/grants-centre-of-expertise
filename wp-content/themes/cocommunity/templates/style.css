@@ -11,6 +11,7 @@ Template:           govsite/templates
 #buddypress div#item-header div#item-header-content h5 a { word-break: break-all; }
 #buddypress div#item-header div#item-header-content span, #buddypress div#item-header div#item-header-content h6 { margin-bottom: 0; color: #6f6f6f; }
 .my-activity #buddypress div.item-list-tabs#subnav { margin-bottom: 40px; }
+#buddypress div.item-list-tabs#subnav .feed { display: none; }
 #buddypress .standard-form div.radio label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
 #buddypress .standard-form div.radio ul { list-style-type: none; }
 #buddypress .standard-form div.radio ul li { position: relative; }
@@ -24,6 +25,11 @@ Template:           govsite/templates
 #buddypress span.department { font-size: small; opacity: .8; }
 #buddypress .notification-settings { width: 100%; max-width: 700px; }
 #buddypress #item-body .entry-title { margin-top: 20px; }
+#buddypress form#whats-new-form p.activity-greeting { display: none; }
+#buddypress form#whats-new-form #whats-new-submit { margin-top: 0; }
+#buddypress a.activity-time-since { display: block; }
+#buddypress #activity-stream p { margin: 0; line-height: 1.5; }
+#buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic, #buddypress .activity-list li.mini .activity-avatar img.avatar { width: auto; height: auto; margin-left: 0; }
 
 #search-message-form { position: relative; min-width: 260px; }
 #search-message-form input { height: 36px; }
@@ -36,6 +42,8 @@ Template:           govsite/templates
 #members-directory-form ul.item-list li div.action .generic-button { float: left; margin-right: 15px; }
 #members-directory-form #members-all { display: none; }
 #members-directory-form span.department { font-size: small; opacity: .8; }
+
+#members-group-list ul.item-list li img.avatar { margin-bottom: 10px; }
 
 ul.acfb-holder li { margin: 0 !important; width: 100%; }
 ul.acfb-holder li input { clear: both; }
@@ -50,10 +58,13 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .bbp-user-page .filter, .bbp-user-page #activity-filter-select { top: 20px; }
 .my-account .filter, .my-account #activity-filter-select { top: 55px; }
 .my-activity .filter, .my-friends .filter, .notifications .filter, .my-activity #activity-filter-select, .my-friends #activity-filter-select, .notifications #activity-filter-select { top: 0; }
+.group-home .filter, .group-home #activity-filter-select { top: -45px; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
-.profile .page-header, .bp-user .page-header { display: none; }
+.profile .page-header, .bp-user .page-header, .groups.single-item .page-header { display: none; }
+
+.groups.single-item #item-header-content p { margin-bottom: 8px; }
 
 #search-members-form, #search-groups-form, #events-search-wrap { position: relative; margin-bottom: 20px; width: 50%; }
 #search-members-form label, #search-groups-form label, #events-search-wrap label { margin-bottom: 0; }

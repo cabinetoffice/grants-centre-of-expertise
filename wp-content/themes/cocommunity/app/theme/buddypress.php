@@ -16,6 +16,8 @@ function co_member_additional_info() {
 	}
 }
 add_action( 'bp_directory_members_item', 'co_member_additional_info' );
+add_action( 'bp_group_members_list_item', 'co_member_additional_info' );
+
 
 
 // Changing position of Settings
@@ -63,3 +65,8 @@ function co_add_invitations_title() {
 	printf( '<h2 class="entry-title">%s</h2>', __( 'Invitations', 'buddypress' ) );
 }
 add_action( 'bp_before_group_invites_content', 'co_add_invitations_title' );
+
+
+add_filter( 'bp_get_activity_secondary_avatar', '__return_false' );
+add_filter( 'bp_activity_can_favorite', '__return_false' );
+

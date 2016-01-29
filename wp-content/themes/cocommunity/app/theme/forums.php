@@ -128,5 +128,3 @@ add_filter( 'bbp_get_reply_author_avatar', '__return_false' );
 add_filter( 'bbp_get_single_topic_description', '__return_false' );
 add_filter( 'bbp_get_reply_author_role', '__return_false' );
 add_filter( 'bbp_get_author_ip', '__return_false' );
-
-

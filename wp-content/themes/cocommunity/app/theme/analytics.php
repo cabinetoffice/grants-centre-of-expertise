@@ -10,6 +10,10 @@ function co_ga_custom_settings( $gaq_push ) {
 
 		$gaq_push[] = sprintf( "'set', 'userId', %s", $current_user->ID );
 		$gaq_push[] = sprintf( "'set', 'dimension1', '%s'", $current_user->user_login );
+
+		if ( $department = bp_get_profile_field_data( array( 'field' => 'Department', 'user_id' => $current_user->ID ) ) ) {
+			$gaq_push[] = sprintf( "'set', 'dimension2', '%s'", $department );
+		}
 	}
 
 	$gaq_push[] = $send;
