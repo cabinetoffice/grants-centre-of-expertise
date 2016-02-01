@@ -1,5 +1,8 @@
 <?php
 
+// Friends slug
+define ( 'BP_FRIENDS_SLUG', 'contacts' );
+
 // Autocomplete on all usernames
 define( 'BP_MESSAGES_AUTOCOMPLETE_ALL', true );
 

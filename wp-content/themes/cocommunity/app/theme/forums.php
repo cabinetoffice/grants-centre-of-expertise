@@ -117,6 +117,76 @@ function co_subscribe_link_wrap_in_button( $retval, $r ) {
 add_filter( 'bbp_get_user_subscribe_link', 'co_subscribe_link_wrap_in_button', 10, 2 );
 
 
+function co_notify_trashed_reply( $reply_id ) {
+	// Bail if topic is not published
+	if ( !bbp_is_topic_published( $topic_id ) ) {
+		return false;
+	}
+
+	// Don't send notifications if the person trashing the post is its author
+	if ( (int) bbp_get_reply_author_id( $reply_id ) === (int) get_current_user_id() ) {
+		return;
+	}
+
+	// Poster name
+	$reply_author_name = bbp_get_reply_author_display_name( $reply_id );
+	$reply_content = html_entity_decode( strip_tags( bbp_get_reply_content( $reply_id ) ) );
+	$reply_topic_title = html_entity_decode( strip_tags( bbp_get_reply_topic_title( $reply_id ) ) );
+
+	$topic_id = bbp_get_reply_topic_id( $reply_id );
+	$topic_link = bbp_get_topic_permalink( $topic_id );
+	$topic_url  = remove_query_arg( 'view', $topic_link );
+	$blog_name     = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+
+	$message = sprintf( __( 'Dear %1$s,
+
+Your reply to the topic "%2$s" has been deleted by the Grants Community forum administrator.
+
+This is what you wrote:
+
+%3$s
+
+To view the topic, see %4$s.
+
+', 'cocommunity' ),
+
+		$reply_author_name,
+		$reply_topic_title,
+		$reply_content,
+		$topic_url
+	);
+
+	// For plugins to filter titles per reply/topic/user
+	$subject = apply_filters( 'bbp_subscription_mail_title', '[' . $blog_name . '] Your reply has been deleted', $reply_id, $topic_id );
+	if ( empty( $subject ) ) {
+		return;
+	}
+
+	/** Users *****************************************************************/
+
+	// Get the noreply@ address
+	$no_reply   = bbp_get_do_not_reply_address();
+
+	// Setup "From" email address
+	$from_email = apply_filters( 'bbp_subscription_from_email', $no_reply );
+
+	// Setup the From header
+	$headers = array( 'From: ' . get_bloginfo( 'name' ) . ' <' . $from_email . '>' );
+
+
+	/** Send it ***************************************************************/
+
+	// Custom headers
+	$headers  = apply_filters( 'bbp_subscription_mail_headers', $headers );
+	$to_email = bbp_get_reply_author_email( $reply_id );
+
+	// Send notification email
+	wp_mail( $to_email, $subject, $message, $headers );
+}
+add_action( 'bbp_trashed_reply', 'co_notify_trashed_reply' );
+
+
+
 // Removing various bits of bbPress
 add_filter( 'bbp_get_topic_reply_link', '__return_false' );
 add_filter( 'bbp_get_reply_to_link', '__return_false' );

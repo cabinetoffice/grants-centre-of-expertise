@@ -161,6 +161,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #tribe-events-content .tribe-events-calendar .tribe-events-othermonth:hover { -webkit-box-shadow: none; box-shadow: none; }
 #tribe-events-content table.tribe-events-calendar { border-bottom: 1px solid #d2d2d2; border-top: 0; }
 #tribe-events-content .tribe-events-tooltip h4.entry-title { font-weight: 700; }
+#tribe-events-content .tribe-events-abbr { font-size: 100%; }
 
 .tribe-events-calendar div[id*=tribe-events-daynum-] { background-color: #b2b2b2; color: #fff; font-size: 12px; font-weight: 700; }
 .tribe-events-calendar div[id*=tribe-events-daynum-] a { background-color: #b2b2b2; color: #fff; font-size: 12px; font-weight: 700; }
