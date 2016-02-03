@@ -1,3 +1,16 @@
+@mixin blue-button {
+	background: #2e69ac;
+	border: none;
+	color: #fff;
+	transition: background-color 300ms ease-out;
+}
+
+@mixin blue-button-hover {
+	background: #25548a;
+	border: none;
+	color: #fff;
+}
+
 // Removing profile visibility settings
 #buddypress {
 	position: relative;
@@ -7,7 +20,10 @@
 			float: none;
 			margin-top: 0;
 
-			input[type=text] { width: 100%; }
+			input[type=text] {
+				width: 100%;
+				background: #fff;
+			}
 		}
 
 		&#item-header div#item-header-content {
@@ -57,8 +73,6 @@
 		}
 
 		&.item-desc p { margin-bottom: 0; }
-
-		&.action { opacity: .5; }
 	}
 
 	table {
@@ -112,7 +126,34 @@
 			margin-left: 0;
 		}
 	}
+
+	.comment-reply-link, .generic-button a, a.button, button { @include blue-button; }
+	input {
+		&[type=button], &[type=reset], &[type=submit] { @include blue-button; }
+	}
+	ul.button-nav li a { @include blue-button; }
+
+	a.bp-title-button { @include blue-button; }
+
+
+
+	.comment-reply-link, button, div.generic-button a {
+		&:hover { @include blue-button-hover; }
+	}
+
+	a.button {
+		&:focus, &:hover { @include blue-button-hover; }
+	}
+
+	input {
+		&[type=button]:hover, &[type=reset]:hover, &[type=submit]:hover { @include blue-button-hover; }
+	}
+
+	ul.button-nav li {
+		a:hover, &.current a { @include blue-button-hover; }
+	}
 }
+
 
 #search-message-form {
 	position: relative;

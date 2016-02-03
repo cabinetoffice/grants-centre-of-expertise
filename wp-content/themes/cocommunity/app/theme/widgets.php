@@ -30,7 +30,7 @@ class CO_Downloads_Widget extends WP_Widget {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		}
 
-		$documents = new WP_Query( array( 'post_type' => 'document', 'orderby' => 'menu_order', 'order' => 'asc' ) );
+		$documents = new WP_Query( array( 'post_type' => 'document', 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => -1 ) );
 
 		if ( $documents->have_posts() ) : ?>
 

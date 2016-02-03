@@ -5,7 +5,7 @@ Template:           govsite/templates
 */
 #buddypress { position: relative; }
 #buddypress div.dir-search { float: none; margin-top: 0; }
-#buddypress div.dir-search input[type=text] { width: 100%; }
+#buddypress div.dir-search input[type=text] { width: 100%; background: #fff; }
 #buddypress div#item-header div#item-header-content small { white-space: nowrap; }
 #buddypress div#item-header div#item-header-content h2 a { color: #000; }
 #buddypress div#item-header div#item-header-content h5 a { word-break: break-all; }
@@ -19,7 +19,6 @@ Template:           govsite/templates
 #buddypress .standard-form div.radio ul li:before { position: absolute; left: -1em; content: "\2013"; }
 #buddypress ul.item-list li div.item-count { font-size: .9em; margin-top: 4px; }
 #buddypress ul.item-list li div.item-desc p { margin-bottom: 0; }
-#buddypress ul.item-list li div.action { opacity: .5; }
 #buddypress table input[type="checkbox"] { margin-bottom: 0; }
 #buddypress table#message-threads tr td .activity { display: block; }
 #buddypress table img.avatar { float: left; margin-right: 1em; }
@@ -31,6 +30,14 @@ Template:           govsite/templates
 #buddypress a.activity-time-since { display: block; }
 #buddypress #activity-stream p { margin: 0; line-height: 1.5; }
 #buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic, #buddypress .activity-list li.mini .activity-avatar img.avatar { width: auto; height: auto; margin-left: 0; }
+#buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress a.button, #buddypress button { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress input[type=button], #buddypress input[type=reset], #buddypress input[type=submit] { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress ul.button-nav li a { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress a.bp-title-button { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress .comment-reply-link:hover, #buddypress button:hover, #buddypress div.generic-button a:hover { background: #25548a; border: none; color: #fff; }
+#buddypress a.button:focus, #buddypress a.button:hover { background: #25548a; border: none; color: #fff; }
+#buddypress input[type=button]:hover, #buddypress input[type=reset]:hover, #buddypress input[type=submit]:hover { background: #25548a; border: none; color: #fff; }
+#buddypress ul.button-nav li a:hover, #buddypress ul.button-nav li.current a { background: #25548a; border: none; color: #fff; }
 
 #search-message-form { position: relative; min-width: 260px; }
 #search-message-form input { height: 36px; }
