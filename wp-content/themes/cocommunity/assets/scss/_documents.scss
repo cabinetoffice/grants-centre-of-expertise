@@ -1,0 +1,16 @@
+
+.single-document {
+	.download-link {
+		a {
+			display: block;
+			position: relative;
+			padding-left: 25px;
+
+			i {
+				position: absolute;
+				left: 0;
+				top: 5px;
+			}
+		}
+	}
+}

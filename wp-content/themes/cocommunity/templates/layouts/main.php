@@ -14,7 +14,6 @@
 	<link rel="icon" type="image/png" href="<?php echo $favicon_url ?>" />
 	<?php wp_head() ?>
 	<!--[if lt IE 9]>
-		<script src="//code.jquery.com/jquery-1.9.0.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/../assets/js/ie/browser-support.js"></script>
 	<![endif]-->
 </head>
@@ -24,6 +23,14 @@
 	<![endif]-->
 
 	<header class="site-header" role="banner">
+		<div class="pointer-bar">
+			<div class="row">
+				<div class="small-12 medium-12 columns">
+					<?php dynamic_sidebar( 'pointer-bar' ) ?>
+				</div>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="small-12 medium-3 columns">
 				<a href="<?php echo home_url('/') ?>" title="<?php bloginfo('name') ?>" class="logo">
@@ -51,20 +58,18 @@
 
 	<?php w_requested_template() ?>
 
-	<footer class="site-footer" role="contentinfo">
-
-		<div class="navigation">
-			<div class="row">
-				<div class="medium-6 large-12 columns">
-					<?php get_template_part('partials/nav-footer') ?>
-				</div>
-				<div class="medium-6 columns">
-					<?php if ( get_option('footer-link-text-setting') ) : ?>
-						<p><?php echo get_option('footer-link-text-setting') ?> <a href="<?php echo get_option('footer-link-url-setting') ?>"><?php echo get_option('footer-link-cta-setting') ?></a></p>
-					<?php endif ?>
-				</div>
+	<div class="navigation footer-navigation">
+		<div class="row">
+			<div class="medium-6 columns">
+				<?php dynamic_sidebar('widget-footer-left') ?>
+			</div>
+			<div class="medium-6 columns">
+				<?php dynamic_sidebar('widget-footer-right') ?>
 			</div>
 		</div>
+	</div>
+
+	<footer class="site-footer" role="contentinfo">
 
 		<div class="credits">
 			<div class="row">

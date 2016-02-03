@@ -25,9 +25,9 @@ the_post();
             </div>
         </div>
         <div class="large-4 columns">
-            <?php if ( is_active_sidebar( 'widget_sidebar_1' ) ) : ?>
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-                    <?php dynamic_sidebar( 'widget_sidebar_1' ); ?>
+            <?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
+                <div id="secondary-sidebar" class="secondary-sidebar widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'sidebar-right' ); ?>
                 </div><!-- #primary-sidebar -->
             <?php endif; ?>
         </div>

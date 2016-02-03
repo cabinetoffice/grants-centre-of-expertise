@@ -27,7 +27,7 @@
   <div class="pointer-bar">
     <div class="row">
       <div class="small-12 medium-12 columns">
-        <?php dynamic_sidebar('pointer_bar') ?>
+        <?php dynamic_sidebar('pointer-bar') ?>
       </div>
     </div>
   </div>
@@ -89,10 +89,10 @@
     <div class="navigation">
       <div class="row">
         <div class="medium-6 columns">
-          <?php dynamic_sidebar('widget_footer_left') ?>
+          <?php dynamic_sidebar('widget-footer-left') ?>
         </div>
         <div class="medium-6 columns">
-          <?php dynamic_sidebar('widget_footer_right') ?>
+          <?php dynamic_sidebar('widget-footer-right') ?>
         </div>
       </div>
     </div>

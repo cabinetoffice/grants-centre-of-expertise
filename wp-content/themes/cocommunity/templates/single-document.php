@@ -25,7 +25,7 @@
 
 					<div class="medium-4 columns">
 						<?php if ( $document = get_field( 'file_upload' ) ) : ?>
-							<h5>
+							<h5 class="download-link">
 								<a href="<?php echo $document['url']; ?>">
 									<i class="fa <?php echo get_fa_icon_for_mime_type( $document['mime_type'] ); ?>"></i>
 									<?php printf( '%s %s', __( 'Download', 'cabinetoffice' ), get_the_title() ); ?>

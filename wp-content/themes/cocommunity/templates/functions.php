@@ -49,15 +49,35 @@ function get_fa_icon_for_mime_type( $type, $default = 'fa-file-text-o' ) {
 }
 
 
+// Simple Comment Editing
+add_filter( 'sce_comment_time', 'edit_sce_comment_time' );
+function edit_sce_comment_time( $time_in_minutes ) {
+	return 90;
+}
+
+
+// Removing parent templates
+function co_remove_page_templates( $templates ) {
+    unset( $templates['template-campaign.php'] );
+    unset( $templates['template-contact.php'] );
+    unset( $templates['template-home.php'] );
+    return $templates;
+}
+add_filter( 'theme_page_templates', 'co_remove_page_templates' );
+
+
 foreach( glob( STYLESHEETPATH . '/../app/*.php' ) as $filename ) require_once $filename;
 foreach( glob( STYLESHEETPATH . '/../app/posts/*.php' ) as $filename ) require_once $filename;
 
-// require_once STYLESHEETPATH . '/../app/theme/custom-theme-css.php';
+require_once STYLESHEETPATH . '/../app/theme/custom-theme-css.php';
 require_once STYLESHEETPATH . '/../app/theme/custom-scripts.php';
+require_once STYLESHEETPATH . '/../app/theme/theme_settings.php';
 require_once STYLESHEETPATH . '/../app/theme/custom-menus.php';
 require_once STYLESHEETPATH . '/../app/theme/shortcodes.php';
+require_once STYLESHEETPATH . '/../app/theme/widgets.php';
 require_once STYLESHEETPATH . '/../app/theme/sidebars.php';
 require_once STYLESHEETPATH . '/../app/theme/forums.php';
 require_once STYLESHEETPATH . '/../app/theme/buddypress.php';
 require_once STYLESHEETPATH . '/../app/theme/groups.php';
 require_once STYLESHEETPATH . '/../app/theme/analytics.php';
+

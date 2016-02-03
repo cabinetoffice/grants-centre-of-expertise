@@ -8,9 +8,9 @@ the_post();
 
 	<div class="row">
 		<div class="large-4 columns">
-			<?php if ( is_active_sidebar( 'widget_sidebar_1' ) ) : ?>
+			<?php if ( is_active_sidebar( 'sidebar-left' ) ) : ?>
 				<div id="primary-sidebar" class="primary-sidebar sidebar widget-area" role="complementary">
-					<?php dynamic_sidebar( 'widget_sidebar_1' ); ?>
+					<?php dynamic_sidebar( 'sidebar-left' ); ?>
 				</div><!-- #primary-sidebar -->
 			<?php endif; ?>
 		</div>

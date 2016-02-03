@@ -25,7 +25,7 @@
       </div>
 
       <aside class="sidebar medium-4 columns" role="complementary">
-        <?php dynamic_sidebar('sidebar-primary') ?>
+        <?php dynamic_sidebar('sidebar-right') ?>
       </aside>
 
     </div>

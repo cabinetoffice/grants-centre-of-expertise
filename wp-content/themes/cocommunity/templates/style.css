@@ -81,6 +81,8 @@ ul.acfb-holder li.friend-tab { width: auto; }
 @media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav, #groups-order-select { position: static; width: 100%; text-align: left; left: 0; }
   #search-members-form { width: 100%; }
   #buddypress div.message-search, #groups-order-select { float: left !important; clear: both; margin: 20px 10px 0 !important; } }
+#members-list .vcard { display: block; }
+
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
 #bbpress-forums #buddypress { display: inline-block; }
 #bbpress-forums #buddypress .item-list-tabs { margin-bottom: 20px; font-size: 1rem; }
@@ -106,10 +108,10 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .secondary-sidebar { margin-top: 35px; }
 .secondary-sidebar ul, .secondary-sidebar li { list-style: none; margin: 0; padding: 0; }
 
-.documentation-widget { margin-bottom: 40px; }
-.documentation-widget li { margin-bottom: 8px; }
-.documentation-widget li a { display: block; padding-left: 20px; position: relative; }
-.documentation-widget li a .fa { position: absolute; left: 0; top: 5px; }
+.widget_co_downloads_widget { margin-bottom: 40px; }
+.widget_co_downloads_widget li { margin-bottom: 8px; }
+.widget_co_downloads_widget li a { display: block; padding-left: 20px; position: relative; }
+.widget_co_downloads_widget li a .fa { position: absolute; left: 0; top: 5px; }
 
 .home-page .page-header { display: none; }
 .home-page .main-archive .button { display: none; }
@@ -188,9 +190,14 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 .tribe-events-meta-group .tribe-events-single-section-title { font-size: 17px; font-weight: 700; margin: 20px 0 10px; }
 
+.single-document .download-link a { display: block; position: relative; padding-left: 25px; }
+.single-document .download-link a i { position: absolute; left: 0; top: 5px; }
+
 a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
 
 p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
+
+dl dd { margin-left: 0; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
@@ -202,5 +209,19 @@ p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 .site-header .top-bar .menu > .active > a:before { display: none; }
 .site-header .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
 .site-header .dropdown { top: 55px; }
+
+.sce-edit-comment, .sce-status { margin-top: 1em; font-size: .8em; }
+
+.sce-comment-edit-buttons > button { margin-right: 1em; }
+
+.footer-navigation { padding-bottom: 30px; }
+
+.primary-sidebar ul { list-style-type: none; margin-left: 0; }
+
+.pointer-bar { padding: 0; text-align: right; }
+.pointer-bar ul { list-style: none; text-align: right; margin: 0; padding: 0; }
+.pointer-bar ul li { display: inline; }
+.pointer-bar ul li a { padding-left: 12px; font-size: 0.8rem; }
+.pointer-bar ul li ul { display: none; }
 
 /*# sourceMappingURL=style.css.map */

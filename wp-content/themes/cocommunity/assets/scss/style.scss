@@ -9,6 +9,7 @@ Template:           govsite/templates
 @import "sidebars";
 @import "home";
 @import "events";
+@import "documents";
 
 a:visited, a:visited:hover, a:visited:focus {
 	color: #2e69ac;
@@ -18,6 +19,8 @@ p, a, button, .button, ul, ol, dl {
 	font-size: inherit;
 	line-height: inherit;
 }
+
+dl dd { margin-left: 0; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -57,10 +60,18 @@ p, a, button, .button, ul, ol, dl {
 	.dropdown { top: 55px; }
 }
 
-footer.site-footer nav ul > li {
-	// &:first-child { margin-left: 0; }
+.sce-edit-comment, .sce-status {
+	margin-top: 1em;
+	font-size: .8em;
 }
 
+.sce-comment-edit-buttons > button {
+	margin-right: 1em;
+}
+
+.footer-navigation {
+	padding-bottom: 30px;
+}
 
 
 // .menu-main-menu-container {
@@ -133,10 +144,10 @@ footer.site-footer nav ul > li {
 // 	}
 // }
 
-// .primary-sidebar ul {
-// 	list-style-type: none;
-// 	margin-left: 0;
-// }
+.primary-sidebar ul {
+	list-style-type: none;
+	margin-left: 0;
+}
 
 // .entry-meta time:after {
 // 	content: "";
@@ -195,23 +206,28 @@ footer.site-footer nav ul > li {
 // 	}
 // }
 
-// .pointer-bar {
-// 	padding: 0;
-// 	text-align: right;
-// 	ul {
-// 		list-style: none;
-// 		text-align: right;
-// 		margin: 0 28px 0 0;
-// 		padding: 0px;
-// 		li {
-// 			display: inline;
-// 			a {
-// 				padding-left: 12px;
-// 				font-size: 0.8rem;
-// 			}
-// 		}
-// 	}
-// }
+.pointer-bar {
+	padding: 0;
+	text-align: right;
+
+	ul {
+		list-style: none;
+		text-align: right;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline;
+
+			a {
+				padding-left: 12px;
+				font-size: 0.8rem;
+			}
+
+			ul { display: none; }
+		}
+	}
+}
 
 // .top-bar-section ul {
 // 	float: right;

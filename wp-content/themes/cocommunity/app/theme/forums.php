@@ -49,6 +49,10 @@ function co_bbp_fix_404s() {
 	if ( $wp_query->is_404 && $wp_query->query['post_type'] == 'topic' && isset( $wp_query->query['topic'] ) ) {
 		wp_redirect( bbp_get_topics_url() );
 	}
+
+	if ( $wp_query->is_404 ) {
+		wp_redirect( get_home_url() );
+	}
 }
 add_action( 'wp', 'co_bbp_fix_404s' );
 
