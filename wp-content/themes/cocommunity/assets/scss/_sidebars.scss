@@ -1,7 +1,9 @@
 .widget_subpages {
 	.widget_subpages_current_page {
-		font-weight: bold;
+		> a { font-weight: bold; }
 	}
+
+	li > ul { margin-top: 4px; }
 }
 
 .sidebar {

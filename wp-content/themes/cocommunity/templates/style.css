@@ -101,7 +101,8 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 .bbp-reply-content #subscription-toggle { display: none; }
 
-.widget_subpages .widget_subpages_current_page { font-weight: bold; }
+.widget_subpages .widget_subpages_current_page > a { font-weight: bold; }
+.widget_subpages li > ul { margin-top: 4px; }
 
 .sidebar { margin-top: 35px; }
 
@@ -215,6 +216,8 @@ dl dd { margin-left: 0; }
 .sce-comment-edit-buttons > button { margin-right: 1em; }
 
 .footer-navigation { padding-bottom: 30px; }
+
+#wp-admin-bar-my-account-settings-profile, #wp-admin-bar-my-account-forums-favorites { display: none; }
 
 .primary-sidebar ul { list-style-type: none; margin-left: 0; }
 
