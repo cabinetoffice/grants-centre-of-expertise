@@ -3,6 +3,16 @@ Theme Name:         Cabinet Office Grants Hub
 Author:             WTG
 Template:           govsite/templates
 */
+.site-header .top-bar-section { position: absolute; top: 0; right: 0; }
+.site-header .top-bar .menu > .active > a:before { display: none; }
+.site-header.menu-full-width .top-bar-section { position: static; }
+.site-header.menu-full-width .logo img { max-width: 140px; }
+.site-header.menu-full-width .top-bar div { float: none; }
+.site-header.menu-full-width .top-bar ul > li { background: none; margin-bottom: 0; }
+.site-header.menu-full-width .top-bar .top-bar-section > ul > li > a { padding: 15px; }
+.site-header.menu-full-width .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
+.site-header.menu-full-width .dropdown { top: 55px; }
+
 #buddypress { position: relative; }
 #buddypress div.dir-search { float: none; margin-top: 0; }
 #buddypress div.dir-search input[type=text] { width: 100%; background: #fff; }
@@ -209,14 +219,6 @@ dl dd { margin-left: 0; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
-
-.site-header .logo img { max-width: 140px; }
-.site-header .top-bar div { float: none; }
-.site-header .top-bar ul > li { background: none; margin-bottom: 0; }
-.site-header .top-bar .top-bar-section > ul > li > a { padding: 15px; }
-.site-header .top-bar .menu > .active > a:before { display: none; }
-.site-header .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
-.site-header .dropdown { top: 55px; }
 
 .sce-edit-comment, .sce-status { margin-top: 1em; font-size: .8em; }
 

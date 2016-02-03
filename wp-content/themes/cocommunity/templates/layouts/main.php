@@ -22,7 +22,9 @@
 		<div class="alert-box alert">You are using an <strong>outdated</strong> browser. Please <a href="//browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 	<![endif]-->
 
-	<header class="site-header" role="banner">
+	<?php $menu_full_width = get_option( 'full-width-menu' ); ?>
+
+	<header class="site-header<?php echo $menu_full_width ? ' menu-full-width' : ''; ?>" role="banner">
 		<div class="pointer-bar">
 			<div class="row">
 				<div class="small-12 medium-12 columns">
@@ -44,9 +46,13 @@
 					<a href="#top-bar" class="nav-toggle"><span class="visually-hidden"><?php _e('Menu', 'govsite') ?></span></a>
 				</div>
 			</div>
-			<!-- <div class="small-12 medium-12 columns"> -->
-				<?php get_template_part('partials/nav') ?>
-			<!-- </div> -->
+			<?php if ( $menu_full_width ) : ?>
+				<?php get_template_part('partials/nav'); ?>
+			<?php else : ?>
+				<div class="small-12 medium-9 columns">
+					<?php get_template_part('partials/nav'); ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</header>
 

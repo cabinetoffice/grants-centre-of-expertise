@@ -129,6 +129,19 @@ function co_theme_settings_admin_init() {
 	function govsite_theme_settings_admin_init_site_wide_options() {
 		echo "";
 	}
+
+	// Full-width menu
+	register_setting( 'site-wide-options', 'full-width-menu' );
+	
+	add_settings_section( 'menu-options', 'Menu options', 'govsite_theme_settings_admin_init_site_wide_options', 'site-wide-options' );
+	
+	add_settings_field( 'menu-options', 'Display a full-width menu', 'govsite_theme_settings_admin_init_full_width_menu', 'site-wide-options', 'menu-options' );
+	
+	function govsite_theme_settings_admin_init_full_width_menu() {
+		$value   = esc_attr( get_option( 'full-width-menu' ) );
+		$checked = $value ? "checked='checked'" : "";
+		echo '<input type="checkbox" name="full-width-menu" value="1" ' . $checked . ' />';
+	}
 	
 	// Link colours section
 	register_setting( 'theme-colors', 'link-unvisited-color' );

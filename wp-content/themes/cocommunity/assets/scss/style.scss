@@ -4,6 +4,7 @@ Author:             WTG
 Template:           govsite/templates
 */
 
+@import "header";
 @import "buddypress";
 @import "forums";
 @import "sidebars";
@@ -29,35 +30,6 @@ dl dd { margin-left: 0; }
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-}
-
-.site-header {
-	.logo img { max-width: 140px; }
-
-	.top-bar {
-		div { float: none; }
-
-		ul {
-			> li {
-				background: none;
-				margin-bottom: 0;
-			}
-		}
-
-		.top-bar-section > ul > li > a { padding: 15px; }
-
-		.menu > .active > a:before { display: none; }
-
-		.button-search {
-			margin: 0;
-			position: absolute;
-			right: 0;
-			top: 14px;
-			line-height: 1;
-		}
-	}
-
-	.dropdown { top: 55px; }
 }
 
 .sce-edit-comment, .sce-status {
