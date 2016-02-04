@@ -50,9 +50,17 @@
 	}
 }
 
+.bbp-rc-reply-is-reported {
+	p { margin-bottom: 10px; }
+	
+	em { font-size: .8em; }
+}
+
 .topics-navigation {
 	font-size: 1rem;
 	margin-bottom: 15px;
+
+	a { margin-right: 1em; }
 }
 
 .bbp-pagination { display: none; }

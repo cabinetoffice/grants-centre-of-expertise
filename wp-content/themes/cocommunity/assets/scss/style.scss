@@ -37,13 +37,11 @@ dl dd { margin-left: 0; }
 	font-size: .8em;
 }
 
-.sce-comment-edit-buttons > button {
-	margin-right: 1em;
-}
+.sce-comment-edit-buttons > button { margin-right: 1em; }
 
-.footer-navigation {
-	padding-bottom: 30px;
-}
+.footer-navigation { padding-bottom: 30px; }
+
+fieldset legend, .quicktags-toolbar { background: none !important; }
 
 #wp-admin-bar-my-account-settings-profile, #wp-admin-bar-my-account-forums-favorites { display: none; }
 

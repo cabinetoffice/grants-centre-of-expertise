@@ -6,7 +6,12 @@
 }
 
 @mixin blue-button-hover {
-	background: #25548a;
+	background: #25548a !important;
+	border: none;
+	color: #fff;
+}
+
+@mixin blue-button-disabled {
 	border: none;
 	color: #fff;
 }
@@ -41,11 +46,22 @@
 			.activity { display: block; }
 		}
 
-		&.item-list-tabs#subnav {
-			.my-activity & { margin-bottom: 40px; }
+		&.item-list-tabs {
+			ul li a span {
+				border: none;
+				padding: 2px 6px;
+			}
 
-			.feed { display: none; }
+			&#subnav {
+				.my-activity & { margin-bottom: 40px; }
+
+				.feed { display: none; }
+			}
 		}
+
+		&#item-header { margin-bottom: 1em; }
+
+		&#invite-list { padding: 15px 10px; }
 	}
 
 	.standard-form div.radio {
@@ -112,7 +128,9 @@
 		}
 	}
 
-	a.activity-time-since { display: block; }
+	a.view.activity-time-since { display: block; }
+
+	div#message p { margin-top: 1em; }
 
 	#activity-stream p {
 		margin: 0;
@@ -127,16 +145,30 @@
 		}
 	}
 
+	div.activity-comments>ul { padding-left: 0; }
+
+	#reply-title small a, a.bp-primary-action {
+		span {
+			background: #25548a;
+			border-radius: 50%;
+			padding: 2px 6px;
+			font-size: 80%;
+		}
+		
+		&:hover span { background: #25548a; }
+	}
+	
+	// Default button
 	.comment-reply-link, .generic-button a, a.button, button { @include blue-button; }
 	input {
-		&[type=button], &[type=reset], &[type=submit] { @include blue-button; }
+		&[type="button"], &[type="reset"], &[type="submit"] { @include blue-button; }
 	}
 	ul.button-nav li a { @include blue-button; }
 
 	a.bp-title-button { @include blue-button; }
 
 
-
+	// Hover state
 	.comment-reply-link, button, div.generic-button a {
 		&:hover { @include blue-button-hover; }
 	}
@@ -146,12 +178,53 @@
 	}
 
 	input {
-		&[type=button]:hover, &[type=reset]:hover, &[type=submit]:hover { @include blue-button-hover; }
+		&[type="button"], &[type="reset"], &[type="submit"] {
+			&:hover, &:focus, &:active {
+				@include blue-button-hover;
+			}
+		}
 	}
 
 	ul.button-nav li {
 		a:hover, &.current a { @include blue-button-hover; }
 	}
+
+
+	// Disabled state
+	a.disabled { @include blue-button-disabled; }
+	button {
+		&.disabled, &.pending { @include blue-button-disabled; }
+	}
+	div.pending a { @include blue-button-disabled; }
+	input {
+		&[type="submit"] {
+			&[disabled=disabled] { @include blue-button-disabled; }
+		}
+		&[type="button"], &[type="reset"], &[type="submit"] {
+			&.disabled, &.pending { @include blue-button-disabled; }
+		}
+	}
+
+	
+	// Input background
+	.dir-search input {
+		&[type=search], &[type=text] { background: #fff; }
+	}
+	.groups-members-search input {
+		&[type=search], &[type=text] { background: #fff; }
+	}
+	.standard-form {
+		input {
+			&[type=color], &[type=date], &[type=datetime-local], &[type=datetime], &[type=email], &[type=month], &[type=number], &[type=password], &[type=range], &[type=search], &[type=tel], &[type=text], &[type=time], &[type=url], &[type=week] { background: #fff; }
+		}
+		select, textarea { background: #fff; }
+
+		input, select, textarea {
+			&:focus { background: #fff; }
+		}
+	}
+
+
 }
 
 

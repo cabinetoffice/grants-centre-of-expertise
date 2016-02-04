@@ -90,6 +90,11 @@ add_action( 'bbp_template_before_single_forum', 'co_filter_topics' );
 function co_topic_actions() {
 	print '<p class="topics-navigation">';
 	print bbp_get_topic_subscription_link( array( 'before' => '' ) );
+	
+	if ( class_exists( 'bbp_ReportContent' ) ) {
+		$report_content = bbp_ReportContent::get_instance();
+		print str_replace( 'bbp-topic-report-link', 'bbp-topic-report-link button', $report_content->get_topic_report_link() );
+	}
 	print '</p>';
 }
 add_action( 'bbp_template_before_single_topic', 'co_topic_actions' );
@@ -112,6 +117,12 @@ function co_list_forums_parse_args( $args = array() ) {
 	return $args;
 }
 add_filter( 'bbp_before_list_forums_parse_args', 'co_list_forums_parse_args' );
+
+function co_get_author_link_parse_args( $args = array() ) {
+	$args['type'] = 'name';
+	return $args;
+}
+add_filter( 'bbp_before_get_author_link_parse_args', 'co_get_author_link_parse_args' );
 
 
 // Adding a button class to subscription toggle
@@ -188,7 +199,6 @@ To view the topic, see %4$s.
 	wp_mail( $to_email, $subject, $message, $headers );
 }
 add_action( 'bbp_trashed_reply', 'co_notify_trashed_reply' );
-
 
 
 // Removing various bits of bbPress

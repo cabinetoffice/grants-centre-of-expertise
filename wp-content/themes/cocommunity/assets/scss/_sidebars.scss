@@ -1,3 +1,4 @@
+
 .widget_subpages {
 	.widget_subpages_current_page {
 		> a { font-weight: bold; }
@@ -19,6 +20,8 @@
 		padding: 0;
 	}
 }
+
+.blog .widget-area { margin-top: 0; }
 
 .widget_co_downloads_widget {
 	margin-bottom: 40px;

@@ -21,8 +21,11 @@ Template:           govsite/templates
 #buddypress div#item-header div#item-header-content h5 a { word-break: break-all; }
 #buddypress div#item-header div#item-header-content span, #buddypress div#item-header div#item-header-content h6 { margin-bottom: 0; color: #6f6f6f; }
 #buddypress div#item-header div#item-header-content .activity { display: block; }
+#buddypress div.item-list-tabs ul li a span { border: none; padding: 2px 6px; }
 .my-activity #buddypress div.item-list-tabs#subnav { margin-bottom: 40px; }
 #buddypress div.item-list-tabs#subnav .feed { display: none; }
+#buddypress div#item-header { margin-bottom: 1em; }
+#buddypress div#invite-list { padding: 15px 10px; }
 #buddypress .standard-form div.radio label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
 #buddypress .standard-form div.radio ul { list-style-type: none; }
 #buddypress .standard-form div.radio ul li { position: relative; }
@@ -37,17 +40,31 @@ Template:           govsite/templates
 #buddypress #item-body .entry-title { margin-top: 20px; }
 #buddypress form#whats-new-form p.activity-greeting { display: none; }
 #buddypress form#whats-new-form #whats-new-submit { margin-top: 0; }
-#buddypress a.activity-time-since { display: block; }
+#buddypress a.view.activity-time-since { display: block; }
+#buddypress div#message p { margin-top: 1em; }
 #buddypress #activity-stream p { margin: 0; line-height: 1.5; }
 #buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic, #buddypress .activity-list li.mini .activity-avatar img.avatar { width: auto; height: auto; margin-left: 0; }
+#buddypress div.activity-comments > ul { padding-left: 0; }
+#buddypress #reply-title small a span, #buddypress a.bp-primary-action span { background: #25548a; border-radius: 50%; padding: 2px 6px; font-size: 80%; }
+#buddypress #reply-title small a:hover span, #buddypress a.bp-primary-action:hover span { background: #25548a; }
 #buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress a.button, #buddypress button { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
-#buddypress input[type=button], #buddypress input[type=reset], #buddypress input[type=submit] { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress input[type="button"], #buddypress input[type="reset"], #buddypress input[type="submit"] { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
 #buddypress ul.button-nav li a { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
 #buddypress a.bp-title-button { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
-#buddypress .comment-reply-link:hover, #buddypress button:hover, #buddypress div.generic-button a:hover { background: #25548a; border: none; color: #fff; }
-#buddypress a.button:focus, #buddypress a.button:hover { background: #25548a; border: none; color: #fff; }
-#buddypress input[type=button]:hover, #buddypress input[type=reset]:hover, #buddypress input[type=submit]:hover { background: #25548a; border: none; color: #fff; }
-#buddypress ul.button-nav li a:hover, #buddypress ul.button-nav li.current a { background: #25548a; border: none; color: #fff; }
+#buddypress .comment-reply-link:hover, #buddypress button:hover, #buddypress div.generic-button a:hover { background: #25548a !important; border: none; color: #fff; }
+#buddypress a.button:focus, #buddypress a.button:hover { background: #25548a !important; border: none; color: #fff; }
+#buddypress input[type="button"]:hover, #buddypress input[type="button"]:focus, #buddypress input[type="button"]:active, #buddypress input[type="reset"]:hover, #buddypress input[type="reset"]:focus, #buddypress input[type="reset"]:active, #buddypress input[type="submit"]:hover, #buddypress input[type="submit"]:focus, #buddypress input[type="submit"]:active { background: #25548a !important; border: none; color: #fff; }
+#buddypress ul.button-nav li a:hover, #buddypress ul.button-nav li.current a { background: #25548a !important; border: none; color: #fff; }
+#buddypress a.disabled { border: none; color: #fff; }
+#buddypress button.disabled, #buddypress button.pending { border: none; color: #fff; }
+#buddypress div.pending a { border: none; color: #fff; }
+#buddypress input[type="submit"][disabled=disabled] { border: none; color: #fff; }
+#buddypress input[type="button"].disabled, #buddypress input[type="button"].pending, #buddypress input[type="reset"].disabled, #buddypress input[type="reset"].pending, #buddypress input[type="submit"].disabled, #buddypress input[type="submit"].pending { border: none; color: #fff; }
+#buddypress .dir-search input[type=search], #buddypress .dir-search input[type=text] { background: #fff; }
+#buddypress .groups-members-search input[type=search], #buddypress .groups-members-search input[type=text] { background: #fff; }
+#buddypress .standard-form input[type=color], #buddypress .standard-form input[type=date], #buddypress .standard-form input[type=datetime-local], #buddypress .standard-form input[type=datetime], #buddypress .standard-form input[type=email], #buddypress .standard-form input[type=month], #buddypress .standard-form input[type=number], #buddypress .standard-form input[type=password], #buddypress .standard-form input[type=range], #buddypress .standard-form input[type=search], #buddypress .standard-form input[type=tel], #buddypress .standard-form input[type=text], #buddypress .standard-form input[type=time], #buddypress .standard-form input[type=url], #buddypress .standard-form input[type=week] { background: #fff; }
+#buddypress .standard-form select, #buddypress .standard-form textarea { background: #fff; }
+#buddypress .standard-form input:focus, #buddypress .standard-form select:focus, #buddypress .standard-form textarea:focus { background: #fff; }
 
 #search-message-form { position: relative; min-width: 260px; }
 #search-message-form input { height: 36px; }
@@ -112,7 +129,11 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
 #bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }
 
+.bbp-rc-reply-is-reported p { margin-bottom: 10px; }
+.bbp-rc-reply-is-reported em { font-size: .8em; }
+
 .topics-navigation { font-size: 1rem; margin-bottom: 15px; }
+.topics-navigation a { margin-right: 1em; }
 
 .bbp-pagination { display: none; }
 
@@ -125,6 +146,8 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 .secondary-sidebar { margin-top: 35px; }
 .secondary-sidebar ul, .secondary-sidebar li { list-style: none; margin: 0; padding: 0; }
+
+.blog .widget-area { margin-top: 0; }
 
 .widget_co_downloads_widget { margin-bottom: 40px; }
 .widget_co_downloads_widget li { margin-bottom: 8px; }
@@ -208,8 +231,8 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 .tribe-events-meta-group .tribe-events-single-section-title { font-size: 17px; font-weight: 700; margin: 20px 0 10px; }
 
-.single-document .download-link a { display: block; position: relative; padding-left: 25px; }
-.single-document .download-link a i { position: absolute; left: 0; top: 5px; }
+.single-document .download-link { display: block; position: relative; padding-left: 25px; }
+.single-document .download-link i { position: absolute; left: 0; top: 5px; }
 
 a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
 
@@ -225,6 +248,8 @@ dl dd { margin-left: 0; }
 .sce-comment-edit-buttons > button { margin-right: 1em; }
 
 .footer-navigation { padding-bottom: 30px; }
+
+fieldset legend, .quicktags-toolbar { background: none !important; }
 
 #wp-admin-bar-my-account-settings-profile, #wp-admin-bar-my-account-forums-favorites { display: none; }
 

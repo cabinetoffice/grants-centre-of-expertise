@@ -17,6 +17,8 @@ function co_enqueue_scripts() {
 	wp_deregister_script( 'main' );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/../build/main.min.js', array('jquery', 'modernizr'), '', true );
 
+	// wp_enqueue_script( 'co-main', get_stylesheet_directory_uri() . '/../assets/js/main.js', array('jquery', 'modernizr'), filemtime( get_stylesheet_directory() . '/../assets/js/main.js' ), true );
+
 	// Enqueue custom css which may of been added the style.css
 	wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/style.css', array( 'main' ), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
