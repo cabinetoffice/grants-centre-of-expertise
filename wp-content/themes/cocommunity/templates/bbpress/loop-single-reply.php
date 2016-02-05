@@ -9,7 +9,7 @@
 
 ?>
 
-<div <?php bbp_reply_class(); ?>>
+<div id="post-<?php bbp_reply_id(); ?>" <?php bbp_reply_class(); ?>>
 
 	<div class="bbp-reply-author">
 
@@ -43,7 +43,7 @@
 
 </div><!-- .reply -->
 
-<div id="post-<?php bbp_reply_id(); ?>" class="bbp-reply-header">
+<div class="bbp-reply-header">
 
 	<div class="bbp-meta">
 

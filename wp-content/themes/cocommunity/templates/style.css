@@ -26,12 +26,16 @@ Template:           govsite/templates
 #buddypress div.item-list-tabs#subnav .feed { display: none; }
 #buddypress div#item-header { margin-bottom: 1em; }
 #buddypress div#invite-list { padding: 15px 10px; }
+#buddypress div.activity-meta a { margin-bottom: 0; }
+#buddypress .standard-form #invite-list label { padding-left: 18px; position: relative; margin-bottom: 8px; word-wrap: break-word; hyphens: auto; }
+#buddypress .standard-form #invite-list label input { position: absolute; left: 0; top: 5px; }
 #buddypress .standard-form div.radio label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
 #buddypress .standard-form div.radio ul { list-style-type: none; }
 #buddypress .standard-form div.radio ul li { position: relative; }
 #buddypress .standard-form div.radio ul li:before { position: absolute; left: -1em; content: "\2013"; }
 #buddypress ul.item-list li div.item-count { font-size: .9em; margin-top: 4px; }
 #buddypress ul.item-list li div.item-desc p { margin-bottom: 0; }
+#buddypress ul.item-list li div.action .generic-button { display: inline-block; margin-left: 1em; }
 #buddypress table input[type="checkbox"] { margin-bottom: 0; }
 #buddypress table#message-threads tr td .activity { display: block; }
 #buddypress table img.avatar { float: left; margin-right: 1em; }
@@ -74,7 +78,7 @@ Template:           govsite/templates
 #members-directory-form div.item-list-tabs#subnav ul li.last { margin-top: 0; }
 #members-directory-form ul.item-list li { padding: 15px; }
 #members-directory-form ul.item-list li.odd { background: rgba(255, 255, 255, 0.5); }
-#members-directory-form ul.item-list li div.action .generic-button { float: left; margin-right: 15px; }
+#members-directory-form ul.item-list li div.action .generic-button { margin-right: 15px; margin-left: 0; }
 #members-directory-form #members-all { display: none; }
 #members-directory-form span.department { font-size: small; opacity: .8; }
 
@@ -88,7 +92,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 #item-body { position: relative; }
 
-.filter, #activity-filter-select { width: 100%; position: absolute; right: 0; top: 0; text-align: right; max-width: 50%; margin-top: 0 !important; }
+.filter, #activity-filter-select { position: absolute; right: 0; top: 0; text-align: right; width: 100%; max-width: 260px; margin-top: 0 !important; }
 .filter label, #activity-filter-select label { display: inline; padding-right: 4px; }
 .bbp-user-page .filter, .bbp-user-page #activity-filter-select { top: 20px; }
 .my-account .filter, .my-account #activity-filter-select { top: 55px; }
@@ -109,10 +113,10 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 #member-list h5 { margin: 0; }
 
-.search-results #members-dir-list { margin-bottom: 40px; }
-.search-results #members-dir-list .pagination { display: none; }
+.search-results #members-dir-list, .search-results #groups-dir-list { margin-bottom: 40px; }
+.search-results #members-dir-list .pagination, .search-results #groups-dir-list .pagination { display: none; }
 
-@media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav, #groups-order-select { position: static; width: 100%; text-align: left; left: 0; }
+@media only screen and (max-width: 48.75em) { #members-directory-form div.item-list-tabs#subnav, .filter, #activity-filter-select { position: static; width: 100%; text-align: left; float: left; left: 0; }
   #search-members-form { width: 100%; }
   #buddypress div.message-search, #groups-order-select { float: left !important; clear: both; margin: 20px 10px 0 !important; } }
 #members-list .vcard { display: block; }
@@ -128,14 +132,19 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
 #bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }
+#bbpress-forums .bbp-reply-form .bbp-form .bbp-form { border: none; padding: 0; }
+#bbpress-forums .bbp-reply-form .bbp-form .bbp-form legend { display: none; }
 
 .bbp-rc-reply-is-reported p { margin-bottom: 10px; }
 .bbp-rc-reply-is-reported em { font-size: .8em; }
 
 .topics-navigation { font-size: 1rem; margin-bottom: 15px; }
 .topics-navigation a { margin-right: 1em; }
+.topics-navigation a.right { margin-right: 0; margin-left: 1em; }
 
 .bbp-pagination { display: none; }
+
+div.bbp-breadcrumb { float: none; }
 
 .bbp-reply-content #subscription-toggle { display: none; }
 
@@ -252,6 +261,8 @@ dl dd { margin-left: 0; }
 fieldset legend, .quicktags-toolbar { background: none !important; }
 
 #wp-admin-bar-my-account-settings-profile, #wp-admin-bar-my-account-forums-favorites { display: none; }
+
+ul.pagination li.current a:hover, ul.pagination li.current a:focus { color: #fff; }
 
 .primary-sidebar ul { list-style-type: none; margin-left: 0; }
 

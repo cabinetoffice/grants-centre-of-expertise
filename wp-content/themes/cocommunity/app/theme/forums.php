@@ -89,12 +89,15 @@ add_action( 'bbp_template_before_single_forum', 'co_filter_topics' );
 // Actions above single topic
 function co_topic_actions() {
 	print '<p class="topics-navigation">';
+
 	print bbp_get_topic_subscription_link( array( 'before' => '' ) );
 	
 	if ( class_exists( 'bbp_ReportContent' ) ) {
 		$report_content = bbp_ReportContent::get_instance();
 		print str_replace( 'bbp-topic-report-link', 'bbp-topic-report-link button', $report_content->get_topic_report_link() );
 	}
+
+	print '<a href="javascript:history.go(0);" class="button right">Refresh</a>';
 	print '</p>';
 }
 add_action( 'bbp_template_before_single_topic', 'co_topic_actions' );
@@ -204,7 +207,7 @@ add_action( 'bbp_trashed_reply', 'co_notify_trashed_reply' );
 // Removing various bits of bbPress
 add_filter( 'bbp_get_topic_reply_link', '__return_false' );
 add_filter( 'bbp_get_reply_to_link', '__return_false' );
-add_filter( 'bbp_get_breadcrumb', '__return_false' );
+// add_filter( 'bbp_get_breadcrumb', '__return_false' );
 add_filter( 'bbp_get_single_forum_description', '__return_false' );
 add_filter( 'bbp_get_forum_pagination_count', '__return_false' );
 add_filter( 'bbp_get_topic_author_avatar', '__return_false' );

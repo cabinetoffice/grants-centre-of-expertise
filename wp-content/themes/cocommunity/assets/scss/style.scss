@@ -45,6 +45,12 @@ fieldset legend, .quicktags-toolbar { background: none !important; }
 
 #wp-admin-bar-my-account-settings-profile, #wp-admin-bar-my-account-forums-favorites { display: none; }
 
+ul.pagination li.current {
+	a {
+		&:hover, &:focus { color: #fff; }
+	}
+}
+
 // .menu-main-menu-container {
 // 	margin-top: 52px;
 // 	ul {

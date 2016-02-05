@@ -41,6 +41,7 @@ function co_change_bp_nav_position() {
 	unset( $bp->bp_options_nav['forums']['favorites'] );
 
 	$bp->bp_nav['settings']['position'] = 25;
+	$bp->bp_nav['activity']['position'] = 25;
 	$bp->bp_options_nav['messages']['compose']['position'] = 1;
 }
 add_action( 'bp_init', 'co_change_bp_nav_position', 999 );

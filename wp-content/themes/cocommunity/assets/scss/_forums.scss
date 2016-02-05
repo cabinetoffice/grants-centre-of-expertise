@@ -48,6 +48,17 @@
 		display: block;
 		margin-bottom: 5px;
 	}
+
+	.bbp-reply-form {
+		.bbp-form .bbp-form {
+			border: none;
+			padding: 0;
+			
+			legend {
+				display: none;
+			}
+		}
+	}
 }
 
 .bbp-rc-reply-is-reported {
@@ -60,11 +71,18 @@
 	font-size: 1rem;
 	margin-bottom: 15px;
 
-	a { margin-right: 1em; }
+	a {
+		margin-right: 1em;
+
+		&.right {
+			margin-right: 0;
+			margin-left: 1em;
+		}
+	}
 }
 
 .bbp-pagination { display: none; }
 
-.bbp-reply-content #subscription-toggle {
-	display: none;
-}
+div.bbp-breadcrumb { float: none; }
+
+.bbp-reply-content #subscription-toggle { display: none; }

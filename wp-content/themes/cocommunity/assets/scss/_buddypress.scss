@@ -62,21 +62,40 @@
 		&#item-header { margin-bottom: 1em; }
 
 		&#invite-list { padding: 15px 10px; }
+
+		&.activity-meta a { margin-bottom: 0; }
 	}
 
-	.standard-form div.radio {
-		label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
+	.standard-form {
+		#invite-list label {
+			// line-height: 1;
+			padding-left: 18px;
+			position: relative;
+			margin-bottom: 8px;
+			word-wrap: break-word;
+			hyphens: auto;
 
-		ul {
-			list-style-type: none;
+			input {
+				position: absolute;
+				left: 0;
+				top: 5px;
+			}
+		}
 
-			li {
-				position: relative;
+		div.radio {
+			label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
 
-				&:before {
-					position: absolute;
-					left: -1em;
-					content: "\2013";
+			ul {
+				list-style-type: none;
+
+				li {
+					position: relative;
+
+					&:before {
+						position: absolute;
+						left: -1em;
+						content: "\2013";
+					}
 				}
 			}
 		}
@@ -89,6 +108,13 @@
 		}
 
 		&.item-desc p { margin-bottom: 0; }
+
+		&.action {
+			.generic-button {
+				display: inline-block;
+				margin-left: 1em;
+			}
+		}
 	}
 
 	table {
@@ -266,7 +292,10 @@
 		&.odd { background: rgba( 255, 255, 255, 0.5 ); }
 		
 		div.action {
-			.generic-button { float: left; margin-right: 15px; }
+			.generic-button {
+				margin-right: 15px; // leave space on the right
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -298,12 +327,12 @@ ul.acfb-holder li {
 // Selects
 // #members-order-select, #groups-order-select, #group_members-order-select, #activity-filter-select {
 .filter, #activity-filter-select {
-	width: 100%;
 	position: absolute;
 	right: 0;
 	top: 0;
 	text-align: right;
-	max-width: 50%;
+	width: 100%;
+	max-width: 260px;
 	margin-top: 0 !important;
 
 	label {
@@ -361,7 +390,7 @@ ul.acfb-holder li {
 }
 
 .search-results {
-	#members-dir-list {
+	#members-dir-list, #groups-dir-list {
 		margin-bottom: 40px;
 
 		.pagination { display: none; }
@@ -369,10 +398,11 @@ ul.acfb-holder li {
 }
 
 @media only screen and (max-width: 48.75em) {
-	#members-directory-form div.item-list-tabs#subnav, #groups-order-select {
+	#members-directory-form div.item-list-tabs#subnav, .filter, #activity-filter-select {
 		position: static;
 		width: 100%;
 		text-align: left;
+		float: left;
 		left: 0;
 	}
 

@@ -1,3 +1,4 @@
+
 <main id="content" role="main" class="main">
 
 	<section class="search-results">
@@ -18,6 +19,18 @@
 							<div id="members-dir-list" class="members dir-list">
 								<?php bp_get_template_part( 'members/members-loop' ); ?>
 							</div><!-- #members-dir-list -->
+						</div>
+
+					<?php endif; ?>
+
+					<?php if ( bp_has_groups( bp_ajax_querystring( 'groups' ) ) ) : ?>
+
+						<div id="buddypress">
+							<h3>Groups found</h3>
+
+							<div id="groups-dir-list" class="groups dir-list">
+								<?php bp_get_template_part( 'groups/groups-loop' ); ?>
+							</div><!-- #groups-dir-list -->
 						</div>
 
 					<?php endif; ?>
