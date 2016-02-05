@@ -41,6 +41,8 @@ function govsite_co_show_recent_posts_func( $atts ) {
 
 	query_posts( array(
 		'showposts' => $a['numberposts'],
+		'numberposts' => $a['numberposts'],
+		'posts_per_page' => $a['numberposts'],
 		'post_type' => 'post',
 	) );
 
@@ -78,6 +80,8 @@ function govsite_co_show_recent_events_func( $atts ) {
 
 	query_posts( array(
 		'showposts' => $a['numberposts'],
+		'numberposts' => $a['numberposts'],
+		'posts_per_page' => $a['numberposts'],
 		'post_type' => 'tribe_events',
 	) );
 
