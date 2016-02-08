@@ -11,29 +11,34 @@
 
 				<div class="page-element">
 
-					<?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
+					<?php if ( ! get_query_var( 'paged' ) || get_query_var( 'paged' ) == 1 ) : ?>
 
-						<div id="buddypress">
-							<h3>Members found</h3>
+						<?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
 
-							<div id="members-dir-list" class="members dir-list">
-								<?php bp_get_template_part( 'members/members-loop' ); ?>
-							</div><!-- #members-dir-list -->
-						</div>
+							<div id="buddypress">
+								<h3>Members found</h3>
+
+								<div id="members-dir-list" class="members dir-list">
+									<?php bp_get_template_part( 'members/members-loop' ); ?>
+								</div><!-- #members-dir-list -->
+							</div>
+
+						<?php endif; ?>
+
+						<?php if ( bp_has_groups( bp_ajax_querystring( 'groups' ) ) ) : ?>
+
+							<div id="buddypress">
+								<h3>Groups found</h3>
+
+								<div id="groups-dir-list" class="groups dir-list">
+									<?php bp_get_template_part( 'groups/groups-loop' ); ?>
+								</div><!-- #groups-dir-list -->
+							</div>
+
+						<?php endif; ?>
 
 					<?php endif; ?>
 
-					<?php if ( bp_has_groups( bp_ajax_querystring( 'groups' ) ) ) : ?>
-
-						<div id="buddypress">
-							<h3>Groups found</h3>
-
-							<div id="groups-dir-list" class="groups dir-list">
-								<?php bp_get_template_part( 'groups/groups-loop' ); ?>
-							</div><!-- #groups-dir-list -->
-						</div>
-
-					<?php endif; ?>
 
 					<?php if (have_posts()) : ?>
 						<h3>Posts or topics found</h3>
