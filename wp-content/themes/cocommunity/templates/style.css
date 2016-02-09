@@ -13,12 +13,14 @@ Template:           govsite/templates
 .site-header.menu-full-width .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
 .site-header.menu-full-width .dropdown { top: 55px; }
 
+@media only screen and (max-width: 48.6875em) { .site-header .top-bar.active { max-height: none; margin-bottom: 0; }
+  .site-header .top-bar ul { margin-bottom: 0; } }
 #buddypress { position: relative; }
 #buddypress div.dir-search { float: none; margin-top: 0; }
 #buddypress div.dir-search input[type=text] { width: 100%; background: #fff; }
 #buddypress div#item-header div#item-header-content small { white-space: nowrap; }
 #buddypress div#item-header div#item-header-content h2 a { color: #000; }
-#buddypress div#item-header div#item-header-content h5 a { word-break: break-all; }
+#buddypress div#item-header div#item-header-content h5 a { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
 #buddypress div#item-header div#item-header-content span, #buddypress div#item-header div#item-header-content h6 { margin-bottom: 0; color: #6f6f6f; }
 #buddypress div#item-header div#item-header-content .activity { display: block; }
 #buddypress div.item-list-tabs ul li a span { border: none; padding: 2px 6px; }
@@ -27,6 +29,8 @@ Template:           govsite/templates
 #buddypress div#item-header { margin-bottom: 1em; }
 #buddypress div#invite-list { padding: 15px 10px; }
 #buddypress div.activity-meta a { margin-bottom: 0; }
+#buddypress div.activity-comments ul { padding-top: 15px; }
+#buddypress div.activity-comments form.ac-form { padding: 10px 0; }
 #buddypress .standard-form #invite-list label { padding-left: 18px; position: relative; margin-bottom: 8px; word-wrap: break-word; hyphens: auto; }
 #buddypress .standard-form #invite-list label input { position: absolute; left: 0; top: 5px; }
 #buddypress .standard-form div.radio label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
@@ -97,9 +101,9 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .filter, #activity-filter-select { position: absolute; right: 0; top: 0; text-align: right; width: 100%; max-width: 260px; margin-top: 0 !important; }
 .filter label, #activity-filter-select label { display: inline; padding-right: 4px; }
 .bbp-user-page .filter, .bbp-user-page #activity-filter-select { top: 20px; }
-.my-account .filter, .my-account #activity-filter-select { top: 55px; }
-.my-activity .filter, .my-friends .filter, .notifications .filter, .my-activity #activity-filter-select, .my-friends #activity-filter-select, .notifications #activity-filter-select { top: 0; }
+.my-account .filter, .my-account #activity-filter-select { top: 58px; }
 .group-home .filter, .activity .filter, .group-home #activity-filter-select, .activity #activity-filter-select { top: -45px; }
+.my-activity .filter, .my-friends .filter, .notifications .filter, .my-activity #activity-filter-select, .my-friends #activity-filter-select, .notifications #activity-filter-select { top: 0; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
@@ -131,6 +135,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
 #bbpress-forums div.bbp-search-form { display: none; }
+#bbpress-forums div.bbp-reply-author a.bbp-author-name { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
 #bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }
@@ -144,7 +149,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .topics-navigation a { margin-right: 1em; }
 .topics-navigation a.right { margin-right: 0; margin-left: 1em; }
 
-.bbp-pagination { display: none; }
+.bbp-pagination .bbp-pagination-count { display: none; }
 
 div.bbp-breadcrumb { float: none; }
 
@@ -163,7 +168,7 @@ div.bbp-breadcrumb { float: none; }
 .widget_co_downloads_widget { margin-bottom: 40px; }
 .widget_co_downloads_widget li { margin-bottom: 8px; }
 .widget_co_downloads_widget li a { display: block; padding-left: 20px; position: relative; }
-.widget_co_downloads_widget li a .fa { position: absolute; left: 0; top: 5px; }
+.widget_co_downloads_widget li a .fa { position: absolute; left: 0; top: 4px; }
 
 .home-page .page-header { display: none; }
 .home-page .main-archive .button { display: none; }

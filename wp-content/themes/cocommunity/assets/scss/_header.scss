@@ -39,3 +39,14 @@
 		.dropdown { top: 55px; }
 	}
 }
+
+@media only screen and (max-width: 48.6875em) {
+	.site-header .top-bar {
+		&.active {
+			max-height: none;
+			margin-bottom: 0;
+		}
+
+		ul { margin-bottom: 0; }
+	}
+}

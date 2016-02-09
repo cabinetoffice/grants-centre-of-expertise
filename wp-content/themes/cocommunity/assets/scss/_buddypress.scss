@@ -36,7 +36,11 @@
 
 			h2 a { color: #000; }
 
-			h5 a { word-break: break-all; }
+			h5 a {
+				white-space: pre-wrap;
+				word-break: break-all;
+				word-wrap: break-word;
+			}
 
 			span, h6 {
 				margin-bottom: 0;
@@ -64,11 +68,16 @@
 		&#invite-list { padding: 15px 10px; }
 
 		&.activity-meta a { margin-bottom: 0; }
+
+		&.activity-comments {
+			ul { padding-top: 15px; }
+
+			form.ac-form { padding: 10px 0; }
+		}		
 	}
 
 	.standard-form {
 		#invite-list label {
-			// line-height: 1;
 			padding-left: 18px;
 			position: relative;
 			margin-bottom: 8px;
@@ -325,7 +334,6 @@ ul.acfb-holder li {
 #item-body { position: relative; }
 
 // Selects
-// #members-order-select, #groups-order-select, #group_members-order-select, #activity-filter-select {
 .filter, #activity-filter-select {
 	position: absolute;
 	right: 0;
@@ -342,11 +350,11 @@ ul.acfb-holder li {
 
 	.bbp-user-page & { top: 20px; }
 
-	.my-account & { top: 55px; }
-
-	.my-activity &, .my-friends &, .notifications & { top: 0; }
+	.my-account & { top: 58px; }
 
 	.group-home &, .activity & { top: -45px; }
+
+	.my-activity &, .my-friends &, .notifications & { top: 0; }
 }
 
 #profile-edit-form {

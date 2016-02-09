@@ -1,3 +1,4 @@
+
 #bbpress-forums {
 	> #subscription-toggle {
 		float: right;
@@ -34,6 +35,12 @@
 		}
 
 		&.bbp-search-form { display: none; }
+
+		&.bbp-reply-author a.bbp-author-name {
+			white-space: pre-wrap;
+			word-break: break-all;
+			word-wrap: break-word;
+		}
 	}
 
 	p {
@@ -81,7 +88,7 @@
 	}
 }
 
-.bbp-pagination { display: none; }
+.bbp-pagination .bbp-pagination-count { display: none; }
 
 div.bbp-breadcrumb { float: none; }
 

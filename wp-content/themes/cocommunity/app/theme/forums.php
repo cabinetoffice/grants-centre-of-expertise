@@ -20,7 +20,7 @@ function co_reply_trash_link( $retval, $r ) {
 	$reply = bbp_get_reply( bbp_get_reply_id( (int) $r['id'] ) );
 	$user_id = get_current_user_id();
 
-	if ( ! current_user_can( 'administrator' ) && $reply->post_author != $user_id )
+	if ( ! current_user_can( 'bbp_keymaster' ) && $reply->post_author != $user_id )
 		return;
 
 	return $retval;
@@ -33,7 +33,7 @@ function co_topic_trash_link( $retval, $r ) {
 	$topic = bbp_get_topic( bbp_get_topic_id( (int) $r['id'] ) );
 	$user_id = get_current_user_id();
 
-	if ( ! current_user_can( 'administrator' ) && $topic->post_author != $user_id )
+	if ( ! current_user_can( 'bbp_keymaster' ) && $topic->post_author != $user_id )
 		return;
 
 	return $retval;
