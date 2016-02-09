@@ -249,9 +249,9 @@
 			&:focus { background: #fff; }
 		}
 	}
-
-
 }
+
+#close-notice { float: right; }
 
 
 #search-message-form {
@@ -346,7 +346,7 @@ ul.acfb-holder li {
 
 	.my-activity &, .my-friends &, .notifications & { top: 0; }
 
-	.group-home & { top: -45px; }
+	.group-home &, .activity & { top: -45px; }
 }
 
 #profile-edit-form {

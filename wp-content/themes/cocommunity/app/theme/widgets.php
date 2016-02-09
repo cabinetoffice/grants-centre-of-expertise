@@ -30,7 +30,21 @@ class CO_Downloads_Widget extends WP_Widget {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		}
 
-		$documents = new WP_Query( array( 'post_type' => 'document', 'orderby' => 'menu_order', 'order' => 'asc', 'posts_per_page' => -1 ) );
+		$args = array(
+			'post_type' => 'document',
+			'orderby' => 'menu_order',
+			'order' => 'asc',
+			'posts_per_page' => -1,
+		);
+
+		if ( $documents_widget = get_field( 'documents_widget' ) ) {
+			$args['post__in'] = $documents_widget;
+			$args['orderby'] = 'post__in';
+		}
+
+		$documents = new WP_Query( $args );
+
+		$link_type = get_field( 'documents_link_type' );
 
 		if ( $documents->have_posts() ) : ?>
 
@@ -39,7 +53,7 @@ class CO_Downloads_Widget extends WP_Widget {
 					<?php $document = get_field( 'file_upload' ); ?>
 
 					<li>
-						<a href="<?php the_permalink(); ?>">
+						<a href="<?php echo $link_type == 'download' ? $document['url'] : get_permalink(); ?>">
 							<i class="fa <?php echo get_fa_icon_for_mime_type( $document['mime_type'] ); ?>"></i>
 							<?php the_title(); ?>
 						</a>

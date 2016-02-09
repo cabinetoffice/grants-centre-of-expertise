@@ -70,6 +70,8 @@ Template:           govsite/templates
 #buddypress .standard-form select, #buddypress .standard-form textarea { background: #fff; }
 #buddypress .standard-form input:focus, #buddypress .standard-form select:focus, #buddypress .standard-form textarea:focus { background: #fff; }
 
+#close-notice { float: right; }
+
 #search-message-form { position: relative; min-width: 260px; }
 #search-message-form input { height: 36px; }
 #search-message-form #messages_search_submit { position: absolute; right: 0; top: 0; }
@@ -97,7 +99,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .bbp-user-page .filter, .bbp-user-page #activity-filter-select { top: 20px; }
 .my-account .filter, .my-account #activity-filter-select { top: 55px; }
 .my-activity .filter, .my-friends .filter, .notifications .filter, .my-activity #activity-filter-select, .my-friends #activity-filter-select, .notifications #activity-filter-select { top: 0; }
-.group-home .filter, .group-home #activity-filter-select { top: -45px; }
+.group-home .filter, .activity .filter, .group-home #activity-filter-select, .activity #activity-filter-select { top: -45px; }
 
 #profile-edit-form > h4, #profile-edit-form .field-visibility-settings-notoggle { display: none; }
 
