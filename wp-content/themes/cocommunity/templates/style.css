@@ -135,7 +135,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
 #bbpress-forums div.bbp-search-form { display: none; }
-#bbpress-forums div.bbp-reply-author a.bbp-author-name { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
+#bbpress-forums .bbp-author-name { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
 #bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }

@@ -35,12 +35,12 @@
 		}
 
 		&.bbp-search-form { display: none; }
+	}
 
-		&.bbp-reply-author a.bbp-author-name {
-			white-space: pre-wrap;
-			word-break: break-all;
-			word-wrap: break-word;
-		}
+	.bbp-author-name {
+		white-space: pre-wrap;
+		word-break: break-all;
+		word-wrap: break-word;
 	}
 
 	p {
