@@ -26,6 +26,10 @@ function co_theme_setup() {
 add_action( 'after_setup_theme', 'co_theme_setup' );
 
 
+// Disable translation updates
+add_filter( 'auto_update_translation', '__return_false' );
+
+
 // Admin bar for users
 function co_admin_bar_remove() {
 	global $wp_admin_bar;
