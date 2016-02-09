@@ -52,8 +52,10 @@ class CO_Downloads_Widget extends WP_Widget {
 				<?php while ( $documents->have_posts() ) : $documents->the_post(); ?>
 					<?php $document = get_field( 'file_upload' ); ?>
 
+					<?php $ga_tracker = $link_type == 'download' ? sprintf( " onClick=\"__gaTracker('send', 'event', 'Documents', 'download', '%s');\"", get_the_title() ) : ''; ?>
+
 					<li>
-						<a href="<?php echo $link_type == 'download' ? $document['url'] : get_permalink(); ?>">
+						<a href="<?php echo $link_type == 'download' ? $document['url'] : get_permalink(); ?>" class="download-link" title="<?php the_title(); ?>"<?php echo $ga_tracker; ?>>
 							<i class="fa <?php echo get_fa_icon_for_mime_type( $document['mime_type'] ); ?>"></i>
 							<?php the_title(); ?>
 						</a>

@@ -75,6 +75,8 @@ Template:           govsite/templates
 #buddypress .standard-form select, #buddypress .standard-form textarea { background: #fff; }
 #buddypress .standard-form input:focus, #buddypress .standard-form select:focus, #buddypress .standard-form textarea:focus { background: #fff; }
 
+.button-banner:hover, .button-banner:focus, .button:hover, .button:focus { background: #25548a !important; border: none; color: #fff; }
+
 #close-notice { float: right; }
 
 #search-message-form { position: relative; min-width: 260px; }

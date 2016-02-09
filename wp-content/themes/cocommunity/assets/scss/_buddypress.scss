@@ -260,6 +260,11 @@
 	}
 }
 
+.button-banner, .button {
+	&:hover, &:focus { @include blue-button-hover; }
+}
+
+
 #close-notice { float: right; }
 
 
