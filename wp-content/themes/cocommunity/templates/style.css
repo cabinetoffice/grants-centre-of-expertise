@@ -3,6 +3,7 @@ Theme Name:         Cabinet Office Grants Hub
 Author:             WTG
 Template:           govsite/templates
 */
+.site-header .dropdown:before { left: 40px; }
 .site-header .top-bar-section { position: absolute; top: 0; right: 0; }
 .site-header .top-bar .menu > .active > a:before { display: none; }
 .site-header.menu-full-width .top-bar-section { position: static; }
