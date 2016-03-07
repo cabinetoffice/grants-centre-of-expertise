@@ -36,13 +36,13 @@ add_shortcode( 'govuk_hidden_text', 'govuk_hidden_text_func' );
  */
 function govsite_co_show_recent_posts_func( $atts ) {
 	$a = shortcode_atts( array(
-		'numberposts' => '3'
+		'posts' => '3'
 	), $atts );
 
 	query_posts( array(
-		'showposts' => $a['numberposts'],
-		'numberposts' => $a['numberposts'],
-		'posts_per_page' => $a['numberposts'],
+		'showposts' => $a['posts'],
+		'numberposts' => $a['posts'],
+		'posts_per_page' => $a['posts'],
 		'post_type' => 'post',
 	) );
 
@@ -66,7 +66,7 @@ function govsite_co_show_recent_posts_func( $atts ) {
 
 	return $output;
 }
-add_shortcode( 'govsite_co_show_recent_posts', 'govsite_co_show_recent_posts_func' );
+add_shortcode( 'co_show_recent_posts', 'govsite_co_show_recent_posts_func' );
 
 
 /**
@@ -75,13 +75,13 @@ add_shortcode( 'govsite_co_show_recent_posts', 'govsite_co_show_recent_posts_fun
  */
 function govsite_co_show_recent_events_func( $atts ) {
 	$a = shortcode_atts( array(
-		'numberposts' => '3'
+		'events' => '3'
 	), $atts );
 
 	query_posts( array(
-		'showposts' => $a['numberposts'],
-		'numberposts' => $a['numberposts'],
-		'posts_per_page' => $a['numberposts'],
+		'showposts' => $a['events'],
+		'numberposts' => $a['events'],
+		'posts_per_page' => $a['events'],
 		'post_type' => 'tribe_events',
 	) );
 
@@ -105,6 +105,6 @@ function govsite_co_show_recent_events_func( $atts ) {
 
 	return $output;
 }
-add_shortcode( 'govsite_co_show_recent_events', 'govsite_co_show_recent_events_func' );
+add_shortcode( 'co_show_recent_events', 'govsite_co_show_recent_events_func' );
 
 
