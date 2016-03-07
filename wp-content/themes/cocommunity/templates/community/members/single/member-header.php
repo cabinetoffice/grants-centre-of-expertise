@@ -44,21 +44,11 @@ $user = bp_core_get_core_userdata( bp_displayed_user_id() );
 		<!-- <span class="user-nicename">@<?php bp_displayed_user_mentionname(); ?></span> -->
 	<?php endif; ?>
 
-	<span class="activity"><?php bp_last_activity( bp_displayed_user_id() ); ?></span>
+	<h6><span class="activity"><?php bp_last_activity( bp_displayed_user_id() ); ?></span></h6>
 
 	<?php do_action( 'bp_before_member_header_meta' ); ?>
 
 	<div id="item-meta">
-
-		<?php if ( bp_is_active( 'activity' ) ) : ?>
-
-			<div id="latest-update">
-
-				<?php bp_activity_latest_update( bp_displayed_user_id() ); ?>
-
-			</div>
-
-		<?php endif; ?>
 
 		<div id="item-buttons">
 
