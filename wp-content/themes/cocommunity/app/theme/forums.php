@@ -74,7 +74,7 @@ function co_filter_topics() {
 		<div class="item-list-tabs no-ajax" role="navigation">
 			<ul>
 				<li><span>Show: </span></li>
-				<li class="selected" id="topics-all"><a href="<?php echo bbp_get_topics_url(); ?>"><?php _e( 'All topics', 'cabinetoffice' ); ?></a></li>
+				<li<?php if ( bbp_is_topic_archive() ) echo ' class="selected"'; ?> id="topics-all"><a href="<?php echo bbp_get_topics_url(); ?>"><?php _e( 'All topics', 'cabinetoffice' ); ?></a></li>
 				<li id="my-topics"><a href="<?php echo bp_loggedin_user_domain() . bbp_get_root_slug(); ?>"><?php _e( 'My topics', 'cabinetoffice' ); ?></a></li>
 				<li id="my-subscriptions"><a href="<?php echo bbp_get_subscriptions_permalink( get_current_user_id() ); ?>"><?php _e( 'My subscriptions', 'cabinetoffice' ); ?></a></li>
 			</ul>
@@ -84,6 +84,7 @@ function co_filter_topics() {
 }
 add_action( 'bbp_template_before_forums_index', 'co_filter_topics' );
 add_action( 'bbp_template_before_single_forum', 'co_filter_topics' );
+add_action( 'bbp_template_before_topics_loop', 'co_filter_topics' );
 
 
 // Actions above single topic
@@ -211,7 +212,7 @@ add_filter( 'bbp_get_reply_to_link', '__return_false' );
 add_filter( 'bbp_get_single_forum_description', '__return_false' );
 add_filter( 'bbp_get_forum_pagination_count', '__return_false' );
 add_filter( 'bbp_get_topic_author_avatar', '__return_false' );
-add_filter( 'bbp_get_reply_author_avatar', '__return_false' );
+// add_filter( 'bbp_get_reply_author_avatar', '__return_false' );
 add_filter( 'bbp_get_single_topic_description', '__return_false' );
 add_filter( 'bbp_get_reply_author_role', '__return_false' );
 add_filter( 'bbp_get_author_ip', '__return_false' );

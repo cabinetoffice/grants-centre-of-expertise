@@ -19,6 +19,8 @@ Template:           govsite/templates
 #buddypress { position: relative; }
 #buddypress div.dir-search { float: none; margin-top: 0; }
 #buddypress div.dir-search input[type=text] { width: 100%; background: #fff; }
+#buddypress div#item-header div#item-header-avatar { margin-right: -215px; float: left; }
+#buddypress div#item-header div#item-header-content { margin-left: 215px; }
 #buddypress div#item-header div#item-header-content small { white-space: nowrap; }
 #buddypress div#item-header div#item-header-content h2 a { color: #000; }
 #buddypress div#item-header div#item-header-content h5 a { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
@@ -39,8 +41,10 @@ Template:           govsite/templates
 #buddypress .standard-form div.radio ul li { position: relative; }
 #buddypress .standard-form div.radio ul li:before { position: absolute; left: -1em; content: "\2013"; }
 #buddypress ul.item-list li div.item-count { font-size: .9em; margin-top: 4px; }
+#buddypress ul.item-list li div.item-desc { margin-left: 90px; }
 #buddypress ul.item-list li div.item-desc p { margin-bottom: 0; }
 #buddypress ul.item-list li div.action .generic-button { display: inline-block; margin-left: 1em; }
+#buddypress ul.item-list li div.item-title span.update { display: none; }
 #buddypress table input[type="checkbox"] { margin-bottom: 0; }
 #buddypress table#message-threads tr td .activity { display: block; }
 #buddypress table img.avatar { float: left; margin-right: 1em; }
@@ -134,6 +138,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums #buddypress { display: inline-block; }
 #bbpress-forums #buddypress .item-list-tabs { margin-bottom: 20px; font-size: 1rem; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
+#bbpress-forums div.bbp-reply-author img.avatar { margin-bottom: 10px; }
 #bbpress-forums div.bbp-reply-header { border-top: none; border-bottom: 1px solid #ddd; background-color: transparent; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
@@ -152,6 +157,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .topics-navigation a { margin-right: 1em; }
 .topics-navigation a.right { margin-right: 0; margin-left: 1em; }
 
+.bbp-pagination { float: right; width: auto; }
 .bbp-pagination .bbp-pagination-count { display: none; }
 
 div.bbp-breadcrumb { float: none; }

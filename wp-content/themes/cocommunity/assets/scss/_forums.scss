@@ -20,6 +20,8 @@
 			img.avatar { margin-bottom: 0; }
 		}
 
+		&.bbp-reply-author img.avatar { margin-bottom: 10px; }
+
 		&.bbp-reply-header {
 			border-top: none;
 			border-bottom: 1px solid #ddd;
@@ -88,7 +90,12 @@
 	}
 }
 
-.bbp-pagination .bbp-pagination-count { display: none; }
+.bbp-pagination {
+	float: right;
+	width: auto;
+
+	.bbp-pagination-count { display: none; }
+}
 
 div.bbp-breadcrumb { float: none; }
 
