@@ -39,6 +39,7 @@ function co_change_bp_nav_position() {
 
 	unset( $bp->bp_options_nav['settings']['profile'] );
 	unset( $bp->bp_options_nav['forums']['favorites'] );
+	unset( $bp->bp_options_nav['forums']['favourites'] );
 
 	$bp->bp_nav['settings']['position'] = 25;
 	$bp->bp_nav['activity']['position'] = 25;
@@ -70,4 +71,8 @@ add_action( 'bp_before_group_invites_content', 'co_add_invitations_title' );
 
 add_filter( 'bp_get_activity_secondary_avatar', '__return_false' );
 add_filter( 'bp_activity_can_favorite', '__return_false' );
+
+
+// Set user profile page as default
+define( 'BP_DEFAULT_COMPONENT', 'profile' );
 
