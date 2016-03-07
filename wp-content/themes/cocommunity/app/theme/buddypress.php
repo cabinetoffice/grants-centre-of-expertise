@@ -41,6 +41,14 @@ function co_change_bp_nav_position() {
 	unset( $bp->bp_options_nav['forums']['favorites'] );
 	unset( $bp->bp_options_nav['forums']['favourites'] );
 
+	$groups = groups_get_invites_for_user( bp_loggedin_user_id() );
+
+	$invites_count = ' <span style="display: none;">(</span>';
+	$invites_count .= sprintf( '<span class="%s">%s</span>', $groups['total'] ? 'count' : 'no-count', $groups['total'] );
+	$invites_count .= '<span style="display: none;">)</span>';
+
+	$bp->bp_options_nav['groups']['invites']['name'] .= $invites_count;
+
 	$bp->bp_nav['settings']['position'] = 25;
 	$bp->bp_nav['activity']['position'] = 25;
 	$bp->bp_options_nav['messages']['compose']['position'] = 1;
