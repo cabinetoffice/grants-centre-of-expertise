@@ -136,7 +136,10 @@ function co_subscribe_link_wrap_in_button( $retval, $r ) {
 add_filter( 'bbp_get_user_subscribe_link', 'co_subscribe_link_wrap_in_button', 10, 2 );
 
 
+// Email notification when a user reply has been trashed
 function co_notify_trashed_reply( $reply_id ) {
+	$topic_id = bbp_get_reply_topic_id( $reply_id );
+
 	// Bail if topic is not published
 	if ( !bbp_is_topic_published( $topic_id ) ) {
 		return false;
@@ -152,7 +155,6 @@ function co_notify_trashed_reply( $reply_id ) {
 	$reply_content = html_entity_decode( strip_tags( bbp_get_reply_content( $reply_id ) ) );
 	$reply_topic_title = html_entity_decode( strip_tags( bbp_get_reply_topic_title( $reply_id ) ) );
 
-	$topic_id = bbp_get_reply_topic_id( $reply_id );
 	$topic_link = bbp_get_topic_permalink( $topic_id );
 	$topic_url  = remove_query_arg( 'view', $topic_link );
 	$blog_name     = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
@@ -181,8 +183,6 @@ To view the topic, see %4$s.
 		return;
 	}
 
-	/** Users *****************************************************************/
-
 	// Get the noreply@ address
 	$no_reply   = bbp_get_do_not_reply_address();
 
@@ -195,14 +195,93 @@ To view the topic, see %4$s.
 
 	/** Send it ***************************************************************/
 
-	// Custom headers
-	$headers  = apply_filters( 'bbp_subscription_mail_headers', $headers );
 	$to_email = bbp_get_reply_author_email( $reply_id );
 
 	// Send notification email
 	wp_mail( $to_email, $subject, $message, $headers );
 }
 add_action( 'bbp_trashed_reply', 'co_notify_trashed_reply' );
+
+
+// Email notification when a topic is reported as inappropriate
+function co_rc_reported_topic( $topic_id ) {
+	$topic_title = html_entity_decode( strip_tags( bbp_get_topic_title( $topic_id ) ) );
+	$topic_link = bbp_get_topic_permalink( $topic_id );
+	$topic_url  = remove_query_arg( 'view', $topic_link );
+	$blog_name     = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+
+	$message = sprintf( __( 'The topic "%1$s" has been reported for inappropriate content.
+
+To view the topic, see %2$s.
+
+', 'cocommunity' ),
+
+		$topic_title,
+		$topic_url
+	);
+
+	// Subject line
+	$subject = '[' . $blog_name . '] A topic has been reported for inappropriate content.';
+
+	// Get the noreply@ address
+	$from_email = bbp_get_do_not_reply_address();
+
+	// Setup the From header
+	$headers = array( 'From: ' . get_bloginfo( 'name' ) . ' <' . $from_email . '>' );
+
+	/** Send it ***************************************************************/
+
+	$to_email = get_option( 'admin_email' );
+
+	// Send notification email
+	wp_mail( $to_email, $subject, $message, $headers );
+}
+add_action( 'bbp_rc_reported_topic', 'co_rc_reported_topic' );
+
+
+// Email notification when a reply is reported as inappropriate
+function co_rc_reported_reply( $reply_id ) {
+	$topic_id = bbp_get_reply_topic_id( $reply_id );
+
+	$reply_topic_title = html_entity_decode( strip_tags( bbp_get_reply_topic_title( $reply_id ) ) );
+	$reply_content = html_entity_decode( strip_tags( bbp_get_reply_content( $reply_id ) ) );
+	$reply_url = bbp_get_reply_url( $reply_id );
+	$blog_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+
+	$message = sprintf( __( 'A reply to the topic "%1$s" has been reported for inappropriate content.
+
+This is what it said:
+
+%2$s
+
+To view the reply, see %3$s.
+
+', 'cocommunity' ),
+
+		$reply_topic_title,
+		$reply_content,
+		$reply_url
+	);
+
+	// Subject line
+	$subject = '[' . $blog_name . '] A reply has been reported for inappropriate content.';
+
+	// Get the noreply@ address
+	$from_email = bbp_get_do_not_reply_address();
+
+	$from_email = 'ivantipov@gmail.com';
+
+	// Setup the From header
+	$headers = array( 'From: ' . get_bloginfo( 'name' ) . ' <' . $from_email . '>' );
+
+	/** Send it ***************************************************************/
+
+	$to_email = get_option( 'admin_email' );
+
+	// Send notification email
+	wp_mail( $to_email, $subject, $message, $headers );
+}
+add_action( 'bbp_rc_reported_reply', 'co_rc_reported_reply' );
 
 
 // Removing various bits of bbPress

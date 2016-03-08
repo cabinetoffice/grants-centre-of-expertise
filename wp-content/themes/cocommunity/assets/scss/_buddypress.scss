@@ -128,7 +128,7 @@
 
 		&.item-desc {
 			margin-left: 90px;
-			
+
 			p { margin-bottom: 0; }
 		}
 
@@ -179,7 +179,10 @@
 		}
 	}
 
-	a.view.activity-time-since { display: block; }
+	a.view.activity-time-since {
+		display: block;
+		font-size: 0.8em;
+	}
 
 	div#message p { margin-top: 1em; }
 
