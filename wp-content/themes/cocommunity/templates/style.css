@@ -4,8 +4,8 @@ Author:             WTG
 Template:           govsite/templates
 */
 .site-header .dropdown:before { left: 40px; }
-.site-header .top-bar-section { position: absolute; top: 0; right: 0; }
 .site-header .top-bar .menu > .active > a:before { display: none; }
+.site-header .top-bar .button-search { position: absolute; z-index: 99; right: 0; top: 0; }
 .site-header.menu-full-width .top-bar-section { position: static; }
 .site-header.menu-full-width .logo img { max-width: 140px; }
 .site-header.menu-full-width .top-bar div { float: none; }
@@ -279,6 +279,19 @@ fieldset legend, .quicktags-toolbar { background: none !important; }
 #wp-admin-bar-my-account-settings-profile, #wp-admin-bar-my-account-forums-favorites { display: none; }
 
 ul.pagination li.current a:hover, ul.pagination li.current a:focus { color: #fff; }
+
+/*wrap this in a govuk class ?*/
+.panel-indent { clear: both; padding: 0.789474em; margin-bottom: 0.789474em; border-left: 5px solid #BFC1C3; }
+.panel-indent p:last-child { margin-bottom: 0; }
+
+.govuk > details { display: block; }
+.govuk > details summary { display: inline-block; color: #005EA5; cursor: pointer; position: relative; margin-bottom: 10px; }
+.govuk > details summary:hover { color: #2E8ACA; }
+.govuk > details summary:focus { outline: 3px solid #2E8ACA; }
+.govuk > details .summary { text-decoration: underline; }
+.govuk > details .arrow { margin-right: .35em; font-style: normal; }
+.govuk .summary:before, .govuk .summary:after { content: none; }
+.govuk .post-summary:before, .govuk .post-summary:after { content: none; }
 
 .primary-sidebar ul { list-style-type: none; margin-left: 0; }
 
