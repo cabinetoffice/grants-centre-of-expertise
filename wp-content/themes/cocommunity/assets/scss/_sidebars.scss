@@ -7,12 +7,10 @@
 	li > ul { margin-top: 4px; }
 }
 
-.sidebar {
-	margin-top: 35px;
-}
+.sidebar { margin-top: 45px; }
 
 .secondary-sidebar {
-	margin-top: 35px;
+	margin-top: 45px;
 
 	ul, li {
 		list-style: none;
@@ -41,4 +39,11 @@
 			}
 		}
 	}
+}
+
+h2.widgettitle {
+	font-size: 1.5rem;
+	margin-top: 0;
+	line-height: 1.2;
+	margin-bottom: 0.625rem;
 }

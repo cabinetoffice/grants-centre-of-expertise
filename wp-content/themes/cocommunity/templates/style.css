@@ -53,7 +53,7 @@ Template:           govsite/templates
 #buddypress #item-body .entry-title { margin-top: 20px; }
 #buddypress form#whats-new-form p.activity-greeting { display: none; }
 #buddypress form#whats-new-form #whats-new-submit { margin-top: 0; }
-#buddypress a.view.activity-time-since { display: block; }
+#buddypress a.view.activity-time-since { display: block; font-size: 0.8em; }
 #buddypress div#message p { margin-top: 1em; }
 #buddypress #activity-stream p { margin: 0; line-height: 1.5; }
 #buddypress .activity-list li.mini .activity-avatar img.FB_profile_pic, #buddypress .activity-list li.mini .activity-avatar img.avatar { width: auto; height: auto; margin-left: 0; }
@@ -167,9 +167,9 @@ div.bbp-breadcrumb { float: none; }
 .widget_subpages .widget_subpages_current_page > a { font-weight: bold; }
 .widget_subpages li > ul { margin-top: 4px; }
 
-.sidebar { margin-top: 35px; }
+.sidebar { margin-top: 45px; }
 
-.secondary-sidebar { margin-top: 35px; }
+.secondary-sidebar { margin-top: 45px; }
 .secondary-sidebar ul, .secondary-sidebar li { list-style: none; margin: 0; padding: 0; }
 
 .blog .widget-area { margin-top: 0; }
@@ -178,6 +178,8 @@ div.bbp-breadcrumb { float: none; }
 .widget_co_downloads_widget li { margin-bottom: 8px; }
 .widget_co_downloads_widget li a { display: block; padding-left: 20px; position: relative; }
 .widget_co_downloads_widget li a .fa { position: absolute; left: 0; top: 4px; }
+
+h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bottom: 0.625rem; }
 
 .home-page .page-header { display: none; }
 .home-page .main-archive .button { display: none; }
