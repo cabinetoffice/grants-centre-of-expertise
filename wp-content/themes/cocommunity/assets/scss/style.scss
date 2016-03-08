@@ -11,6 +11,7 @@ Template:           govsite/templates
 @import "home";
 @import "events";
 @import "documents";
+@import "tablepress";
 
 a:visited, a:visited:hover, a:visited:focus {
 	color: #2e69ac;
@@ -31,6 +32,7 @@ dl dd { margin-left: 0; }
 	width: 1px;
 	overflow: hidden;
 }
+
 
 .sce-edit-comment, .sce-status {
 	margin-top: 1em;

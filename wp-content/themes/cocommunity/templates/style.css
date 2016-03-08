@@ -259,6 +259,19 @@ div.bbp-breadcrumb { float: none; }
 .single-document .download-link { display: block; position: relative; padding-left: 25px; }
 .single-document .download-link i { position: absolute; left: 0; top: 5px; }
 
+.tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc { background-color: #f3f3f3; }
+.tablepress tfoot th, .tablepress thead th { background-color: #f9f9f9; }
+
+.dataTables_wrapper label select { padding-right: 25px; }
+.dataTables_wrapper label input { margin-left: 10px; }
+.dataTables_wrapper .tablepress caption { display: none; }
+
+.dataTables_length, .dataTables_filter { margin-bottom: 1em; }
+
+.paging_simple .paginate_button.next:after, .paging_simple .paginate_button.previous:before { color: #999; text-shadow: none; top: 2px; }
+
+.dataTables_info { font-size: .8em; }
+
 a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
 
 p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }

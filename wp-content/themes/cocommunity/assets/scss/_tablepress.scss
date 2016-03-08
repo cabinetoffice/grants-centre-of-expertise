@@ -1,0 +1,38 @@
+
+.tablepress {
+	.sorting:hover, .sorting_asc, .sorting_desc {
+		background-color: #f3f3f3;
+	}
+
+	tfoot, thead {
+		th {
+			background-color: #f9f9f9;
+		}
+	}
+}
+
+.dataTables_wrapper {
+	label {
+		select { padding-right: 25px; }
+
+		input { margin-left: 10px; }
+	}
+
+	.tablepress {
+		caption {
+			display: none;
+		}
+	}
+}
+
+.dataTables_length, .dataTables_filter { margin-bottom: 1em; }
+
+.paging_simple .paginate_button {
+	&.next:after, &.previous:before {
+		color: #999;
+		text-shadow: none;
+		top: 2px;
+	}
+}
+
+.dataTables_info { font-size: .8em; }
