@@ -7,7 +7,7 @@ the_post();
 <main id="content" role="main" class="main">
 
 	<div class="row">
-		<div class="large-8 columns">
+		<div class="large-9 columns">
 			<header class="page-header">
 				<h1><?php the_title(); ?></h1>
 			</header>
@@ -24,7 +24,7 @@ the_post();
 				</div>
 			</div>
 		</div>
-		<div class="large-4 columns">
+		<div class="large-3 columns">
 			<?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
 				<div id="secondary-sidebar" class="secondary-sidebar widget-area" role="complementary">
 					<?php dynamic_sidebar( 'sidebar-right' ); ?>
