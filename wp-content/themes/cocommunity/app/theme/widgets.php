@@ -56,7 +56,7 @@ class CO_Downloads_Widget extends WP_Widget {
 
 					<li>
 						<a href="<?php echo $link_type == 'download' ? $document['url'] : get_permalink(); ?>" class="download-link" title="<?php the_title(); ?>"<?php echo $ga_tracker; ?>>
-							<i class="fa <?php echo get_fa_icon_for_mime_type( $document['mime_type'] ); ?>"></i>
+							<img class="icon" src="<?php echo get_stylesheet_directory_uri() . '/../assets/images/icons/' . get_image_icon_for_mime_type( $document['mime_type'] ) . '.jpg'; ?>">
 							<?php the_title(); ?>
 						</a>
 					</li>

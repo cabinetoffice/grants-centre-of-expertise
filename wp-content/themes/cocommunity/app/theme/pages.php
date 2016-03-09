@@ -21,6 +21,27 @@ function get_fa_icon_for_mime_type( $type, $default = 'fa-file-text-o' ) {
 }
 
 
+// Returns an image filename for a mime type defined in the file upload field
+function get_image_icon_for_mime_type( $type, $default = 'document' ) {
+	$fa_icon_map = array(
+		'application/pdf' => 'pdf',
+		'text/csv' => 'excel',
+		'application/msword' => 'word',
+		'application/vnd.openxmlformats-officedocument.wordprocessingml.document' => 'word',
+		'application/vnd.ms-excel' => 'excel',
+		'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' => 'excel',
+		'application/vnd.ms-powerpoint' => 'powerpoint',
+		'application/vnd.openxmlformats-officedocument.presentationml.slideshow' => 'powerpoint',
+		'application/vnd.openxmlformats-officedocument.presentationml.presentation' => 'powerpoint',
+	);
+
+	if ( isset( $fa_icon_map[$type] ) )
+		return $fa_icon_map[$type];
+
+	return $default;
+}
+
+
 // Simple Comment Editing
 function edit_sce_comment_time( $time_in_minutes ) {
 	return 90;

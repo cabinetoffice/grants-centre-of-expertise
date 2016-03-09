@@ -3,12 +3,18 @@
 	.download-link {
 		display: block;
 		position: relative;
-		padding-left: 25px;
+		padding-left: 28px;
 
-		i {
+		i, .icon {
 			position: absolute;
 			left: 0;
 			top: 5px;
+		}
+
+		.icon {
+			display: block;
+			width: 20px;
+			height: auto;
 		}
 	}
 }
