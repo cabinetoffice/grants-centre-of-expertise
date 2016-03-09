@@ -36,7 +36,7 @@ dl dd { margin-left: 0; }
 .page-element {
 	padding-top: 0;
 
-	.home & { padding-top: 30px; }
+	.home &, .events-list & { padding-top: 30px; }
 }
 
 .sce-edit-comment, .sce-status {
