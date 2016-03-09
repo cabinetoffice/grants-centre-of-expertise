@@ -179,9 +179,10 @@ div.bbp-breadcrumb { float: none; }
 .widget_co_downloads_widget { margin-bottom: 40px; padding-top: 6px; }
 .widget_co_downloads_widget h2.widgettitle { margin-bottom: 22px; }
 .widget_co_downloads_widget li { margin-bottom: 8px; }
-.widget_co_downloads_widget li a { display: block; padding-left: 20px; position: relative; }
+.widget_co_downloads_widget li a { display: block; padding-left: 22px; position: relative; }
 .widget_co_downloads_widget li a .fa, .widget_co_downloads_widget li a .icon { position: absolute; left: 0; top: 4px; }
-.widget_co_downloads_widget li a .icon { display: block; width: 16px; height: auto; }
+.widget_co_downloads_widget li a .icon { display: block; width: 16px; height: auto; top: 5px; }
+.widget_co_downloads_widget li a .icon.pdf, .widget_co_downloads_widget li a .icon.document { top: 4px; }
 
 h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bottom: 0.625rem; }
 
@@ -269,7 +270,8 @@ h2.tribe-events-page-title { text-align: left; margin-top: 0; margin-bottom: 20p
 
 .single-document .download-link { display: block; position: relative; padding-left: 28px; }
 .single-document .download-link i, .single-document .download-link .icon { position: absolute; left: 0; top: 5px; }
-.single-document .download-link .icon { display: block; width: 20px; height: auto; }
+.single-document .download-link .icon { display: block; width: 20px; height: auto; top: 6px; }
+.single-document .download-link .icon.pdf, .single-document .download-link .icon.document { top: 5px; }
 
 .tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc { background-color: #f3f3f3; }
 .tablepress tfoot th, .tablepress thead th { background-color: #f9f9f9; }

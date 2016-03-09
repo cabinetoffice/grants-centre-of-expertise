@@ -15,6 +15,9 @@
 			display: block;
 			width: 20px;
 			height: auto;
+			top: 6px;
+
+			&.pdf, &.document { top: 5px; }
 		}
 	}
 }
