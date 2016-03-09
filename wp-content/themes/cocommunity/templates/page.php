@@ -4,10 +4,12 @@
 
 	<div class="row">
 		<div class="large-12 columns">
-
-			<header class="page-header">
-				<h1><?php the_title(); ?></h1>
-			</header>
+			
+			<?php if ( $title = get_the_title() ) : ?>
+				<header class="page-header">
+					<h1><?php $title; ?></h1>
+				</header>
+			<?php endif; ?>
 
 			<div class="page-element row">
 				<div class="medium-12 large-12 columns">
