@@ -33,14 +33,22 @@
 		}
 
 		&#item-header {
-
 			div#item-header-avatar {
-				margin-right: -215px;
 				float: left;
+
+				@media (min-width: 480px) {
+					.group-home & { margin-right: -215px; }
+
+					.profile & { margin-right: -165px; }
+				}
 			}
 
 			div#item-header-content {
-				margin-left: 215px;
+				@media (min-width: 480px) {
+					.group-home & { margin-left: 215px; }
+
+					.profile & { margin-left: 165px; }
+				}
 
 				small { white-space: nowrap; }
 
