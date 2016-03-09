@@ -176,7 +176,8 @@ div.bbp-breadcrumb { float: none; }
 
 .blog .widget-area { margin-top: 0; }
 
-.widget_co_downloads_widget { margin-bottom: 40px; }
+.widget_co_downloads_widget { margin-bottom: 40px; padding-top: 6px; }
+.widget_co_downloads_widget h2.widgettitle { margin-bottom: 22px; }
 .widget_co_downloads_widget li { margin-bottom: 8px; }
 .widget_co_downloads_widget li a { display: block; padding-left: 20px; position: relative; }
 .widget_co_downloads_widget li a .fa { position: absolute; left: 0; top: 4px; }
@@ -289,6 +290,8 @@ dl dd { margin-left: 0; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
+
+.page-element { padding-top: 0; }
 
 .sce-edit-comment, .sce-status { margin-top: 1em; font-size: .8em; }
 
