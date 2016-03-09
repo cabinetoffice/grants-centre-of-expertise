@@ -37,7 +37,7 @@
 				float: left;
 
 				@media (min-width: 480px) {
-					.group-home & { margin-right: -215px; }
+					.groups & { margin-right: -215px; }
 
 					.profile & { margin-right: -165px; }
 				}
@@ -45,7 +45,7 @@
 
 			div#item-header-content {
 				@media (min-width: 480px) {
-					.group-home & { margin-left: 215px; }
+					.groups & { margin-left: 215px; }
 
 					.profile & { margin-left: 165px; }
 				}

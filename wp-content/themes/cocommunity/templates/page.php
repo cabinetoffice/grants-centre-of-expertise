@@ -7,7 +7,7 @@
 			
 			<?php if ( $title = get_the_title() ) : ?>
 				<header class="page-header">
-					<h1><?php $title; ?></h1>
+					<h1><?php echo $title; ?></h1>
 				</header>
 			<?php endif; ?>
 

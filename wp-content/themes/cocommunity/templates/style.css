@@ -20,9 +20,9 @@ Template:           govsite/templates
 #buddypress div.dir-search { float: none; margin-top: 0; }
 #buddypress div.dir-search input[type=text] { width: 100%; background: #fff; }
 #buddypress div#item-header div#item-header-avatar { float: left; }
-@media (min-width: 480px) { .group-home #buddypress div#item-header div#item-header-avatar { margin-right: -215px; }
+@media (min-width: 480px) { .groups #buddypress div#item-header div#item-header-avatar { margin-right: -215px; }
   .profile #buddypress div#item-header div#item-header-avatar { margin-right: -165px; } }
-@media (min-width: 480px) { .group-home #buddypress div#item-header div#item-header-content { margin-left: 215px; }
+@media (min-width: 480px) { .groups #buddypress div#item-header div#item-header-content { margin-left: 215px; }
   .profile #buddypress div#item-header div#item-header-content { margin-left: 165px; } }
 #buddypress div#item-header div#item-header-content small { white-space: nowrap; }
 #buddypress div#item-header div#item-header-content h2 a { color: #000; }
@@ -138,7 +138,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
 #bbpress-forums #buddypress { display: inline-block; }
-#bbpress-forums #buddypress .item-list-tabs { margin-bottom: 20px; font-size: 1rem; }
+#bbpress-forums #buddypress .item-list-tabs { margin-bottom: 10px; margin-left: -10px; font-size: 1rem; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
 #bbpress-forums div.bbp-reply-author img.avatar { margin-bottom: 10px; }
 #bbpress-forums div.bbp-reply-header { border-top: none; border-bottom: 1px solid #ddd; background-color: transparent; }
@@ -155,7 +155,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .bbp-rc-reply-is-reported p { margin-bottom: 10px; }
 .bbp-rc-reply-is-reported em { font-size: .8em; }
 
-.topics-navigation { font-size: 1rem; margin-bottom: 15px; }
+.topics-navigation { font-size: 1rem; margin-bottom: 0; }
 .topics-navigation a { margin-right: 1em; }
 .topics-navigation a.right { margin-right: 0; margin-left: 1em; }
 
@@ -296,7 +296,7 @@ dl dd { margin-left: 0; }
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
 
 .page-element { padding-top: 0; }
-.home .page-element, .events-list .page-element { padding-top: 30px; }
+.home .page-element, .events-list .page-element, .bp-user .page-element, .groups .page-element { padding-top: 30px; }
 
 .sce-edit-comment, .sce-status { margin-top: 1em; font-size: .8em; }
 
