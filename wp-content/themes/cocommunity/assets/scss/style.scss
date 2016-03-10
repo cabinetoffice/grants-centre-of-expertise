@@ -4,6 +4,7 @@ Author:             WTG
 Template:           govsite/templates
 */
 
+@import "variables";
 @import "header";
 @import "buddypress";
 @import "forums";
@@ -184,7 +185,7 @@ ul.pagination li.current {
 // 		position: relative;
 // 		background: transparent none repeat scroll 0% 0%;
 // 		padding: 12px 0 12px 2rem;
-// 		/*color: #222;*/
+// 		/*color: $dark-grey;*/
 // 		font-size: 0.992rem;
 // 		line-height: 1.5;
 // 		/* remove set font-family on top navigation section */

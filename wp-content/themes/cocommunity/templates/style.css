@@ -30,7 +30,7 @@ Template:           govsite/templates
 #buddypress div#item-header div#item-header-content span, #buddypress div#item-header div#item-header-content h6 { margin-bottom: 0; color: #6f6f6f; }
 #buddypress div#item-header div#item-header-content .activity { display: block; }
 #buddypress div.item-list-tabs ul li a span { border: none; padding: 2px 6px; }
-#buddypress div.item-list-tabs ul li.current a, #buddypress div.item-list-tabs ul li.selected a { color: #222; }
+#buddypress div.item-list-tabs ul li.current a, #buddypress div.item-list-tabs ul li.selected a { color: #222222; }
 .my-activity #buddypress div.item-list-tabs#subnav { margin-bottom: 40px; }
 #buddypress div.item-list-tabs#subnav .feed { display: none; }
 #buddypress div#item-header { margin-bottom: 1em; }
@@ -48,7 +48,7 @@ Template:           govsite/templates
 #buddypress ul.item-list li div.item-title, #buddypress ul.item-list li h4 { font-size: 1rem; line-height: 1.5rem; }
 #buddypress ul.item-list li div.item-count { font-size: 0.875rem; margin-top: 0; }
 #buddypress ul.item-list li div.item-desc { margin-left: 90px; }
-#buddypress ul.item-list li div.item-desc p { margin-bottom: 0; color: #222; font-size: 0.875rem; }
+#buddypress ul.item-list li div.item-desc p { margin-bottom: 0; color: #222222; font-size: 0.875rem; }
 #buddypress ul.item-list li div.action .generic-button { display: inline-block; margin-left: 1rem; }
 #buddypress ul.item-list li div.item-title span.update { display: none; }
 #buddypress ul.item-list li div.meta .item-type { color: #767676; font-size: 0.875rem; }
@@ -87,7 +87,7 @@ Template:           govsite/templates
 #buddypress .standard-form input[type=color], #buddypress .standard-form input[type=date], #buddypress .standard-form input[type=datetime-local], #buddypress .standard-form input[type=datetime], #buddypress .standard-form input[type=email], #buddypress .standard-form input[type=month], #buddypress .standard-form input[type=number], #buddypress .standard-form input[type=password], #buddypress .standard-form input[type=range], #buddypress .standard-form input[type=search], #buddypress .standard-form input[type=tel], #buddypress .standard-form input[type=text], #buddypress .standard-form input[type=time], #buddypress .standard-form input[type=url], #buddypress .standard-form input[type=week] { background: #fff; }
 #buddypress .standard-form select, #buddypress .standard-form textarea { background: #fff; }
 #buddypress .standard-form input:focus, #buddypress .standard-form select:focus, #buddypress .standard-form textarea:focus { background: #fff; }
-#buddypress .standard-form label, #buddypress .standard-form span.label { font-size: 1rem; line-height: 1.5rem; color: #222; }
+#buddypress .standard-form label, #buddypress .standard-form span.label { font-size: 1rem; line-height: 1.5rem; color: #222222; }
 #buddypress .standard-form div.submit input { font-size: 0.875rem; }
 
 .button-banner:hover, .button-banner:focus, .button:hover, .button:focus { background: #25548a !important; border: none; color: #fff; }
@@ -144,6 +144,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
   #buddypress div.message-search, #groups-order-select { float: left !important; clear: both; margin: 20px 10px 0 !important; } }
 #members-list .vcard { display: block; }
 
+#bbpress-forums { overflow: visible; }
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
 #bbpress-forums > #subscription-toggle .button { margin-top: -10px; }
 #bbpress-forums #buddypress { display: inline-block; }
@@ -154,12 +155,20 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
 #bbpress-forums div.bbp-search-form { display: none; }
-#bbpress-forums .bbp-author-name { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
+#bbpress-forums li.bbp-header ul li { font-size: 1rem; line-height: 1.5; }
+#bbpress-forums li.bbp-footer { border-top: none; }
+#bbpress-forums li.bbp-topic-freshness { font-size: 0.875rem; }
+#bbpress-forums .bbp-author-name { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; font-size: 0.8125rem; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
+#bbpress-forums .bbp-forum-info .bbp-forum-content, #bbpress-forums p.bbp-topic-meta { font-size: 0.875rem; color: #222222; }
 #bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }
+#bbpress-forums .bbp-reply-form { clear: both; }
 #bbpress-forums .bbp-reply-form .bbp-form .bbp-form { border: none; padding: 0; }
 #bbpress-forums .bbp-reply-form .bbp-form .bbp-form legend { display: none; }
+#bbpress-forums fieldset.bbp-form legend { font-size: 1rem; line-height: 1.5; }
+
+li.bbp-forum-topic-count, li.bbp-topic-voice-count, li.bbp-forum-reply-count, li.bbp-topic-reply-count { font-size: 0.875rem; }
 
 .bbp-rc-reply-is-reported p { margin-bottom: 10px; }
 .bbp-rc-reply-is-reported em { font-size: .8em; }
@@ -171,7 +180,10 @@ ul.acfb-holder li.friend-tab { width: auto; }
 .bbp-pagination { float: right; width: auto; }
 .bbp-pagination .bbp-pagination-count { display: none; }
 
-div.bbp-breadcrumb { float: none; }
+div.bbp-breadcrumb { float: none; font-size: 0.875rem; color: #767676; margin-top: 10px; }
+#bbpress-forums div.bbp-breadcrumb { display: none; }
+div.bbp-breadcrumb p { margin: 0; }
+div.bbp-breadcrumb .bbp-breadcrumb-current { color: #222222; }
 
 .bbp-reply-content #subscription-toggle { display: none; }
 
@@ -231,7 +243,7 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 .tribe-events-list .type-tribe_events { margin-bottom: 1.6em; }
 .tribe-events-list .tribe-events-ical { margin-top: 20px; float: right; }
 
-.tribe-events-list-separator-month { font-size: 1.875rem; line-height: 1.5; color: #222; display: block; }
+.tribe-events-list-separator-month { font-size: 1.875rem; line-height: 1.5; color: #222222; display: block; }
 
 .tribe-events-list-event-title { margin-bottom: 0; font-size: 1.875rem; line-height: 1.5; }
 .tribe-events-list-event-title a { font-size: 1.875rem; line-height: 1.5; display: inline-block; }

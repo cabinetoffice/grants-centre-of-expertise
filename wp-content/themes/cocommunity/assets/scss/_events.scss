@@ -59,7 +59,7 @@
 		a {
 			font-size: 1rem;
 			line-height: 1.5;
-			color: #767676;
+			color: $grey;
 		}
 
 		li {
@@ -95,7 +95,7 @@
 
 .tribe-events-back {
 	a, a:visited, a:visited:hover, a:visited:focus {
-		color: #767676;
+		color: $grey;
 	}
 }
 
@@ -124,7 +124,7 @@
 .tribe-events-list-separator-month {
 	font-size: 1.875rem;
 	line-height: 1.5;
-	color: #222;
+	color: $dark-grey;
 	display: block;
 }
 
@@ -143,7 +143,7 @@
 .tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr {
 	font-size: 0.875rem;
 	line-height: 1.5;
-	color: #767676;
+	color: $grey;
 	margin-bottom: 1rem;
 	font-weight: 400;
 }

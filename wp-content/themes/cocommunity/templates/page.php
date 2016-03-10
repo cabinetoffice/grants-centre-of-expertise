@@ -4,6 +4,8 @@
 
 	<div class="row">
 		<div class="large-12 columns">
+
+			<?php if ( bbp_is_forum( get_the_ID() ) || bbp_is_forum_archive() || bbp_is_topic( get_the_ID() ) || bbp_is_topic_archive() ) bbp_breadcrumb(); ?>
 			
 			<?php if ( $title = get_the_title() ) : ?>
 				<header class="page-header">
