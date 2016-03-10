@@ -204,6 +204,8 @@
 			font-size: 0.875rem;
 			color: $grey;
 			opacity: 1;
+
+			.directory & { color: $dark-grey; }
 		}
 	}
 

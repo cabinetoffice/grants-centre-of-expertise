@@ -4,7 +4,7 @@
 function co_member_count() {
 	printf( '<p>' . __( 'Total number of members: ', 'cabinetoffice' ) . '<strong>%s</strong></p>', bp_get_total_member_count() );
 }
-add_action( 'bp_before_directory_members_page', 'co_member_count' );
+// add_action( 'bp_before_directory_members_page', 'co_member_count' );
 
 
 // Department name under member name

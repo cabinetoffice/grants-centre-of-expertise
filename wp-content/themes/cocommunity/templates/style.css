@@ -57,6 +57,7 @@ Template:           govsite/templates
 #buddypress table img.avatar { float: left; margin-right: 1em; }
 #buddypress span.department { font-size: 0.875rem; opacity: 0.8; }
 #buddypress span.activity { font-size: 0.875rem; color: #767676; opacity: 1; }
+.directory #buddypress span.activity { color: #222222; }
 #buddypress .notification-settings { width: 100%; max-width: 700px; }
 #buddypress #item-body { padding-top: 20px; }
 #buddypress #item-body .entry-title { margin-top: 20px; }
@@ -151,17 +152,19 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums #buddypress .item-list-tabs { margin-bottom: 10px; margin-left: -10px; font-size: 1rem; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
 #bbpress-forums div.bbp-reply-author img.avatar { margin-bottom: 10px; }
+#bbpress-forums div.bbp-reply-author a.bbp-author-name { font-size: 0.8125rem; }
 #bbpress-forums div.bbp-reply-header { border-top: none; border-bottom: 1px solid #ddd; background-color: transparent; }
+#bbpress-forums div.bbp-reply-header .bbp-reply-post-date { font-size: 0.875rem; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
 #bbpress-forums div.bbp-search-form { display: none; }
-#bbpress-forums li.bbp-header ul li { font-size: 1rem; line-height: 1.5; }
+#bbpress-forums li.bbp-header, #bbpress-forums li.bbp-footer, #bbpress-forums li.bbp-header ul li { font-size: 1rem; line-height: 1.5; }
 #bbpress-forums li.bbp-footer { border-top: none; }
-#bbpress-forums li.bbp-topic-freshness { font-size: 0.875rem; }
+#bbpress-forums li.bbp-topic-freshness, #bbpress-forums li.bbp-forum-freshness { font-size: 0.875rem; }
 #bbpress-forums .bbp-author-name { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; font-size: 0.8125rem; }
 #bbpress-forums p.bbp-topic-meta img.avatar { margin-bottom: 0; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
-#bbpress-forums .bbp-forum-info .bbp-forum-content, #bbpress-forums p.bbp-topic-meta { font-size: 0.875rem; color: #222222; }
+#bbpress-forums .bbp-forum-info .bbp-forum-content, #bbpress-forums p.bbp-topic-meta { font-size: 0.875rem; }
 #bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }
 #bbpress-forums .bbp-reply-form { clear: both; }
 #bbpress-forums .bbp-reply-form .bbp-form .bbp-form { border: none; padding: 0; }
@@ -310,6 +313,8 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
 
 p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
+
+button, .button { font-size: 0.875rem; }
 
 h1 { font-size: 2.25rem; }
 

@@ -25,12 +25,20 @@
 			img.avatar { margin-bottom: 0; }
 		}
 
-		&.bbp-reply-author img.avatar { margin-bottom: 10px; }
+		&.bbp-reply-author {
+			img.avatar { margin-bottom: 10px; }
+
+			a.bbp-author-name { font-size: 0.8125rem; }
+		}
 
 		&.bbp-reply-header {
 			border-top: none;
 			border-bottom: 1px solid #ddd;
-			background-color: transparent;	
+			background-color: transparent;
+
+			.bbp-reply-post-date {
+				font-size: 0.875rem;
+			}
 		}
 
 		&.bbp-reply-content {
@@ -45,14 +53,14 @@
 	}
 
 	li {
-		&.bbp-header ul li {
+		&.bbp-header, &.bbp-footer, &.bbp-header ul li {
 			font-size: 1rem;
-			line-height: 1.5;
+			line-height: 1.5;	
 		}
 
 		&.bbp-footer { border-top: none; }
 
-		&.bbp-topic-freshness { font-size: 0.875rem; }
+		&.bbp-topic-freshness, &.bbp-forum-freshness { font-size: 0.875rem; }
 	}
 
 	.bbp-author-name {
@@ -70,10 +78,7 @@
 
 	.bbp-forum-title, .bbp-forum-link, .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
 
-	.bbp-forum-info .bbp-forum-content, p.bbp-topic-meta {
-		font-size: 0.875rem;
-		color: $dark-grey;
-	}
+	.bbp-forum-info .bbp-forum-content, p.bbp-topic-meta { font-size: 0.875rem; }
 
 	.bbp-forums-list li {
 		display: block;
