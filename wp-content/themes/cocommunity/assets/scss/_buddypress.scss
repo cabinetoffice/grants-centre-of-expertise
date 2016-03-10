@@ -114,9 +114,15 @@
 			div.acomment-meta, div.acomment-content { font-size: 0.875rem; }
 		}
 
-		&.pagination .pag-count {
-			font-size: 0.875rem;
-			margin-left: 0;
+		&.pagination {
+			.pagination-links {
+				a, span { font-size: 0.875rem; }
+			}
+
+			.pag-count {
+				font-size: 0.875rem;
+				margin-left: 0;
+			}
 		}
 
 		&.profile h4 { margin-bottom: 10px; }

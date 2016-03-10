@@ -40,6 +40,7 @@ Template:           govsite/templates
 #buddypress div.activity-comments > ul { padding-top: 10px; }
 #buddypress div.activity-comments form.ac-form { padding: 10px 0; }
 #buddypress div.activity-comments div.acomment-meta, #buddypress div.activity-comments div.acomment-content { font-size: 0.875rem; }
+#buddypress div.pagination .pagination-links a, #buddypress div.pagination .pagination-links span { font-size: 0.875rem; }
 #buddypress div.pagination .pag-count { font-size: 0.875rem; margin-left: 0; }
 #buddypress div.profile h4 { margin-bottom: 10px; }
 #buddypress .acomment-options a { font-size: 0.875rem; }
