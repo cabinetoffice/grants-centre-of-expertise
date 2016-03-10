@@ -83,7 +83,6 @@ function co_filter_topics() {
 	<?php
 }
 add_action( 'bbp_template_before_forums_index', 'co_filter_topics' );
-add_action( 'bbp_template_before_single_forum', 'co_filter_topics' );
 add_action( 'bbp_template_before_topics_loop', 'co_filter_topics' );
 
 

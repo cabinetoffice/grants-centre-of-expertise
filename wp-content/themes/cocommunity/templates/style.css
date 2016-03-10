@@ -18,7 +18,7 @@ Template:           govsite/templates
   .site-header .top-bar ul { margin-bottom: 0; } }
 #buddypress { position: relative; }
 #buddypress div.dir-search { float: none; margin-top: 0; }
-#buddypress div.dir-search input[type=text] { width: 100%; background: #fff; }
+#buddypress div.dir-search input[type=text] { width: 100%; background: #fff; font-size: 0.875rem; }
 #buddypress div#item-header div#item-header-avatar { float: left; }
 @media (min-width: 480px) { .groups #buddypress div#item-header div#item-header-avatar { margin-right: -215px; }
   .profile #buddypress div#item-header div#item-header-avatar { margin-right: -165px; } }
@@ -30,6 +30,7 @@ Template:           govsite/templates
 #buddypress div#item-header div#item-header-content span, #buddypress div#item-header div#item-header-content h6 { margin-bottom: 0; color: #6f6f6f; }
 #buddypress div#item-header div#item-header-content .activity { display: block; }
 #buddypress div.item-list-tabs ul li a span { border: none; padding: 2px 6px; }
+#buddypress div.item-list-tabs ul li.current a, #buddypress div.item-list-tabs ul li.selected a { color: #222; }
 .my-activity #buddypress div.item-list-tabs#subnav { margin-bottom: 40px; }
 #buddypress div.item-list-tabs#subnav .feed { display: none; }
 #buddypress div#item-header { margin-bottom: 1em; }
@@ -37,22 +38,27 @@ Template:           govsite/templates
 #buddypress div.activity-meta a { margin-bottom: 0; }
 #buddypress div.activity-comments ul { padding-top: 15px; }
 #buddypress div.activity-comments form.ac-form { padding: 10px 0; }
+#buddypress div.pagination .pag-count { font-size: 0.875rem; margin-left: 0; }
 #buddypress .standard-form #invite-list label { padding-left: 18px; position: relative; margin-bottom: 8px; word-wrap: break-word; hyphens: auto; }
 #buddypress .standard-form #invite-list label input { position: absolute; left: 0; top: 5px; }
 #buddypress .standard-form div.radio label input[type="radio"] { margin-right: 5px; margin-bottom: 0; }
 #buddypress .standard-form div.radio ul { list-style-type: none; }
 #buddypress .standard-form div.radio ul li { position: relative; }
 #buddypress .standard-form div.radio ul li:before { position: absolute; left: -1em; content: "\2013"; }
-#buddypress ul.item-list li div.item-count { font-size: .9em; margin-top: 4px; }
+#buddypress ul.item-list li div.item-title, #buddypress ul.item-list li h4 { font-size: 1rem; line-height: 1.5rem; }
+#buddypress ul.item-list li div.item-count { font-size: 0.875rem; margin-top: 0; }
 #buddypress ul.item-list li div.item-desc { margin-left: 90px; }
-#buddypress ul.item-list li div.item-desc p { margin-bottom: 0; }
-#buddypress ul.item-list li div.action .generic-button { display: inline-block; margin-left: 1em; }
+#buddypress ul.item-list li div.item-desc p { margin-bottom: 0; color: #222; font-size: 0.875rem; }
+#buddypress ul.item-list li div.action .generic-button { display: inline-block; margin-left: 1rem; }
 #buddypress ul.item-list li div.item-title span.update { display: none; }
+#buddypress ul.item-list li div.meta .item-type { color: #767676; font-size: 0.875rem; }
 #buddypress table input[type="checkbox"] { margin-bottom: 0; }
 #buddypress table#message-threads tr td .activity { display: block; }
 #buddypress table img.avatar { float: left; margin-right: 1em; }
-#buddypress span.department { font-size: small; opacity: .8; }
+#buddypress span.department { font-size: 0.875rem; opacity: 0.8; }
+#buddypress span.activity { font-size: 0.875rem; color: #767676; opacity: 1; }
 #buddypress .notification-settings { width: 100%; max-width: 700px; }
+#buddypress #item-body { padding-top: 20px; }
 #buddypress #item-body .entry-title { margin-top: 20px; }
 #buddypress form#whats-new-form p.activity-greeting { display: none; }
 #buddypress form#whats-new-form #whats-new-submit { margin-top: 0; }
@@ -81,6 +87,8 @@ Template:           govsite/templates
 #buddypress .standard-form input[type=color], #buddypress .standard-form input[type=date], #buddypress .standard-form input[type=datetime-local], #buddypress .standard-form input[type=datetime], #buddypress .standard-form input[type=email], #buddypress .standard-form input[type=month], #buddypress .standard-form input[type=number], #buddypress .standard-form input[type=password], #buddypress .standard-form input[type=range], #buddypress .standard-form input[type=search], #buddypress .standard-form input[type=tel], #buddypress .standard-form input[type=text], #buddypress .standard-form input[type=time], #buddypress .standard-form input[type=url], #buddypress .standard-form input[type=week] { background: #fff; }
 #buddypress .standard-form select, #buddypress .standard-form textarea { background: #fff; }
 #buddypress .standard-form input:focus, #buddypress .standard-form select:focus, #buddypress .standard-form textarea:focus { background: #fff; }
+#buddypress .standard-form label, #buddypress .standard-form span.label { font-size: 1rem; line-height: 1.5rem; color: #222; }
+#buddypress .standard-form div.submit input { font-size: 0.875rem; }
 
 .button-banner:hover, .button-banner:focus, .button:hover, .button:focus { background: #25548a !important; border: none; color: #fff; }
 
@@ -137,6 +145,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #members-list .vcard { display: block; }
 
 #bbpress-forums > #subscription-toggle { float: right; font-size: 1rem; font-weight: bold; }
+#bbpress-forums > #subscription-toggle .button { margin-top: -10px; }
 #bbpress-forums #buddypress { display: inline-block; }
 #bbpress-forums #buddypress .item-list-tabs { margin-bottom: 10px; margin-left: -10px; font-size: 1rem; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
@@ -204,7 +213,7 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 .tribe-events-button:hover, .tribe-events-button:focus { background-color: #25548a; color: #fff; }
 
 #tribe-events-footer .tribe-events-sub-nav, #tribe-events-header .tribe-events-sub-nav { line-height: normal; list-style-type: none; margin: 0; overflow: hidden; padding: 0; text-align: center; }
-#tribe-events-footer .tribe-events-sub-nav a, #tribe-events-header .tribe-events-sub-nav a { font-size: 16px; line-height: 24px; color: #767676; }
+#tribe-events-footer .tribe-events-sub-nav a, #tribe-events-header .tribe-events-sub-nav a { font-size: 1rem; line-height: 1.5; color: #767676; }
 #tribe-events-footer .tribe-events-sub-nav li, #tribe-events-header .tribe-events-sub-nav li { display: inline-block; margin: 0; vertical-align: middle; zoom: 1; }
 #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-previous { float: left; margin-right: 5px; text-align: left; }
 #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next { float: right; margin-left: 5px; text-align: right; }
@@ -222,14 +231,14 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 .tribe-events-list .type-tribe_events { margin-bottom: 1.6em; }
 .tribe-events-list .tribe-events-ical { margin-top: 20px; float: right; }
 
-.tribe-events-list-separator-month { font-size: 30px; line-height: 45px; color: #222; display: block; }
+.tribe-events-list-separator-month { font-size: 1.875rem; line-height: 1.5; color: #222; display: block; }
 
-.tribe-events-list-event-title { margin-bottom: 0; font-size: 30px; }
-.tribe-events-list-event-title a { font-size: 30px; line-height: 45px; display: inline-block; }
+.tribe-events-list-event-title { margin-bottom: 0; font-size: 1.875rem; line-height: 1.5; }
+.tribe-events-list-event-title a { font-size: 1.875rem; line-height: 1.5; display: inline-block; }
 
-.tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr { font-size: 14px; line-height: 21px; color: #767676; margin-bottom: 16px; font-weight: 400; }
+.tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr { font-size: 0.875rem; line-height: 1.5; color: #767676; margin-bottom: 1rem; font-weight: 400; }
 
-.tribe-events-loop .tribe-events-event-meta { border: 0; clear: both; float: none; font-size: 14px; font-weight: 700; line-height: 1.5; margin: 5px 0 15px; overflow: visible; margin-bottom: 1em; }
+.tribe-events-loop .tribe-events-event-meta { border: 0; clear: both; float: none; font-size: 0.875rem; font-weight: 700; line-height: 1.5; margin: 5px 0 15px; overflow: visible; margin-bottom: 1rem; }
 .tribe-events-loop .tribe-events-event-meta address.tribe-events-address { margin-right: 10px; }
 .tribe-events-loop .tribe-events-event-meta .tribe-events-venue-details { font-style: italic; font-weight: 400; }
 
@@ -258,7 +267,7 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 .tribe-events-tooltip .tribe-events-event-body p { margin-bottom: 0; }
 
 .single-tribe_events .tribe-events-cal-links a { margin-right: 20px; }
-.single-tribe_events .tribe-events-event-meta { font-size: 14px; border: 1px solid #eee; margin: 30px 0; }
+.single-tribe_events .tribe-events-event-meta { font-size: 0.875rem; border: 1px solid #eee; margin: 30px 0; }
 .single-tribe_events #tribe-events-content .tribe-events-event-meta dt { clear: left; font-weight: 700; line-height: 1; list-style: none; }
 .single-tribe_events #tribe-events-content .tribe-events-event-meta dd { float: none; line-height: 1.5; list-style: none; margin: 0 0 10px; padding: 0; }
 .single-tribe_events .tribe-events-venue-map { background: #eee; border: 1px solid #ddd; border-radius: 3px; display: inline-block; float: right; margin: 20px 4% 2% 0; padding: 5px; vertical-align: top; width: 58%; zoom: 1; }
@@ -266,7 +275,7 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 
 .tribe-events-event-meta .column, .tribe-events-event-meta .tribe-events-meta-group { box-sizing: border-box; display: inline-block; float: left; margin: 0 0 20px; padding: 0 4%; text-align: left; vertical-align: top; width: 33.3333%; zoom: 1; }
 
-.tribe-events-meta-group .tribe-events-single-section-title { font-size: 16px; line-height: 24px; font-weight: 700; margin: 20px 0 10px; font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+.tribe-events-meta-group .tribe-events-single-section-title { font-size: 1rem; line-height: 1.5; font-weight: 700; margin: 20px 0 10px; font-family: "Open Sans", Helvetica, Arial, sans-serif; }
 
 .single-document .download-link { display: block; position: relative; padding-left: 28px; }
 .single-document .download-link i, .single-document .download-link .icon { position: absolute; left: 0; top: 5px; }
@@ -290,6 +299,8 @@ a:visited, a:visited:hover, a:visited:focus { color: #2e69ac; }
 
 p, a, button, .button, ul, ol, dl { font-size: inherit; line-height: inherit; }
 
+h1 { font-size: 2.25rem; }
+
 dl dd { margin-left: 0; }
 
 /* Text meant only for screen readers. */
@@ -297,6 +308,7 @@ dl dd { margin-left: 0; }
 
 .page-element { padding-top: 0; }
 .home .page-element, .events-list .page-element, .bp-user .page-element, .groups .page-element { padding-top: 30px; }
+.directory .page-element { padding-top: 0; }
 
 .sce-edit-comment, .sce-status { margin-top: 1em; font-size: .8em; }
 

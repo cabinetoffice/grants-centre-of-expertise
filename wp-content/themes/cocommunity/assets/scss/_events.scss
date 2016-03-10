@@ -57,8 +57,8 @@
 		text-align: center;
 
 		a {
-			font-size: 16px;
-			line-height: 24px;
+			font-size: 1rem;
+			line-height: 1.5;
 			color: #767676;
 		}
 
@@ -122,28 +122,29 @@
 }
 
 .tribe-events-list-separator-month {
-	font-size: 30px;
-	line-height: 45px;
+	font-size: 1.875rem;
+	line-height: 1.5;
 	color: #222;
 	display: block;
 }
 
 .tribe-events-list-event-title {
 	margin-bottom: 0;
-	font-size: 30px;
+	font-size: 1.875rem;
+	line-height: 1.5;
 
 	a {
-		font-size: 30px;
-		line-height: 45px;
+		font-size: 1.875rem;
+		line-height: 1.5;
 		display: inline-block;
 	}
 }
 
 .tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr {
-	font-size: 14px;
-	line-height: 21px;
+	font-size: 0.875rem;
+	line-height: 1.5;
 	color: #767676;
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 	font-weight: 400;
 }
 
@@ -152,12 +153,12 @@
 		border: 0;
 		clear: both;
 		float: none;
-		font-size: 14px;
+		font-size: 0.875rem;
 		font-weight: 700;
 		line-height: 1.5;
 		margin: 5px 0 15px;
 		overflow: visible;
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 
 		address.tribe-events-address {
 			margin-right: 10px;
@@ -285,7 +286,7 @@
 	}
 
 	.tribe-events-event-meta {
-		font-size: 14px;
+		font-size: 0.875rem;
 		border: 1px solid #eee;
 		margin: 30px 0;
 	}
@@ -343,8 +344,8 @@
 }
 
 .tribe-events-meta-group .tribe-events-single-section-title {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1rem;
+	line-height: 1.5;
 	font-weight: 700;
 	margin: 20px 0 10px;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;

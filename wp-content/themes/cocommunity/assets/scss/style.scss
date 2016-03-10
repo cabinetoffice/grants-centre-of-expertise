@@ -22,6 +22,8 @@ p, a, button, .button, ul, ol, dl {
 	line-height: inherit;
 }
 
+h1 { font-size: 2.25rem; }
+
 dl dd { margin-left: 0; }
 
 /* Text meant only for screen readers. */
@@ -37,6 +39,8 @@ dl dd { margin-left: 0; }
 	padding-top: 0;
 
 	.home &, .events-list &, .bp-user &, .groups & { padding-top: 30px; }
+
+	.directory & { padding-top: 0; }
 }
 
 .sce-edit-comment, .sce-status {
