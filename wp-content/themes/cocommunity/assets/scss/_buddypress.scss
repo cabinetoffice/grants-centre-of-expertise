@@ -66,7 +66,18 @@
 					color: #6f6f6f;
 				}
 
-				.activity { display: block; }
+				.activity {
+					font-size: 0.875rem;
+					line-height: 1.5;
+					color: $grey;
+					margin-bottom: 0;
+				}
+
+				.email, .status-update {
+					font-size: 1rem;
+					line-height: 1.5;
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -96,16 +107,22 @@
 		&.activity-meta a { margin-bottom: 0; }
 
 		&.activity-comments {
-			ul { padding-top: 15px; }
+			> ul { padding-top: 10px; }
 
 			form.ac-form { padding: 10px 0; }
+
+			div.acomment-meta, div.acomment-content { font-size: 0.875rem; }
 		}
 
 		&.pagination .pag-count {
 			font-size: 0.875rem;
 			margin-left: 0;
 		}
+
+		&.profile h4 { margin-bottom: 10px; }
 	}
+
+	.acomment-options a { font-size: 0.875rem; }
 
 	.standard-form {
 		#invite-list label {
@@ -215,8 +232,6 @@
 	}
 
 	#item-body {
-		padding-top: 20px;
-
 		.entry-title { margin-top: 20px; }
 	}
 
@@ -230,21 +245,27 @@
 
 	a.view.activity-time-since {
 		display: block;
-		font-size: 0.8em;
+		font-size: 0.875rem;
 	}
 
 	div#message p { margin-top: 1em; }
 
-	#activity-stream p {
-		margin: 0;
-		line-height: 1.5;
+	#activity-stream {
+		p {
+			margin: 0;
+			line-height: 1.5;
+		}
 	}
 
-	.activity-list li.mini .activity-avatar img {
-		&.FB_profile_pic, &.avatar {
-			width: auto;
-			height: auto;
-			margin-left: 0;
+	.activity-list li {
+		font-size: 0.875rem !important;
+
+		.activity-avatar img {
+			&.FB_profile_pic, &.avatar {
+				width: auto;
+				height: auto;
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -307,6 +328,8 @@
 			&.disabled, &.pending { @include blue-button-disabled; }
 		}
 	}
+
+	.generic-button a { font-size: 0.875rem; }
 
 	
 	// Input background
@@ -433,7 +456,7 @@ ul.acfb-holder li {
 
 	.group-home &, .activity & { top: -45px; }
 
-	.my-activity &, .my-friends &, .notifications & { top: 0; }
+	.my-activity &, .my-friends &, .my-groups &, .notifications & { top: 0; }
 }
 
 #profile-edit-form {
@@ -475,6 +498,8 @@ ul.acfb-holder li {
 #member-list {
 	h5 { margin: 0; }
 }
+
+.directory #members-dir-list { padding-top: 10px; }
 
 .search-results {
 	#members-dir-list, #groups-dir-list {

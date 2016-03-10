@@ -36,15 +36,15 @@ $user = bp_core_get_core_userdata( bp_displayed_user_id() );
 
 	<?php if ( ! empty( $profile_fields ) ) printf( '<h6>%s</h6>', implode( ', ', $profile_fields ) ); ?>
 
-	<h6><a href="mailto:<?php echo $user->user_email; ?>"><?php echo $user->user_email; ?></a></h6>
+	<p class="email"><a href="mailto:<?php echo $user->user_email; ?>"><?php echo $user->user_email; ?></a></p>
 
-	<?php if ( $update = xprofile_get_field_data( 'Status Update' ) ) printf( '<h6>%s</h6>', $update ); ?>
+	<?php if ( $update = xprofile_get_field_data( 'Status Update' ) ) printf( '<p class="status-update">%s</p>', $update ); ?>
 
 	<?php if ( bp_is_active( 'activity' ) && bp_activity_do_mentions() ) : ?>
 		<!-- <span class="user-nicename">@<?php bp_displayed_user_mentionname(); ?></span> -->
 	<?php endif; ?>
 
-	<h6><span class="activity"><?php bp_last_activity( bp_displayed_user_id() ); ?></span></h6>
+	<p class="activity"><?php bp_last_activity( bp_displayed_user_id() ); ?></p>
 
 	<?php do_action( 'bp_before_member_header_meta' ); ?>
 
