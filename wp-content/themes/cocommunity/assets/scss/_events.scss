@@ -130,11 +130,11 @@
 
 .tribe-events-list-event-title {
 	margin-bottom: 0;
-	font-size: 1.875rem;
+	font-size: 1rem;
 	line-height: 1.5;
 
 	a {
-		font-size: 1.875rem;
+		font-size: 1rem;
 		line-height: 1.5;
 		display: inline-block;
 	}
@@ -160,13 +160,12 @@
 		overflow: visible;
 		margin-bottom: 1rem;
 
-		address.tribe-events-address {
-			margin-right: 10px;
-		}
+		address.tribe-events-address { margin-right: 10px; }
 
 		.tribe-events-venue-details {
 			font-style: italic;
 			font-weight: 400;
+			line-height: 1.5;
 		}
 	}
 }

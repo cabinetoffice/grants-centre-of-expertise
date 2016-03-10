@@ -248,14 +248,14 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 
 .tribe-events-list-separator-month { font-size: 1.875rem; line-height: 1.5; color: #222222; display: block; }
 
-.tribe-events-list-event-title { margin-bottom: 0; font-size: 1.875rem; line-height: 1.5; }
-.tribe-events-list-event-title a { font-size: 1.875rem; line-height: 1.5; display: inline-block; }
+.tribe-events-list-event-title { margin-bottom: 0; font-size: 1rem; line-height: 1.5; }
+.tribe-events-list-event-title a { font-size: 1rem; line-height: 1.5; display: inline-block; }
 
 .tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr { font-size: 0.875rem; line-height: 1.5; color: #767676; margin-bottom: 1rem; font-weight: 400; }
 
 .tribe-events-loop .tribe-events-event-meta { border: 0; clear: both; float: none; font-size: 0.875rem; font-weight: 700; line-height: 1.5; margin: 5px 0 15px; overflow: visible; margin-bottom: 1rem; }
 .tribe-events-loop .tribe-events-event-meta address.tribe-events-address { margin-right: 10px; }
-.tribe-events-loop .tribe-events-event-meta .tribe-events-venue-details { font-style: italic; font-weight: 400; }
+.tribe-events-loop .tribe-events-event-meta .tribe-events-venue-details { font-style: italic; font-weight: 400; line-height: 1.5; }
 
 #tribe-events .tribe-events-content p { margin-bottom: 10px; }
 
@@ -324,7 +324,7 @@ dl dd { margin-left: 0; }
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
 
 .page-element { padding-top: 0; }
-.home .page-element, .events-list .page-element, .bp-user .page-element, .groups .page-element { padding-top: 30px; }
+.home .page-element, .events-list .page-element, .bp-user .page-element, .groups .page-element, .single-tribe_events .page-element { padding-top: 30px; }
 .directory .page-element { padding-top: 0; }
 
 .sce-edit-comment, .sce-status { margin-top: 1em; font-size: .8em; }
