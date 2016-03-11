@@ -57,9 +57,8 @@
 		text-align: center;
 
 		a {
-			font-size: 1rem;
+			font-size: 0.875rem;
 			line-height: 1.5;
-			color: $grey;
 		}
 
 		li {
@@ -126,6 +125,7 @@
 	line-height: 1.5;
 	color: $dark-grey;
 	display: block;
+	margin: 10px 0;
 }
 
 .tribe-events-list-event-title {
@@ -135,6 +135,7 @@
 
 	a {
 		font-size: 1rem;
+		font-weight: 700;
 		line-height: 1.5;
 		display: inline-block;
 	}
@@ -144,7 +145,7 @@
 	font-size: 0.875rem;
 	line-height: 1.5;
 	color: $grey;
-	margin-bottom: 1rem;
+	margin-bottom: 0;
 	font-weight: 400;
 }
 
@@ -156,9 +157,8 @@
 		font-size: 0.875rem;
 		font-weight: 700;
 		line-height: 1.5;
-		margin: 5px 0 15px;
+		margin: 0;
 		overflow: visible;
-		margin-bottom: 1rem;
 
 		address.tribe-events-address { margin-right: 10px; }
 
@@ -172,7 +172,7 @@
 
 #tribe-events {
 	.tribe-events-content p {
-		margin-bottom: 10px;
+		margin-bottom: 0;
 	}
 }
 

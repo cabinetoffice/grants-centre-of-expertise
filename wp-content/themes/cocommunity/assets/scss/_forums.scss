@@ -29,6 +29,8 @@
 			img.avatar { margin-bottom: 10px; }
 
 			a.bbp-author-name { font-size: 0.8125rem; }
+
+			br { display: none; }
 		}
 
 		&.bbp-reply-header {
@@ -50,6 +52,19 @@
 		}
 
 		&.bbp-search-form { display: none; }
+
+		&.bbp-user-subscriptions {
+			.bbp-forum-info {
+				a.subscription-toggle.button { margin: 5px 10px 5px 0; }
+
+				.bbp-row-actions { display: inline-block; }
+
+				.bbp-forum-content {
+					margin: 10px 0;
+					padding-left: 42px;
+				}
+			}
+		}
 	}
 
 	li {
@@ -83,6 +98,11 @@
 	.bbp-forums-list li {
 		display: block;
 		margin-bottom: 5px;
+	}
+
+	.bbp-user-section p {
+		font-size: 1rem;
+		line-height: 1.5;
 	}
 
 	.bbp-reply-form {
@@ -141,7 +161,7 @@ div.bbp-breadcrumb {
 	float: none;
 	font-size: 0.875rem;
 	color: $grey;
-	margin-top: 10px;
+	margin-top: 1rem;
 
 	#bbpress-forums & { display: none; }
 

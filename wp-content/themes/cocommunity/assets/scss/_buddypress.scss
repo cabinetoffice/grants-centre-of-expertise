@@ -1,5 +1,6 @@
 
 @mixin blue-button {
+	font-size: 0.875rem;
 	background: #2e69ac;
 	border: none;
 	color: #fff;
@@ -220,7 +221,7 @@
 	span {
 		&.department {
 			font-size: 0.875rem;
-			opacity: 0.8;
+			font-size: $dark-grey;
 		}
 
 		&.activity {
@@ -228,7 +229,7 @@
 			color: $grey;
 			opacity: 1;
 
-			.directory & { color: $dark-grey; }
+			.directory & { color: $grey; }
 		}
 	}
 
@@ -335,8 +336,6 @@
 		}
 	}
 
-	.generic-button a { font-size: 0.875rem; }
-
 	
 	// Input background
 	.dir-search input {
@@ -416,11 +415,6 @@
 				margin-left: 0;
 			}
 		}
-	}
-	
-	span.department {
-		font-size: small;
-		opacity: .8;
 	}
 }
 

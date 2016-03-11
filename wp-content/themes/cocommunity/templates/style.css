@@ -61,9 +61,9 @@ Text Domain:		cabinetoffice
 #buddypress table input[type="checkbox"] { margin-bottom: 0; }
 #buddypress table#message-threads tr td .activity { display: block; }
 #buddypress table img.avatar { float: left; margin-right: 1em; }
-#buddypress span.department { font-size: 0.875rem; opacity: 0.8; }
+#buddypress span.department { font-size: 0.875rem; font-size: #222222; }
 #buddypress span.activity { font-size: 0.875rem; color: #767676; opacity: 1; }
-.directory #buddypress span.activity { color: #222222; }
+.directory #buddypress span.activity { color: #767676; }
 #buddypress .notification-settings { width: 100%; max-width: 700px; }
 #buddypress #item-body .entry-title { margin-top: 20px; }
 #buddypress form#whats-new-form p.activity-greeting { display: none; }
@@ -110,7 +110,6 @@ Text Domain:		cabinetoffice
 #members-directory-form ul.item-list li { padding: 15px; }
 #members-directory-form ul.item-list li.odd { background: rgba(255, 255, 255, 0.5); }
 #members-directory-form ul.item-list li div.action .generic-button { margin-right: 15px; margin-left: 0; }
-#members-directory-form span.department { font-size: small; opacity: .8; }
 
 #members-group-list ul.item-list li img.avatar { margin-bottom: 10px; }
 
@@ -161,11 +160,15 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums div.bbp-template-notice img.avatar { margin-bottom: 0; }
 #bbpress-forums div.bbp-reply-author img.avatar { margin-bottom: 10px; }
 #bbpress-forums div.bbp-reply-author a.bbp-author-name { font-size: 0.8125rem; }
+#bbpress-forums div.bbp-reply-author br { display: none; }
 #bbpress-forums div.bbp-reply-header { border-top: none; border-bottom: 1px solid #ddd; background-color: transparent; }
 #bbpress-forums div.bbp-reply-header .bbp-reply-post-date { font-size: 0.875rem; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
 #bbpress-forums div.bbp-search-form { display: none; }
+#bbpress-forums div.bbp-user-subscriptions .bbp-forum-info a.subscription-toggle.button { margin: 5px 10px 5px 0; }
+#bbpress-forums div.bbp-user-subscriptions .bbp-forum-info .bbp-row-actions { display: inline-block; }
+#bbpress-forums div.bbp-user-subscriptions .bbp-forum-info .bbp-forum-content { margin: 10px 0; padding-left: 42px; }
 #bbpress-forums li.bbp-header, #bbpress-forums li.bbp-footer, #bbpress-forums li.bbp-header ul li { font-size: 1rem; line-height: 1.5; }
 #bbpress-forums li.bbp-footer { border-top: none; }
 #bbpress-forums li.bbp-topic-freshness, #bbpress-forums li.bbp-forum-freshness { font-size: 0.875rem; }
@@ -174,6 +177,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-forum-link, #bbpress-forums .bbp-topic-title > .bbp-topic-permalink { font-size: 1rem; }
 #bbpress-forums .bbp-forum-info .bbp-forum-content, #bbpress-forums p.bbp-topic-meta { font-size: 0.875rem; }
 #bbpress-forums .bbp-forums-list li { display: block; margin-bottom: 5px; }
+#bbpress-forums .bbp-user-section p { font-size: 1rem; line-height: 1.5; }
 #bbpress-forums .bbp-reply-form { clear: both; }
 #bbpress-forums .bbp-reply-form .bbp-form .bbp-form { border: none; padding: 0; }
 #bbpress-forums .bbp-reply-form .bbp-form .bbp-form legend { display: none; }
@@ -191,7 +195,7 @@ li.bbp-forum-topic-count, li.bbp-topic-voice-count, li.bbp-forum-reply-count, li
 .bbp-pagination { float: right; width: auto; }
 .bbp-pagination .bbp-pagination-count { display: none; }
 
-div.bbp-breadcrumb { float: none; font-size: 0.875rem; color: #767676; margin-top: 10px; }
+div.bbp-breadcrumb { float: none; font-size: 0.875rem; color: #767676; margin-top: 1rem; }
 #bbpress-forums div.bbp-breadcrumb { display: none; }
 div.bbp-breadcrumb p { margin: 0; }
 div.bbp-breadcrumb .bbp-breadcrumb-current { color: #222222; }
@@ -330,6 +334,8 @@ dl dd { margin-left: 0; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
+
+.page-header { margin-top: 20px; }
 
 .page-element { padding-top: 0; }
 .home .page-element, .events-list .page-element, .bp-user .page-element, .groups .page-element, .single-tribe_events .page-element { padding-top: 30px; }
