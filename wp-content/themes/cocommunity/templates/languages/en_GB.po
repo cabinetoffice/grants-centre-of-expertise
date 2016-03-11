@@ -1,0 +1,357 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cabinet Office Grants Hub\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-11 10:45+0000\n"
+"PO-Revision-Date: Fri Mar 11 2016 10:46:29 GMT+0000 (GMT)\n"
+"Last-Translator: Ivan Antipov <Ivan.Antipov@wtg.co.uk>\n"
+"Language-Team: \n"
+"Language: English (UK)\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: en_GB\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: app/posts/cpt.php:9
+msgctxt "Post Type General Name"
+msgid "Documents"
+msgstr ""
+
+#: app/posts/cpt.php:10
+msgctxt "Post Type Singular Name"
+msgid "Document"
+msgstr ""
+
+#: app/posts/cpt.php:11 app/posts/cpt.php:12
+msgid "Documents"
+msgstr ""
+
+#: app/posts/cpt.php:13
+msgid "Document Archives"
+msgstr ""
+
+#: app/posts/cpt.php:14
+msgid "Parent Document:"
+msgstr ""
+
+#: app/posts/cpt.php:15
+msgid "All Documents"
+msgstr ""
+
+#: app/posts/cpt.php:16
+msgid "Add New Document"
+msgstr ""
+
+#: app/posts/cpt.php:17
+msgid "Add New"
+msgstr ""
+
+#: app/posts/cpt.php:18
+msgid "New Document"
+msgstr ""
+
+#: app/posts/cpt.php:19
+msgid "Edit Document"
+msgstr ""
+
+#: app/posts/cpt.php:20
+msgid "Update Document"
+msgstr ""
+
+#: app/posts/cpt.php:21
+msgid "View Document"
+msgstr ""
+
+#: app/posts/cpt.php:22
+msgid "Search Documents"
+msgstr ""
+
+#: app/posts/cpt.php:23
+msgid "Insert into document"
+msgstr ""
+
+#: app/posts/cpt.php:24
+msgid "Uploaded to this document"
+msgstr ""
+
+#: app/posts/cpt.php:25
+msgid "Documents list"
+msgstr ""
+
+#: app/posts/cpt.php:26
+msgid "Documents list navigation"
+msgstr ""
+
+#: app/posts/cpt.php:27
+msgid "Filter Documents list"
+msgstr ""
+
+#: app/posts/cpt.php:30
+msgid "Document"
+msgstr ""
+
+#: app/posts/cpt.php:31
+msgid "A single document upload"
+msgstr ""
+
+#: app/theme/buddypress.php:5
+msgid "Total number of members: "
+msgstr ""
+
+#: app/theme/buddypress.php:14
+#, php-format
+msgid "Department: %s"
+msgstr ""
+
+#: app/theme/buddypress.php:61
+msgid "Inbox"
+msgstr ""
+
+#: app/theme/buddypress.php:68
+msgid "Group Memberships"
+msgstr ""
+
+#: app/theme/buddypress.php:75
+msgid "Invitations"
+msgstr ""
+
+#: app/theme/forums.php:77
+msgid "All topics"
+msgstr ""
+
+#: app/theme/forums.php:78
+msgid "My topics"
+msgstr ""
+
+#: app/theme/forums.php:79
+msgid "My subscriptions"
+msgstr ""
+
+#: app/theme/forums.php:161
+#, php-format
+msgid ""
+"Dear %1$s,\n"
+"\n"
+"Your reply to the topic \"%2$s\" has been deleted by the Grants Community "
+"forum administrator.\n"
+"\n"
+"This is what you wrote:\n"
+"\n"
+"%3$s\n"
+"\n"
+"To view the topic, see %4$s.\n"
+"\n"
+msgstr ""
+
+#: app/theme/forums.php:212
+#, php-format
+msgid ""
+"The topic \"%1$s\" has been reported for inappropriate content.\n"
+"\n"
+"To view the topic, see %2$s.\n"
+"\n"
+msgstr ""
+
+#: app/theme/forums.php:250
+#, php-format
+msgid ""
+"A reply to the topic \"%1$s\" has been reported for inappropriate content.\n"
+"\n"
+"This is what it said:\n"
+"\n"
+"%2$s\n"
+"\n"
+"To view the reply, see %3$s.\n"
+"\n"
+msgstr ""
+
+#: app/theme/groups.php:35
+msgid "Left group"
+msgstr ""
+
+#: app/theme/groups.php:37
+msgid "Group Disbands"
+msgstr ""
+
+#: app/theme/groups.php:55
+#, php-format
+msgid "%1$s left the group %2$s"
+msgstr ""
+
+#: app/theme/widgets.php:14
+msgid "Cabinet Office Downloads Widget"
+msgstr ""
+
+#: app/theme/widgets.php:15
+msgid "A widget displaying all available downloads by menu order."
+msgstr ""
+
+#: app/theme/widgets.php:81
+msgid "Downloads"
+msgstr ""
+
+#: app/theme/widgets.php:84
+msgid "Title:"
+msgstr ""
+
+#: templates/404.php:8
+msgid "Page not found"
+msgstr ""
+
+#: templates/404.php:14
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: templates/404.php:16
+msgid "We might have removed the page."
+msgstr ""
+
+#: templates/404.php:17
+msgid "The link you clicked might be old."
+msgstr ""
+
+#: templates/404.php:18
+msgid "You might have accidentally typed the wrong URL in the address bar."
+msgstr ""
+
+#: templates/404.php:20
+msgid ""
+"Try retyping the URL again  or use search in the header to find what you're "
+"looking for."
+msgstr ""
+
+#: templates/404.php:21
+msgid "Return to homepage"
+msgstr ""
+
+#: templates/404.php:25
+msgid "404"
+msgstr ""
+
+#: templates/bbpress/loop-single-reply.php:55
+msgid "in reply to: "
+msgstr ""
+
+#: templates/comments.php:12
+msgid "Comment"
+msgstr ""
+
+#: templates/comments.php:15
+#, php-format
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments.php:25
+msgid "&larr; Older comments"
+msgstr ""
+
+#: templates/comments.php:29
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: templates/community/groups/groups-loop.php:93
+#, php-format
+msgid "active %s"
+msgstr ""
+
+#: templates/community/groups/groups-loop.php:134
+msgid "There were no groups found."
+msgstr ""
+
+#: templates/community/groups/single/group-header.php:24
+msgid "Group Admins: "
+msgstr ""
+
+#: templates/community/groups/single/group-header.php:42
+msgid "Group Mods: "
+msgstr ""
+
+#: templates/community/groups/single/group-header.php:64
+#, php-format
+msgid "Active %s"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:54
+msgid "Select all"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:57
+msgid "Star"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:60
+msgid "From"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:61
+msgid "Subject"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:75
+msgid "Actions"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:85
+msgid "Select this message"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:97
+msgid "From:"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:104
+msgid "To:"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:111
+msgid "View Message"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:129
+msgid "Read"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:131
+msgid "Unread"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:134
+msgid "Delete"
+msgstr ""
+
+#: templates/community/members/single/messages/messages-loop.php:172
+msgid "Sorry, no messages were found."
+msgstr ""
+
+#: templates/layouts/main.php:44
+msgid "Menu"
+msgstr ""
+
+#: templates/partials/nav.php:2
+msgid "Search"
+msgstr ""
+
+#: templates/search.php:9
+#, php-format
+msgid "You have searched for <strong>%s</strong>"
+msgstr ""
+
+#: templates/search.php:50
+msgid "No posts or topics found."
+msgstr ""
+
+#: templates/single-document.php:31
+msgid "Download"
+msgstr ""

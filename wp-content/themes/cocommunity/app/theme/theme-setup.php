@@ -22,6 +22,8 @@ function co_theme_setup() {
 	if ( file_exists( WP_LANG_DIR . '/plugins/buddypress-' . $locale . '.mo' ) ) {
 		load_textdomain( 'buddypress', WP_LANG_DIR . '/plugins/buddypress-' . $locale  . '.mo' );
 	}
+
+	load_child_theme_textdomain( 'cabinetoffice', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'co_theme_setup' );
 

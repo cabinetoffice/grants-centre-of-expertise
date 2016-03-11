@@ -168,7 +168,7 @@ This is what you wrote:
 
 To view the topic, see %4$s.
 
-', 'cocommunity' ),
+', 'cabinetoffice' ),
 
 		$reply_author_name,
 		$reply_topic_title,
@@ -213,7 +213,7 @@ function co_rc_reported_topic( $topic_id ) {
 
 To view the topic, see %2$s.
 
-', 'cocommunity' ),
+', 'cabinetoffice' ),
 
 		$topic_title,
 		$topic_url
@@ -255,7 +255,7 @@ This is what it said:
 
 To view the reply, see %3$s.
 
-', 'cocommunity' ),
+', 'cabinetoffice' ),
 
 		$reply_topic_title,
 		$reply_content,

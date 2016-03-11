@@ -2,6 +2,7 @@
 Theme Name:         Cabinet Office Grants Hub
 Author:             WTG
 Template:           govsite/templates
+Text Domain:		cabinetoffice
 */
 .site-header .dropdown:before { left: 40px; }
 .site-header .top-bar .menu > .active > a:before { display: none; }
@@ -75,10 +76,10 @@ Template:           govsite/templates
 #buddypress div.activity-comments > ul { padding-left: 0; }
 #buddypress #reply-title small a span, #buddypress a.bp-primary-action span { background: #25548a; border-radius: 50%; padding: 2px 6px; font-size: 80%; }
 #buddypress #reply-title small a:hover span, #buddypress a.bp-primary-action:hover span { background: #25548a; }
-#buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress a.button, #buddypress button { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
-#buddypress input[type="button"], #buddypress input[type="reset"], #buddypress input[type="submit"] { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
-#buddypress ul.button-nav li a { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
-#buddypress a.bp-title-button { background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress a.button, #buddypress button { font-size: 0.875rem; background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress input[type="button"], #buddypress input[type="reset"], #buddypress input[type="submit"] { font-size: 0.875rem; background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress ul.button-nav li a { font-size: 0.875rem; background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
+#buddypress a.bp-title-button { font-size: 0.875rem; background: #2e69ac; border: none; color: #fff; transition: background-color 300ms ease-out; }
 #buddypress .comment-reply-link:hover, #buddypress button:hover, #buddypress div.generic-button a:hover { background: #25548a !important; border: none; color: #fff; }
 #buddypress a.button:focus, #buddypress a.button:hover { background: #25548a !important; border: none; color: #fff; }
 #buddypress input[type="button"]:hover, #buddypress input[type="button"]:focus, #buddypress input[type="button"]:active, #buddypress input[type="reset"]:hover, #buddypress input[type="reset"]:focus, #buddypress input[type="reset"]:active, #buddypress input[type="submit"]:hover, #buddypress input[type="submit"]:focus, #buddypress input[type="submit"]:active { background: #25548a !important; border: none; color: #fff; }
@@ -88,7 +89,6 @@ Template:           govsite/templates
 #buddypress div.pending a { border: none; color: #fff; }
 #buddypress input[type="submit"][disabled=disabled] { border: none; color: #fff; }
 #buddypress input[type="button"].disabled, #buddypress input[type="button"].pending, #buddypress input[type="reset"].disabled, #buddypress input[type="reset"].pending, #buddypress input[type="submit"].disabled, #buddypress input[type="submit"].pending { border: none; color: #fff; }
-#buddypress .generic-button a { font-size: 0.875rem; }
 #buddypress .dir-search input[type=search], #buddypress .dir-search input[type=text] { background: #fff; }
 #buddypress .groups-members-search input[type=search], #buddypress .groups-members-search input[type=text] { background: #fff; }
 #buddypress .standard-form input[type=color], #buddypress .standard-form input[type=date], #buddypress .standard-form input[type=datetime-local], #buddypress .standard-form input[type=datetime], #buddypress .standard-form input[type=email], #buddypress .standard-form input[type=month], #buddypress .standard-form input[type=number], #buddypress .standard-form input[type=password], #buddypress .standard-form input[type=range], #buddypress .standard-form input[type=search], #buddypress .standard-form input[type=tel], #buddypress .standard-form input[type=text], #buddypress .standard-form input[type=time], #buddypress .standard-form input[type=url], #buddypress .standard-form input[type=week] { background: #fff; }
@@ -139,7 +139,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #search-members-form label, #search-groups-form label, #events-search-wrap label { margin-bottom: 0; }
 #search-members-form input, #search-groups-form input, #events-search-wrap input { height: 36px; margin-bottom: 0; }
 #search-members-form input[type="text"], #search-groups-form input[type="text"], #events-search-wrap input[type="text"] { padding: 0 10px !important; }
-#search-members-form input[type="submit"], #search-groups-form input[type="submit"], #events-search-wrap input[type="submit"] { width: 75px; position: absolute; right: 0; top: 0; }
+#search-members-form input[type="submit"], #search-groups-form input[type="submit"], #events-search-wrap input[type="submit"] { font-size: 0.8125rem; width: 75px; position: absolute; right: 0; top: 0; }
 
 #member-list h5 { margin: 0; }
 
@@ -236,7 +236,7 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 .tribe-events-button:hover, .tribe-events-button:focus { background-color: #25548a; color: #fff; }
 
 #tribe-events-footer .tribe-events-sub-nav, #tribe-events-header .tribe-events-sub-nav { line-height: normal; list-style-type: none; margin: 0; overflow: hidden; padding: 0; text-align: center; }
-#tribe-events-footer .tribe-events-sub-nav a, #tribe-events-header .tribe-events-sub-nav a { font-size: 1rem; line-height: 1.5; color: #767676; }
+#tribe-events-footer .tribe-events-sub-nav a, #tribe-events-header .tribe-events-sub-nav a { font-size: 0.875rem; line-height: 1.5; }
 #tribe-events-footer .tribe-events-sub-nav li, #tribe-events-header .tribe-events-sub-nav li { display: inline-block; margin: 0; vertical-align: middle; zoom: 1; }
 #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-previous { float: left; margin-right: 5px; text-align: left; }
 #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next { float: right; margin-left: 5px; text-align: right; }
@@ -254,18 +254,18 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 .tribe-events-list .type-tribe_events { margin-bottom: 1.6em; }
 .tribe-events-list .tribe-events-ical { margin-top: 20px; float: right; }
 
-.tribe-events-list-separator-month { font-size: 1.875rem; line-height: 1.5; color: #222222; display: block; }
+.tribe-events-list-separator-month { font-size: 1.875rem; line-height: 1.5; color: #222222; display: block; margin: 10px 0; }
 
 .tribe-events-list-event-title { margin-bottom: 0; font-size: 1rem; line-height: 1.5; }
-.tribe-events-list-event-title a { font-size: 1rem; line-height: 1.5; display: inline-block; }
+.tribe-events-list-event-title a { font-size: 1rem; font-weight: 700; line-height: 1.5; display: inline-block; }
 
-.tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr { font-size: 0.875rem; line-height: 1.5; color: #767676; margin-bottom: 1rem; font-weight: 400; }
+.tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr { font-size: 0.875rem; line-height: 1.5; color: #767676; margin-bottom: 0; font-weight: 400; }
 
-.tribe-events-loop .tribe-events-event-meta { border: 0; clear: both; float: none; font-size: 0.875rem; font-weight: 700; line-height: 1.5; margin: 5px 0 15px; overflow: visible; margin-bottom: 1rem; }
+.tribe-events-loop .tribe-events-event-meta { border: 0; clear: both; float: none; font-size: 0.875rem; font-weight: 700; line-height: 1.5; margin: 0; overflow: visible; }
 .tribe-events-loop .tribe-events-event-meta address.tribe-events-address { margin-right: 10px; }
 .tribe-events-loop .tribe-events-event-meta .tribe-events-venue-details { font-style: italic; font-weight: 400; line-height: 1.5; }
 
-#tribe-events .tribe-events-content p { margin-bottom: 10px; }
+#tribe-events .tribe-events-content p { margin-bottom: 0; }
 
 #tribe-events-content .tribe-events-calendar td { border: 1px solid #d2d2d2; border-top: 0; -webkit-transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53); transition: all 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53); }
 #tribe-events-content .tribe-events-calendar td:hover { background: #f7f7f7; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px; }
