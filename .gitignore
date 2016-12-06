@@ -99,3 +99,4 @@ forum/*
 *.tgz
 *.gz
 .idea/
+wp-content/updraft/
