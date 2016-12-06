@@ -98,3 +98,4 @@ forum/*
 *.tar
 *.tgz
 *.gz
+.idea/
