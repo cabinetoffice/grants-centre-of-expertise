@@ -14,9 +14,11 @@ Text Domain:		cabinetoffice
 .site-header.menu-full-width .top-bar .top-bar-section > ul > li > a { padding: 15px; }
 .site-header.menu-full-width .top-bar .button-search { margin: 0; position: absolute; right: 0; top: 14px; line-height: 1; }
 .site-header.menu-full-width .dropdown { top: 55px; }
+.site-header .site-title { display: none; margin-bottom: 0; margin-top: 50px; font-weight: 700; }
 
 @media only screen and (max-width: 48.6875em) { .site-header .top-bar.active { max-height: none; margin-bottom: 0; }
-  .site-header .top-bar ul { margin-bottom: 0; } }
+  .site-header .top-bar ul { margin-bottom: 0; }
+  .site-title { padding-left: 0.9375rem; } }
 #buddypress { position: relative; }
 #buddypress div.dir-search { float: none; margin-top: 0; }
 #buddypress div.dir-search input[type=text] { width: 100%; background: #fff; font-size: 0.875rem; }
@@ -138,7 +140,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #search-members-form label, #search-groups-form label, #events-search-wrap label { margin-bottom: 0; }
 #search-members-form input, #search-groups-form input, #events-search-wrap input { height: 36px; margin-bottom: 0; }
 #search-members-form input[type="text"], #search-groups-form input[type="text"], #events-search-wrap input[type="text"] { padding: 0 10px !important; }
-#search-members-form input[type="submit"], #search-groups-form input[type="submit"], #events-search-wrap input[type="submit"] { font-size: 0.8125rem; width: 75px; position: absolute; right: 0; top: 0; }
+#search-members-form input[type="submit"], #search-groups-form input[type="submit"], #events-search-wrap input[type="submit"] { font-size: 0.875rem; width: 75px; position: absolute; right: 0; top: 0; }
 
 #member-list h5 { margin: 0; }
 
@@ -163,6 +165,7 @@ ul.acfb-holder li.friend-tab { width: auto; }
 #bbpress-forums div.bbp-reply-author br { display: none; }
 #bbpress-forums div.bbp-reply-header { border-top: none; border-bottom: 1px solid #ddd; background-color: transparent; }
 #bbpress-forums div.bbp-reply-header .bbp-reply-post-date { font-size: 0.875rem; }
+#bbpress-forums div.bbp-reply-content { padding-bottom: 0; }
 #bbpress-forums div.bbp-reply-content p { font-size: 1rem; }
 #bbpress-forums div.reply.even + .bbp-reply-header { background-color: #fff; }
 #bbpress-forums div.bbp-search-form { display: none; }
@@ -205,9 +208,9 @@ div.bbp-breadcrumb .bbp-breadcrumb-current { color: #222222; }
 .widget_subpages .widget_subpages_current_page > a { font-weight: bold; }
 .widget_subpages li > ul { margin-top: 4px; }
 
-.sidebar { margin-top: 45px; }
+.sidebar { margin-top: 36px; }
 
-.secondary-sidebar { margin-top: 45px; }
+.secondary-sidebar { margin-top: 36px; }
 .secondary-sidebar ul, .secondary-sidebar li { list-style: none; margin: 0; padding: 0; }
 
 .blog .widget-area { margin-top: 0; }
@@ -239,6 +242,8 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 .tribe-events-button { background-color: #2e69ac; text-align: center; padding: 7px 20px; transition: background-color 300ms ease-out; color: #fff; border: none; }
 .tribe-events-button:hover, .tribe-events-button:focus { background-color: #25548a; color: #fff; }
 
+.tribe-events-back { font-size: 0.875rem; margin-top: -14px; }
+
 #tribe-events-footer .tribe-events-sub-nav, #tribe-events-header .tribe-events-sub-nav { line-height: normal; list-style-type: none; margin: 0; overflow: hidden; padding: 0; text-align: center; }
 #tribe-events-footer .tribe-events-sub-nav a, #tribe-events-header .tribe-events-sub-nav a { font-size: 0.875rem; line-height: 1.5; }
 #tribe-events-footer .tribe-events-sub-nav li, #tribe-events-header .tribe-events-sub-nav li { display: inline-block; margin: 0; vertical-align: middle; zoom: 1; }
@@ -246,8 +251,6 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next { float: right; margin-left: 5px; text-align: right; }
 #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-left, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-left { float: left; text-align: left; }
 #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-right, #tribe-events-header .tribe-events-sub-nav .tribe-events-nav-right { float: right; text-align: right; }
-
-.tribe-events-back a, .tribe-events-back a:visited, .tribe-events-back a:visited:hover, .tribe-events-back a:visited:focus { color: #767676; }
 
 .events-list #tribe-events-footer { border-top: 1px solid #e5e5e5; padding-top: 1em; }
 
@@ -260,7 +263,7 @@ h2.widgettitle { font-size: 1.5rem; margin-top: 0; line-height: 1.2; margin-bott
 
 .tribe-events-list-separator-month { font-size: 1.875rem; line-height: 1.5; color: #222222; display: block; margin: 10px 0; }
 
-.tribe-events-list-event-title { margin-bottom: 0; font-size: 1rem; line-height: 1.5; }
+.tribe-events-list-event-title { margin-bottom: 0; font-size: 1rem; line-height: 1.5; font-family: "Open Sans", Helvetica, Arial, sans-serif; }
 .tribe-events-list-event-title a { font-size: 1rem; font-weight: 700; line-height: 1.5; display: inline-block; }
 
 .tribe-event-schedule-details, .tribe-events-venue-details, .tribe-events-venue-details abbr { font-size: 0.875rem; line-height: 1.5; color: #767676; margin-bottom: 0; font-weight: 400; }

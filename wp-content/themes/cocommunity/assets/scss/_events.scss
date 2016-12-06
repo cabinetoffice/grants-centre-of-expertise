@@ -92,12 +92,6 @@
 	}
 }
 
-.tribe-events-back {
-	a, a:visited, a:visited:hover, a:visited:focus {
-		color: $grey;
-	}
-}
-
 .events-list {
 	#tribe-events-footer {
 		border-top: 1px solid #e5e5e5;
@@ -132,6 +126,7 @@
 	margin-bottom: 0;
 	font-size: 1rem;
 	line-height: 1.5;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 
 	a {
 		font-size: 1rem;

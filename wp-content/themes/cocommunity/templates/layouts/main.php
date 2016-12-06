@@ -40,11 +40,13 @@
 						<?php bloginfo('name') ?>
 					<?php endif; ?>
 				</a>
+
 				<div class="toggle-container hidden-for-medium-up">
 					<a href="#top-bar" class="nav-toggle"><span class="visually-hidden"><?php _e('Menu', 'govsite') ?></span></a>
 				</div>
 			</div>
 			<?php if ( $menu_full_width ) : ?>
+				<h6 class="site-title"><?php bloginfo('name') ?></h6>
 				<?php get_template_part('partials/nav'); ?>
 			<?php else : ?>
 				<div class="small-12 medium-9 columns">
